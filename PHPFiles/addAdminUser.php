@@ -23,7 +23,7 @@ else
      }
      else
      {
-         echo "Error: " . $sql . "<br>" . $con->error
+         echo "Error: " . $sql . "<br>" . $con->error;
      }
  }
      $con->close();
