@@ -22,7 +22,7 @@
         echo "});";
         echo "});";
         echo " </script>";
-        echo "</div>";
+        echo "</div>"
     }
 ?>
 
