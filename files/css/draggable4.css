@@ -1,0 +1,80 @@
+.smallimg{
+width:100px;
+height:100px;
+}
+li{
+list-style:none;
+}
+.group1{
+float:left;
+-moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+}
+.group2{
+float:left;
+-moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+}
+.group3{
+float:left;
+-moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+	background:transparent;
+}
+.group4{
+float:left;
+-moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+}
+#group1ul{
+margin-left:0;
+}
+#group2ul{
+margin-left:0;
+margin-top:140px;
+}
+#group3ul{
+margin-left:0;
+margin-top:260px;
+}
+#group4ul{
+margin-left:0;
+margin-top:380px;
+}
+.wrapper{
+width:1100px;
+margin:0 auto;
+}
+body{
+background:#707070;
+color:#ffffff;
+}
+ul.items{
+    margin:0;
+    padding:0;
+    cursor: pointer;
+  }
+.problemarea{
+margin-top:490px;
+width:1000px;
+}
+.problem{
+width:980px;
+height:320px;
+background-color:#FFFFFF;
+padding:10px;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+	color:black;
+}
+.textarea1{
+font-size:20px;
+}
+textarea{
+resize: none;
+}

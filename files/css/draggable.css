@@ -1,0 +1,68 @@
+.smallimg{
+width:100px;
+height:100px;
+}
+li{
+list-style:none;
+}
+.group1{
+float:left;
+-moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+}
+.group2{
+float:left;
+-moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+}
+.group3{
+float:left;
+-moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+}
+#group1ul{
+margin-left:0;
+}
+#group2ul{
+margin-left:0;
+margin-top:140px;
+}
+#group3ul{
+margin-left:0;
+margin-top:260px;
+}
+#group4{
+display:inline;
+}
+.wrapper{
+width:1100px;
+margin:0 auto;
+}
+body{
+background:#404040;
+color:#ffffff;
+}
+ul.items{
+    margin:0;
+    padding:0;
+    cursor: pointer;
+  }
+.problemarea{
+margin-top:390px;
+width:1000px;
+}
+.problem{
+width:980px;
+height:250px;
+background-color:#CBCBCB;
+padding:10px;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+}
+.textarea1{
+font-size:20px;
+}
