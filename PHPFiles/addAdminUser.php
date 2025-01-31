@@ -6,7 +6,6 @@ $lname = $_POST['lname'];
 $email = $_POST['email'];
 $tlevel = $_POST['tlevel'];
 
-
 require 'dbconfig.php';
 if ($adminID == null || $email == null || $fname == '' || $lname == '' )
 {
