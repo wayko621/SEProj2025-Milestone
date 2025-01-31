@@ -12,7 +12,7 @@ label
    color: #333;
 }
 
-input[type="text"],input[type="password"]
+input[type="text"]
 {
    flex-grow: 1;
    padding: 10px;
@@ -20,6 +20,16 @@ input[type="text"],input[type="password"]
    border-radius: 4px;
    font-size: 16px;
 }
+
+input[type="password"]
+{
+   flex-grow: 1;
+   padding: 10px;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+   font-size: 16px;
+}
+
 button
 {
    width: 100%;
