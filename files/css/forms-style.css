@@ -30,8 +30,6 @@
    font-size: 16px;
 }
 
-
-
 .btn
 {
     color: #FFFFFF;
@@ -39,11 +37,9 @@
     font-size: 24px;
     width: 50%;
     height: 60px;
-    
     background: #AA0000;
     border: 0;
-    padding: 15px;
-   
+    padding: 15px;  
 }
 
 .body
