@@ -7,6 +7,7 @@
     $user = trim($_POST['facUN']);
     $password = trim($_POST['facPW']);
     $hashPassword = hash('sha256', $password);
+    
 $sql ="Select * from facultymember where FirstName ='" .$user. "' and FacultyID = '" . $hashPassword . "'";
 
 $results = $con->query($sql);
