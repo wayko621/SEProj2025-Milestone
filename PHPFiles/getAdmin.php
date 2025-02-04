@@ -19,7 +19,7 @@ if($results->num_rows > 0)
         $_SESSION['loggedin'] = true;
         $_SESSION['adminUN'] = $user;
         $_SESSION['TechLevel'] =  $row['TechLevel'];
-        $_SESSION['Admin'] = $row['AdminID'];
+        $_SESSION['Admin'] = $password;
         header("refresh:2; url=admin.php");
         echo "Connected successfully<br />User login successful redirecting to admin page <br />";
     }
