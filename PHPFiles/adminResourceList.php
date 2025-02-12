@@ -89,7 +89,7 @@
             $('.updateResource').on('click', function()
             {
                 index = $(this).closest('tr').index()-1;
-                idNum = $(this).closest('tr').index();
+                idNum = $(".resourceID:eq(" + index + ")" ).text();
                 resourceName =  $(".resourceName:eq(" + index + ")" ).text();
                 classRoomNum =$("input:eq("+ index +")").val();
                 $.ajax(
@@ -106,6 +106,10 @@
                         alert(xhr.responseText); 
                     }
                 });
+                $(document).ajaxStop(function()
+                    {
+                        window.location.reload();
+                    });
             });
         </script>  
     </body>

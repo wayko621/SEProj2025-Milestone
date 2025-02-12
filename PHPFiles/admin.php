@@ -45,10 +45,11 @@
             <nav class="navbar navbar-default">
                 <div class="container-fluid">
                     <div class="navbar-header">
+                        <!--<a class="navbar-brand" href="TroubleTicket.php">Get Trouble Tickets</a>-->
+                        <a class="navbar-brand" href="adminResourceList.php">Get Resource List</a>
                         <a class="navbar-brand" href="../addAdmin.html">Add Admin Member</a>
                         <a class="navbar-brand" href="../addFacultyMember.html">Add Faculty Member</a>
-                        <!-- <a class="navbar-brand" href="#">Get Trouble Tickets</a>
-                        <a class="navbar-brand" href="#">Get Resource List</a> -->
+                        <!--<a class="navbar-brand" href="getClassrooms.php">Get Classroom List</a>-->
                         
                         
                     </div>
