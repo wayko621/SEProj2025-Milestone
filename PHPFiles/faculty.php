@@ -66,10 +66,10 @@
             <nav class="navbar navbar-default">
                 <div class="container-fluid">
                      <div class="navbar-header"> 
-                        <a class="navbar-brand" href="classroom.php">Create Trouble Tickets</a>
-                        <a class="navbar-brand" href="../ResourceList.html">Get Resource List</a>
+                        <!--<a class="navbar-brand" href="classroom.php">Create Trouble Tickets</a>
+                       <a class="navbar-brand" href="../ResourceList.html">Get Resource List</a>
                         <a class="navbar-brand" href="../ScheduleRoom.html">Book a ClassRoom</a>
-                        <a class="navbar-brand" href="../connectCamera.html">Access Camera</a>
+                        <a class="navbar-brand" href="../connectCamera.html">Access Camera</a>-->
                     </div>
                 </div>
             </nav>
