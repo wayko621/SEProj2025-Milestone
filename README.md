@@ -15,9 +15,39 @@ Doing so we wish to allow administrators to review scheduling access and distrib
 Faculty members of the university would be given the ability to request the resources as needed, book classrooms according to their schedules and report issues as they see fit.<br /> 
 Overall, our team wishes to directly allow for the feedback of our stakeholders and create an application that works to support their needs.</p>
 
+<div>
+	<h2>Function Comments</h2>
+	<h3>Database Connection</h3>
+	<p>In most PHP pages that require access to the database there is a file called dbconfig.php that they all use to establish a connection. It contains the databse location, name, user and password. This file is not uploaded to repository due to security reason, but a template file called dbconfigTemplate.php was uploaded to have an example of the file</p>
+	<h3>Admin Members Connection/Structure</h3>
+	<p>Admin Member pages consists of the following sites<p>
+	<ul>
+		<li>Admin Member Login Page (adminlogin.html)</li>
+		<li>Admin Member's assigned Trouble Ticket Page(admin.php)</li>
+		<li>Trouble Ticket Page to assigned Admin Members to Trouble Ticket(TroubleTicket.php)</li>
+		<li>Get Reource List that contains all the resources avaialable at the present time(adminResourceList.php)</li>
+		<li>Admin page to add admin members to the admin member database(addAdmin.html)</li>
+		<li>Admin page to add faculty members to the faculty member database(addFacultyMember.html)</li> 
+		<li>Get Classroom List that contains all the classroom avaialable at the present time and max occupancy(getClassrooms.php)</li>
+	</ul>
+	<h3>Faculty Members Connection/Structure</h3>
+	<p>Faculty Member pages consists of the following sites<p>
+	<ul>
+		<li>Faculty Member Login Page (faclogin.html)</li>
+		<li>Faculty Member's Posted Trouble Ticket Page(faculty.php)</li>
+		<li>Page to create a Trouble Ticket(classroom.php)</li>
+		<li>Get Reource List that contains all the resources avaialable at the present time(ResourceList.html)</li>
+		<li>Page to book a classroom(ScheduleRoom.html)</li>
+		<li>Page to access camera(connectCamera.html)</li> 
+	</ul>
+</div>
+
+
+<div>
 <h2>Programming Languages/Tools Used</h2>
 <img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/badge-html-5-512.png" style="width: 40px; height: 40px; display:inline-block;"/>
 <img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/badge-css-3-512.png" style="width: 40px; height: 40px; display:inline-block;"/>
 <img src="https://cdn2.iconfinder.com/data/icons/designer-skills/128/code-programming-javascript-software-develop-command-language-512.png" style="width: 40px; height: 40px; display:inline-block;"/>
 <img src="https://cdn0.iconfinder.com/data/icons/long-shadow-web-icons/512/jquery-512.png" style="width: 40px; height: 40px; display:inline-block;"/>
 <img src="https://cdn3.iconfinder.com/data/icons/file-extension-11/512/sql-file-extension-format-digital-512.png" style="width: 40px; height: 40px; display:inline-block;"/>
+</div>
