@@ -9,20 +9,9 @@
     else
     {
         echo "<div style='padding-left: 10px;'>";
-        echo "Name: " . htmlspecialchars($_SESSION['adminUN']);
-        echo "<br /><button class='logout btn btn-primary btn-sm pull-left'>Log Out</button>";
-        echo "<script type='text/javascript' src='https://code.jquery.com/jquery-1.7.min.js'></script>";
-        echo "<script type='text/javascript' src='../files/js/jquery-ui-1.8.22.custom.min.js'></script>";
-        echo "<script>";
-        echo "$(document).ready(function()";
-        echo "{";
-        echo "$('.logout').on('click',function()";
-        echo "{";
-        echo "$(location).prop('href', 'sessionDestroy.php')";
-        echo "});";
-        echo "});";
-        echo " </script>";
-        echo "</div>";
+        echo "Name: " . htmlspecialchars($_SESSION['adminUN']) . "<br/>";
+        echo "Email: " . htmlspecialchars($_SESSION['Email']) . "<br/>";
+        require 'logout.php';
     }
 ?>
 
