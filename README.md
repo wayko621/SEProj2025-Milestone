@@ -19,7 +19,7 @@ Overall, our team wishes to directly allow for the feedback of our stakeholders 
 	<h2>Function Comments</h2>
 	<h3>Database Connection</h3>
 	<p>In most PHP pages that require access to the database there is a file called dbconfig.php that they all use to establish a connection. It contains the databse location, name, user and password. This file is not uploaded to repository due to security reason, but a template file called dbconfigTemplate.php was uploaded to have an example of the file</p>
-	<h3>Admin Members Connection/Structure</h3>
+	<h3>Admin Members Connection/Structure (Milestone 1)</h3>
 	<p>Admin Member pages consists of the following sites<p>
 	<ul>
 		<li>Admin Member Login Page (adminlogin.html)</li>
@@ -30,10 +30,23 @@ Overall, our team wishes to directly allow for the feedback of our stakeholders 
 		<li>Admin page to add faculty members to the faculty member database(addFacultyMember.html)</li> 
 		<li>Get Classroom List that contains all the classroom avaialable at the present time and max occupancy(getClassrooms.php)</li>
 	</ul>
-	<h3>Faculty Members Connection/Structure</h3>
+	<h3>Admin Members Connection/Structure (Milestone 2)</h3>
+	<p>Admin Member pages consists of the following sites<p>
+	<ul>
+		<li>Admin Member's assigned Trouble Ticket Page(admin.php)</li>
+		<li>Trouble Ticket Page to assigned Admin Members to Trouble Ticket(TroubleTicket.php)</li>
+		<li>Get Reource List that contains all the resources avaialable at the present time(adminResourceList.php)</li>
+		<li>Get Classroom List that contains all the classroom avaialable at the present time and max occupancy(getClassrooms.php)</li>
+	</ul>
+	<h3>Faculty Members Connection/Structure (Milestone 1)</h3>
 	<p>Faculty Member pages consists of the following sites<p>
 	<ul>
 		<li>Faculty Member Login Page (faclogin.html)</li>
+		<li>Faculty Member's Page(faculty.php)</li>
+	</ul>
+	<h3>Faculty Members Connection/Structure</h3>
+	<p>Faculty Member pages consists of the following sites<p>
+	<ul>
 		<li>Faculty Member's Posted Trouble Ticket Page(faculty.php)</li>
 		<li>Page to create a Trouble Ticket(classroom.php)</li>
 		<li>Get Reource List that contains all the resources avaialable at the present time(ResourceList.html)</li>
