@@ -44,7 +44,7 @@ Overall, our team wishes to directly allow for the feedback of our stakeholders 
 		<li>Faculty Member Login Page (faclogin.html)</li>
 		<li>Faculty Member's Page(faculty.php)</li>
 	</ul>
-	<h3>Faculty Members Connection/Structure</h3>
+	<h3>Faculty Members Connection/Structure (Milestone 2)</h3>
 	<p>Faculty Member pages consists of the following sites<p>
 	<ul>
 		<li>Faculty Member's Posted Trouble Ticket Page(faculty.php)</li>
