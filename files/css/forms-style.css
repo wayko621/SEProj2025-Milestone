@@ -21,7 +21,7 @@
 h2{
     text-align: center;
     display: block;
-    
+    font-family: "Trirong", serif;
     
     font-weight: 400;
 }
@@ -30,7 +30,7 @@ label
     padding-left: 130px;
     text-align: left;
     display: block;
-    
+    font-family: "Trirong", serif;
     margin-bottom: 5px;
     font-weight: 300;
     color: #333;
@@ -58,6 +58,7 @@ input[type="password"]
 
 .btn
 {
+    font-family: "Trirong", serif;
     color: #FFFFFF;
     text-transform: uppercase;
     font-size: 24px;
