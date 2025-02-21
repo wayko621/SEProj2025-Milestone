@@ -55,13 +55,20 @@
             <nav class="navbar navbar-default">
                 <div class="container-fluid">
                      <div class="navbar-header"> 
-                        <!--<a class="navbar-brand" href="classroom.php">Create Trouble Tickets</a>
-                       <a class="navbar-brand" href="../ResourceList.html">Get Resource List</a>
-                        <a class="navbar-brand" href="../ScheduleRoom.html">Book a ClassRoom</a>
-                        <a class="navbar-brand" href="../connectCamera.html">Access Camera</a>-->
+                         <a class="navbar-brand" href="">Create Trouble Tickets</a>
+                        <a class="navbar-brand" href="">Book a ClassRoom</a>
+                        <a class="navbar-brand" href="">Access Camera</a>
                     </div>
                 </div>
             </nav>
+            <div>
+                <h2>Tickets</h2>
+                <p>Coming Soon</p>
+            </div>
+            <div>
+                <h2>My Booked Classrooms</h2>
+                <p>Coming Soon</p>
+            </div>
     </div>
     </div>
     </body>

@@ -10,7 +10,7 @@
     {
         echo "<div style='padding-left: 10px;'>";
         echo "Name: " . htmlspecialchars($_SESSION['adminUN']) . "<br/>";
-        echo "Email: " . htmlspecialchars($_SESSION['Email']) . "<br/>";
+        echo "Email: " . htmlspecialchars($_SESSION['Email']);
         require 'logout.php';
     }
 ?>
@@ -34,20 +34,20 @@
             <nav class="navbar navbar-default">
                 <div class="container-fluid">
                     <div class="navbar-header">
-                        <!--<a class="navbar-brand" href="TroubleTicket.php">Get Trouble Tickets</a>-->
-                        <a class="navbar-brand" href="adminResourceList.php">Get Resource List</a>
+                        <a class="navbar-brand" href="">Get Trouble Tickets</a>
+                        <a class="navbar-brand" href="">Get Resource List</a>
                         <a class="navbar-brand" href="../addAdmin.html">Add Admin Member</a>
                         <a class="navbar-brand" href="../addFacultyMember.html">Add Faculty Member</a>
-                        <!--<a class="navbar-brand" href="getClassrooms.php">Get Classroom List</a>-->
+                        <a class="navbar-brand" href="">Get Classroom List</a>
                         
                         
                     </div>
                 </div>
             </nav>
-           <?php
-           echo "Coming soon"
-
-            ?>
+            <div>
+                <h2>Tickets</h2>
+                <p>Coming Soon</p>
             </div>
+        </div>
     </body>
 </html>
