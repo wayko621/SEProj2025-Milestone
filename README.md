@@ -30,6 +30,12 @@ Overall, our team wishes to directly allow for the feedback of our stakeholders 
 		<li>Admin page to add faculty members to the faculty member database(addFacultyMember.html)</li> 
 		<li>Get Classroom List that contains all the classroom avaialable at the present time and max occupancy(getClassrooms.php)</li>
 	</ul>
+	<h3>Faculty Members Connection/Structure (Milestone 1)</h3>
+	<p>Faculty Member pages consists of the following sites<p>
+	<ul>
+		<li>Faculty Member Login Page (faclogin.html)</li>
+		<li>Faculty Member's Page(faculty.php)</li>
+	</ul>	
 	<h3>Admin Members Connection/Structure (Milestone 2)</h3>
 	<p>Admin Member pages consists of the following sites<p>
 	<ul>
@@ -38,23 +44,16 @@ Overall, our team wishes to directly allow for the feedback of our stakeholders 
 		<li>Get Reource List that contains all the resources avaialable at the present time(adminResourceList.php)</li>
 		<li>Get Classroom List that contains all the classroom avaialable at the present time and max occupancy(getClassrooms.php)</li>
 	</ul>
-	<h3>Faculty Members Connection/Structure (Milestone 1)</h3>
-	<p>Faculty Member pages consists of the following sites<p>
-	<ul>
-		<li>Faculty Member Login Page (faclogin.html)</li>
-		<li>Faculty Member's Page(faculty.php)</li>
-	</ul>
 	<h3>Faculty Members Connection/Structure (Milestone 2)</h3>
 	<p>Faculty Member pages consists of the following sites<p>
 	<ul>
-		<li>Faculty Member's Posted Trouble Ticket Page(faculty.php)</li>
+		<li>Faculty Member's View of posted Trouble Ticket and Booked Classrooms (faculty.php)</li>
 		<li>Page to create a Trouble Ticket(classroom.php)</li>
-		<li>Get Reource List that contains all the resources avaialable at the present time(ResourceList.html)</li>
-		<li>Page to book a classroom(ScheduleRoom.html)</li>
-		<li>Page to access camera(connectCamera.html)</li> 
+		<li>Page to book a classroom (scheduleClassroom.php)</li>
+		<li>Page to view, clear and process pending booking, add resources and set date and time(viewBooking.php)</li>
+		<li>Page to access camera(connectCamera.html)</li>
 	</ul>
 </div>
-
 
 <div>
 <h2>Programming Languages/Tools Used</h2>
