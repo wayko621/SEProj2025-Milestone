@@ -88,16 +88,6 @@ Overall, our team wishes to directly allow for the feedback of our stakeholders 
 		<li>camera.css</li>
 		<li>newDraggable.css</li>
 	</ul>
-	<h3>PHP Files (Milestone 2)</h3>
-	<p>PHP Files consists of the following files</p>
-	<ul>
-		<li>Ability to add admin users to database (addAdminUser.php)</li>
-		<li>Ability to add faculty members to database (addFacultyMember.php)</li>
-		<li>Ability to retrieve admin users by username and password (getAdmin.php)</li>
-		<li>Ability to retrieve faculty members by username and password (getFaculty.php)</li>
-		<li>Ability for admin users and faculty members to log out of website (logout.php)</li>
-		<li>Ability to clear session state to websites (sessionDestroy.php)</li>
-	</ul>
 </div>
 
 <div>
