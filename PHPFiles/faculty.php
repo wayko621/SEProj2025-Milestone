@@ -10,7 +10,7 @@
     {
         echo "<div style='padding-left: 10px;'>";
         echo "Name: " . htmlspecialchars($_SESSION['facUN']) . "<br/>";
-        echo "Email: " . htmlspecialchars($_SESSION['facEmail']) . "<br/>";
+        echo "Email: " . htmlspecialchars($_SESSION['facEmail']);
         require 'logout.php';
 
     }
