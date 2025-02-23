@@ -64,7 +64,7 @@ Overall, our team wishes to directly allow for the feedback of our stakeholders 
 	<ul>
 		<li>jQuery  and Ajax</li>
 		<li>Bootstrap 3</li>
-	<ul>
+	</ul>
 	<h3>Admin Members Connection/Structure (Milestone 2)</h3>
 	<p>Admin Member pages consists of the following sites<p>
 	<ul>
