@@ -17,8 +17,11 @@ Overall, our team wishes to directly allow for the feedback of our stakeholders 
 
 <div>
 	<h2>Function Comments</h2>
-	<h3>Database Connection</h3>
-	<p>In most PHP pages that require access to the database there is a file called dbconfig.php that they all use to establish a connection. It contains the databse location, name, user and password. This file is not uploaded to repository due to security reason, but a template file called dbconfigTemplate.php was uploaded to have an example of the file</p>
+	<h3>Main Index Page (Milestone1)</h3>
+	<p>Main index page consists of the following sites</p>
+	<ul>
+		<li>Index.html</li>
+	</ul>
 	<h3>Admin Members Connection/Structure (Milestone 1)</h3>
 	<p>Admin Member pages consists of the following sites<p>
 	<ul>
@@ -35,14 +38,40 @@ Overall, our team wishes to directly allow for the feedback of our stakeholders 
 	<ul>
 		<li>Faculty Member Login Page (faclogin.html)</li>
 		<li>Faculty Member's Page(faculty.php)</li>
-	</ul>	
+	</ul>
+	<h3>CSS Styling Pages (Milestone 1)</h3>
+	<p>CSS styling pages consists of the following pages</p>
+	<ul>
+		<li>bootstrap-min-css</li>
+		<li>form-style.css</li>
+		<li>main.css</li>
+	</ul>
+	<h3>Database Connection</h3>
+	<p>In most PHP pages that require access to the database there is a file called dbconfig.php that they all use to establish a connection. It contains the databse location, name, user and password. This file is not uploaded to repository due to security reason, but a template file called dbconfigTemplate.php was uploaded to have an example of the file</p>
+	<h3>PHP Files (Milestone 1)</h3>
+	<p>PHP Files consists of the following files</p>
+	<ul>
+		<li>Ability to add admin users to database (addAdminUser.php)</li>
+		<li>Ability to add faculty members to database (addFacultyMember.php)</li>
+		<li>Ability to retrieve admin users by username and password (getAdmin.php)</li>
+		<li>Ability to retrieve faculty members by username and password (getFaculty.php)</li>
+		<li>Ability for admin users and faculty members to log out of website (logout.php)</li>
+		<li>Ability to clear session state to websites (sessionDestroy.php)</li>
+		<li>Ability to test to get admin member by username (testGetAdmin.php, getAdminTest.php)</li>
+	</ul>
+	<h3>Javascript Library Files (Milestone 1 and 2)</h3>
+	<p>Javascript Library files consist of the following files</p>
+	<ul>
+		<li>jQuery  and Ajax</li>
+		<li>Bootstrap 3</li>
+	<ul>
 	<h3>Admin Members Connection/Structure (Milestone 2)</h3>
 	<p>Admin Member pages consists of the following sites<p>
 	<ul>
 		<li>Admin Member's assigned Trouble Ticket Page(admin.php)</li>
 		<li>Trouble Ticket Page to assigned Admin Members to Trouble Ticket(TroubleTicket.php)</li>
 		<li>Get Reource List that contains all the resources avaialable at the present time(adminResourceList.php)</li>
-		<li>Get Classroom List that contains all the classroom avaialable at the present time and max occupancy(getClassrooms.php)</li>
+		<li>Get Classroom List that contains all the classroom avaialable at the present time(getClassrooms.php)</li>
 	</ul>
 	<h3>Faculty Members Connection/Structure (Milestone 2)</h3>
 	<p>Faculty Member pages consists of the following sites<p>
@@ -52,6 +81,22 @@ Overall, our team wishes to directly allow for the feedback of our stakeholders 
 		<li>Page to book a classroom (scheduleClassroom.php)</li>
 		<li>Page to view, clear and process pending booking, add resources and set date and time(viewBooking.php)</li>
 		<li>Page to access camera(connectCamera.html)</li>
+	</ul>
+	<h3>CSS Styling Pages (Milestone 2)</h3>
+	<p>CSS Styling Pages will consists of the following pages</p>
+	<ul>
+		<li>camera.css</li>
+		<li>newDraggable.css</li>
+	</ul>
+	<h3>PHP Files (Milestone 2)</h3>
+	<p>PHP Files consists of the following files</p>
+	<ul>
+		<li>Ability to add admin users to database (addAdminUser.php)</li>
+		<li>Ability to add faculty members to database (addFacultyMember.php)</li>
+		<li>Ability to retrieve admin users by username and password (getAdmin.php)</li>
+		<li>Ability to retrieve faculty members by username and password (getFaculty.php)</li>
+		<li>Ability for admin users and faculty members to log out of website (logout.php)</li>
+		<li>Ability to clear session state to websites (sessionDestroy.php)</li>
 	</ul>
 </div>
 
