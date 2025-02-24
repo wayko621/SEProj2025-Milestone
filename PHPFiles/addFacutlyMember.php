@@ -16,7 +16,7 @@ else
      $sql = "Insert into facultymember(FacultyID, FirstName, LastName, Email) VALUES('".$hashPassword."','".$fname."','".$lname."','".$email."')";
         if($con->query($sql) === TRUE)
      {
-        header("refresh:2; url=/SEProj2025-Milestone/addFacultyMember.html");
+        header("refresh:2; url=/SEProj2025-Milestone/addFacultyMember.php");
          echo "Added faculty member";
      }
      else
