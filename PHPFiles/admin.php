@@ -34,8 +34,8 @@
                     <div class="navbar-header">
                         <a class="navbar-brand" href="">Get Trouble Tickets</a>
                         <a class="navbar-brand" href="">Get Resource List</a>
-                        <a class="navbar-brand" href="../addAdmin.php">Add Admin Member</a>
-                        <a class="navbar-brand" href="../addFacultyMember.php">Add Faculty Member</a>
+                        <a class="navbar-brand" href="addAdmin.php">Add Admin Member</a>
+                        <a class="navbar-brand" href="addFaculty.php">Add Faculty Member</a>
                         <a class="navbar-brand" href="">Get Classroom List</a>
                         
                         

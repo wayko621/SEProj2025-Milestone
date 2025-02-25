@@ -8,8 +8,8 @@
     }
     else
     {
-        require 'PHPFiles/loginfo.php';
-        require 'PHPFiles/logout.php';
+        require 'loginfo.php';
+        require 'logout.php';
     }
 ?>
 
@@ -26,11 +26,11 @@
        <nav class="navbar navbar-default">
                 <div class="container-fluid">
                     <div class="navbar-header"> 
-                        <a class="navbar-brand" href="PHPFiles/admin.php">Admin Page</a>
-                        <a class="navbar-brand" href="PHPFiles/TroubleTicket.php">Get Trouble Tickets</a>
-                        <a class="navbar-brand" href="PHPFiles/adminResourceList.php">Get Resource List</a>
-                        <a class="navbar-brand" href="addFacultyMember.php">Add Faculty Member</a>
-                        <a class="navbar-brand" href="PHPFiles/getClassrooms.php">Get Classroom List</a>
+                        <a class="navbar-brand" href="admin.php">Admin Page</a>
+                        <a class="navbar-brand" href="">Get Trouble Tickets</a>
+                        <a class="navbar-brand" href="">Get Resource List</a>
+                        <a class="navbar-brand" href="addFaculty.php">Add Faculty Member</a>
+                        <a class="navbar-brand" href="">Get Classroom List</a>
                     </div>
                 </div>
             </nav>
