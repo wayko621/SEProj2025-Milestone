@@ -16,9 +16,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-     <link rel="stylesheet" type="text/css" href="files/css/bootstrap.min.css">
-    <link rel="icon" type="image/x-icon" href="files/images/favicon.ico">
-    <link rel="stylesheet" type="text/css" href="files/css/forms-style.css"> 
+     <link rel="stylesheet" type="text/css" href="../files/css/bootstrap.min.css">
+    <link rel="icon" type="image/x-icon" href="../files/images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../files/css/forms-style.css"> 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong"> 
   </head>
   <body>
