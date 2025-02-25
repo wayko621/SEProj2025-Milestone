@@ -8,7 +8,7 @@
     }
     else
     {
-         require 'loginfo.php';
+        require 'loginfo.php';
         require 'logout.php';
     }
 ?>
