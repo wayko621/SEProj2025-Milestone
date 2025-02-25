@@ -8,6 +8,7 @@ $email = $_POST['email'];
 require 'dbconfig.php';
 if ($facultyID == null || $email == null || $fname == '' || $lname == '' )
 {
+     header("refresh:2; url=addFaculty.php");
     echo "Admin ID, First Name, Last Name or email was not supplied";
 }
 else
@@ -16,7 +17,7 @@ else
      $sql = "Insert into facultymember(FacultyID, FirstName, LastName, Email) VALUES('".$hashPassword."','".$fname."','".$lname."','".$email."')";
         if($con->query($sql) === TRUE)
      {
-        header("refresh:2; url=/SEProj2025-Milestone/addFacultyMember.php");
+        header("refresh:2; url=addFaculty.php");
          echo "Added faculty member";
      }
      else

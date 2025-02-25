@@ -17,7 +17,7 @@ session_start();
         echo "{";
         echo "$('.logout').on('click',function()";
         echo "{";
-        echo "$(location).prop('href', '../PHPFiles/sessionDestroy.php')";
+        echo "$(location).prop('href', 'sessionDestroy.php')";
         echo "});";
         echo "});";
         echo " </script>";
