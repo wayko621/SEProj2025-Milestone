@@ -4,11 +4,12 @@
     require 'dbconfig.php';
     
     //Passed Variables
-    $user = trim($_POST['adminUN']);
+    //$user = trim($_POST['adminUN']);
+    $email = trim($_POST['adminEmail']);
     $password = trim($_POST['adminPW']);
     $hashPassword = hash('sha256', $password);
    
-$sql ="Select * from adminmember where FirstName ='" .$user. "' and AdminID = '" . $hashPassword . "'";
+$sql ="Select * from adminmember where Email ='" .$email. "' and AdminID = '" . $hashPassword . "'";
 
 $results = $con->query($sql);
 
@@ -17,7 +18,7 @@ if($results->num_rows > 0)
     while($row = $results->fetch_assoc())
     {
         $_SESSION['loggedin'] = true;
-        $_SESSION['adminUN'] = $user;
+        $_SESSION['adminUN'] = $row['FirstName'];
         $_SESSION['TechLevel'] =  $row['TechLevel'];
         $_SESSION['Admin'] = $password;
         $_SESSION['Email'] = $row['Email'];
