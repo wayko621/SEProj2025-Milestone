@@ -19,7 +19,7 @@
 
         if($results->num_rows > 0)
         {
-            //If user name is found an password is correct user is redirected to products page"
+            //If email already exist user is not created"//
             header("refresh:2; url=addAdmin.php");
             echo "User Already Exist";
         }
