@@ -34,7 +34,7 @@
           </div>
       </div>
     </nav>
-    <form action="PHPFiles/addFacultyMember.php" method="POST" class="row g-3 form-top center-margin" >
+    <form action="addFacultyMember.php" method="POST" class="row g-3 form-top center-margin" >
       <div class="form-group">
         <label for="facultyID">FacultyID:</label> <input type="text" name="facultyID" id="facultyID">
       </div>
