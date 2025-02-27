@@ -34,7 +34,7 @@ session_start();
                     </div>
                 </div>
             </nav>
-    <form action="PHPFiles/addAdminUser.php" method="POST" class="row g-3 form-top center-margin" >
+    <form action="addAdminUser.php" method="POST" class="row g-3 form-top center-margin" >
       <div class="form-group">
       <label for="adminID">AdminID:</label> <input type="text" name="adminID" id="adminID">
       </div>
