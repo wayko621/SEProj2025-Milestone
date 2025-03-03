@@ -4,7 +4,7 @@
     require 'dbconfig.php';
     
     //Passed Variables
-    $user = trim($_POST['facUN']);
+    //$user = trim($_POST['facUN']);
     $email = trim($_POST['facEmail']);
     $password = trim($_POST['facPW']);
     $hashPassword = hash('sha256', $password);
