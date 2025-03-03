@@ -22,7 +22,7 @@ session_start();
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong"> 
   </head>
   <body>
-     <div class="container">
+     <div id="wrapper">
        <nav class="navbar navbar-default">
                 <div class="container-fluid">
                     <div class="navbar-header"> 
