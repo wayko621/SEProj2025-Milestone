@@ -1,6 +1,6 @@
-#wrapper
+.wrapper-center
 {
-    margin: 0 auto;
+    margin: 30px auto;
     width: 1024px;
 }
 .form-top
