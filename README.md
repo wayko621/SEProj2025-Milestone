@@ -70,7 +70,8 @@ Overall, our team wishes to directly allow for the feedback of our stakeholders 
 	<ul>
 		<li>jQuery  and Ajax</li>
 		<li>Bootstrap 3</li>
-		<li>
+		<li>Popper.JS</li>
+		<li>FullCalender.IO</li>
 	</ul>
 </div>
 
@@ -85,6 +86,4 @@ Overall, our team wishes to directly allow for the feedback of our stakeholders 
 <a href="https://www.w3schools.com/Sql/"><img src="https://cdn3.iconfinder.com/data/icons/file-extension-11/512/sql-file-extension-format-digital-512.png" style="width: 40px; height: 40px; display:inline-block;"/></a>
 <a href="https://popper.js.org"><img src="https://popper.js.org/static/popper-text-45fb69958c6fc80df98607583c280b4b.svg" style="width: 40px; height: 40px; display:inline-block;"/></a>
 <a href="https://fullcalendar.io"><img src="https://fullcalendar.io/docs/dist/7d1b800c8515be9b4183.png" style="width: 40px; height: 40px; display:inline-block;"/></a>
-
-
 </div>
