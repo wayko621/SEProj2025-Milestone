@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.css"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
-     <script src="../files/js/calendar.global.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
   </head>
@@ -52,10 +52,8 @@
 
     </div>
     <script>
-            document.addEventListener('DOMContentLoaded', function() {
-  var calendarEl = document.getElementById('calendar');
-
-  var calendar = new FullCalendar.Calendar(calendarEl, {
+        $(document).ready(function(){
+            $('#calendar').fullCalendar({
                 eventRender: function(eventObj, $el) {
                  $el.popover({
                 title: eventObj.title,
@@ -68,7 +66,7 @@
    header: {
       left: 'prev,next,today',
       center: 'title',
-      right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek, listMonth'
+      right: 'ddayGridMonth,timeGridWeek,timeGridDay,listWeek, listMonth'
     },
                 events:[
                     <?php
@@ -86,7 +84,7 @@
                 ]
 
             });
-            calendar.render();
+
         });
     </script>
   </body>
