@@ -36,6 +36,7 @@
                         <a class="navbar-brand" href="addAdmin.php">Add Admin Member</a>
                         <a class="navbar-brand" href="addFaculty.php">Add Faculty Member</a>
                         <a class="navbar-brand" href="getClassroomResource.php">Classroom Resource</a>
+                        <a class="navbar-brand" href="viewCalendar.php">View Calendar</a>
                     </div>
                 </div>
             </nav>

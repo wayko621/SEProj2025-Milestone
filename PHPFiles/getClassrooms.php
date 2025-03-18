@@ -37,6 +37,7 @@
                         <a class="navbar-brand" href="adminResourceList.php">Get Resource List</a>
                         <a class="navbar-brand" href="addAdmin.php">Add Admin Member</a>
                         <a class="navbar-brand" href="addFaculty.php">Add Faculty Member</a>
+                        <a class="navbar-brand" href="viewCalendar.php">View Calendar</a>
                     </div>
                 </div>
             </nav>
@@ -70,7 +71,7 @@ if($results->num_rows > 0)
     }
     else
     {
-        header("refresh:2; url=/SEProj2025/adminlogin.html");
+        header("refresh:2; url=/SEProj2025-Milestone/adminlogin.html");
         echo "User not found or password incorrect";
     }
     echo "</tbody>";

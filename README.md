@@ -81,4 +81,5 @@ Overall, our team wishes to directly allow for the feedback of our stakeholders 
 <img src="https://cdn2.iconfinder.com/data/icons/designer-skills/128/code-programming-javascript-software-develop-command-language-512.png" style="width: 40px; height: 40px; display:inline-block;"/>
 <img src="https://cdn0.iconfinder.com/data/icons/long-shadow-web-icons/512/jquery-512.png" style="width: 40px; height: 40px; display:inline-block;"/>
 <img src="https://cdn3.iconfinder.com/data/icons/file-extension-11/512/sql-file-extension-format-digital-512.png" style="width: 40px; height: 40px; display:inline-block;"/>
+<img src="https://popper.js.org/static/popper-text-45fb69958c6fc80df98607583c280b4b.svg" style="width: 40px; height: 40px; display:inline-block;"/>
 </div>
