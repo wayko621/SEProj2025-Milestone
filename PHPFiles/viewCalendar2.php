@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         $('#homecon').html("<div id='messages'></div>");  
                         $('#messages').html("")
                         .hide()  
-                        .fadeIn(5000, function() {
+                        .fadeIn(3000, function() {
                         $('#homecon').removeClass('fa fa-cog fa-spin fz-5x');
                     });  
                         
