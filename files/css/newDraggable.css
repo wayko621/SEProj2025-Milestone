@@ -1,0 +1,124 @@
+body
+{
+background:#707070;
+color:#000;
+}
+.wrapper
+{
+width:1100px;
+margin:0 auto;
+}
+ul.items
+{
+    padding:0;
+    cursor: crosshair;
+}
+
+li
+{
+    list-style:none;
+}
+
+.group1
+{
+float:left;
+-moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+}
+.group2
+{
+    float:left;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+}
+.group3
+{
+    float:left;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+	background:transparent;
+}
+.group4
+{
+float:left;
+-moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+}
+#group1ul
+{
+    margin-left:0;
+}
+
+#group2ul
+{
+margin-left:0;
+margin-top:140px;
+}
+
+#group3ul
+{
+margin-left:0;
+margin-top:260px;
+}
+#group4ul
+{
+margin-left:0;
+margin-top:380px;
+}
+#group5ul
+{
+margin-left:0;
+margin-top:500px;
+}
+.smallimg
+{
+    width:100px;
+    height:100px;
+}
+#computerNames
+{
+position:absolute;
+margin-left:10px;
+margin-top: 100px;
+}
+#pcname
+{
+    float:left;
+    margin-right: 70px;
+    margin-top: -5px;
+    color: burlywood;
+    
+    background-color: #707070;
+    box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.3);
+    border-radius: 4px;
+}
+
+
+.problemarea
+{
+    margin-top:650px;
+    width:1000px;
+}
+.problem
+{
+    width:980px;
+    height:400px;
+    background-color:#CBCBCB;
+    padding:10px;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+	color:black;
+}
+.textarea1
+{
+    font-size:20px;
+}
+textarea
+{
+    resize: none;
+}

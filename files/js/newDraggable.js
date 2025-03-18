@@ -1,5 +1,5 @@
 var now = new Date();
-var month = now.getMonth();
+var month = now.getMonth() + 1;
 var dates = now.getDate();
 var year = now.getYear();
 var hours = now.getHours();

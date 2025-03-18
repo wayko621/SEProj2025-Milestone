@@ -3,8 +3,7 @@
     //Database Connection//
     require 'dbconfig.php';
     
-    //Passed Variables
-    //$user = trim($_POST['facUN']);
+     //Passed Variables
     $email = trim($_POST['facEmail']);
     $password = trim($_POST['facPW']);
     $hashPassword = hash('sha256', $password);
@@ -19,14 +18,14 @@ if($results->num_rows > 0)
     {
         header("refresh:2; url=faculty.php");
         echo "Connected successfully<br />User login successful redirecting to faculty page";
-        $_SESSION['loggedin'] = true;
+        $_SESSION['loggedin'] = time();
         $_SESSION['facUN'] = $row['FirstName'];
         $_SESSION['facEmail'] = $row['Email'];
     }
     }
     else
     {
-        header("refresh:2; url=/SEProj2025-Milestone/");
+        header("refresh:2; url=/SEProj2025/");
         echo "User not found or password incorrect";
     }
     $results->free();

@@ -1,9 +1,9 @@
 <?php
-   
 
-    if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true)
+
+    if(!isset($_SESSION['loggedin']))
     {
-        header("location:/SEProj2025-Milestone/");
+        header("location:/SEProj2025/");
 
     }
     else

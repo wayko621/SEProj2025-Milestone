@@ -4,7 +4,6 @@
     require 'dbconfig.php';
     
     //Passed Variables
-    //$user = trim($_POST['adminUN']);
     $email = trim($_POST['adminEmail']);
     $password = trim($_POST['adminPW']);
     $hashPassword = hash('sha256', $password);
@@ -17,7 +16,7 @@ if($results->num_rows > 0)
 {
     while($row = $results->fetch_assoc())
     {
-        $_SESSION['loggedin'] = true;
+        $_SESSION['loggedin'] = time();
         $_SESSION['adminUN'] = $row['FirstName'];
         $_SESSION['TechLevel'] =  $row['TechLevel'];
         $_SESSION['Admin'] = $password;
@@ -28,7 +27,7 @@ if($results->num_rows > 0)
     }
     else
     {
-        header("refresh:2; url=/SEProj2025-Milestone/");
+        header("refresh:2; url=/SEProj2025/");
         echo "User not found or password incorrect";
     }
     $results->free();

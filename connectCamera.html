@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" type="text/css" href="files/css/bootstrap4/bootstrap.min.css">
+        <link rel="stylesheet" href="files/css/bootstrap.min.css">
+        <link rel="stylesheet" href="files/css/camera.css">
+        <title>Access Camera</title>
+        
+    </head>
+    <body>
+        <div class="container">
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+                        <div class="navbar-header" style="margin-left:-415px;"> 
+                            <a class="navbar-brand" href="PHPFiles/faculty.php">Faculty Page</a>
+                            <a class="navbar-brand" href="PHPFiles/classroom.php">Create Trouble Tickets</a>
+                            <a class="navbar-brand" href="PHPFiles/scheduleClassroom.">Book a ClassRoom</a>  
+                        </div>
+                    </div>
+                </nav>
+        </div>
+        <div class="display-cover">
+            <video autoplay></video>
+            <canvas class="d-none"></canvas>
+
+            <div class="video-options">
+                <select name="" id="" class="custom-select">
+                    
+                </select>
+            </div>
+
+            <img class="screenshot-image d-none" alt="">
+
+            <div class="controls">
+                <button class="btn btn-danger play" title="Play"><i data-feather="play-circle"></i></button>
+                <button class="btn btn-info pause d-none" title="Pause"><i data-feather="pause"></i></button>
+            </div>
+        </div>
+
+        <script src="https://unpkg.com/feather-icons"></script>
+        <script src="files/js/getCamera.js"></script>
+    </body>
+</html>

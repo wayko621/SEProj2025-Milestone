@@ -1,9 +1,9 @@
 <?php
-session_start();
-    
-    if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true || !isset($_SESSION['adminUN']))
+    session_start();
+
+    if(!isset($_SESSION['loggedin'])  || !isset($_SESSION['adminUN']))
     {
-        header("location:/SEProj2025-Milestone/");
+        header("location:/SEProj2025/");
 
     }
     else
@@ -22,34 +22,33 @@ session_start();
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong"> 
   </head>
   <body>
-     <div class="wrapper-center">
+     <div class="container">
        <nav class="navbar navbar-default">
                 <div class="container-fluid">
                     <div class="navbar-header"> 
                         <a class="navbar-brand" href="admin.php">Admin Page</a>
-                        <a class="navbar-brand" href="">Get Trouble Tickets</a>
-                        <a class="navbar-brand" href="">Get Resource List</a>
+                        <a class="navbar-brand" href="TroubleTicket.php">Get Trouble Tickets</a>
                         <a class="navbar-brand" href="addFaculty.php">Add Faculty Member</a>
-                        <a class="navbar-brand" href="">Get Classroom List</a>
+                        <a class="navbar-brand" href="getClassroomResource.php">Classroom Resource</a>
                     </div>
                 </div>
             </nav>
     <form action="addAdminUser.php" method="POST" class="row g-3 form-top center-margin" >
       <div class="form-group">
-      <label for="adminID">AdminID:</label> <input type="text" name="adminID" id="adminID">
-      </div>
-      <div class="form-group">
-      <label for="fname">First Name:</label> <input type="text" name="fname" id="fname" ></div>
-      <div class="form-group">
-      <label for="lname">Last Name:</label> <input type="text" name="lname" id="lname" ></div>
-      <div class="form-group">
-      <label for="email">Email:</label> <input type="text" name="email" id="email" ></div>
-      <div class="form-group">
-      <label for="tlevel">Tech Level:</label><input type="text" name="tlevel" id="tlevel" >
+          <label for="adminID" class="IDlabel">AdminID:</label> 
+          <input type="text" name="adminID" id="adminID">
+          <label for="fname" class="fnlabel">First Name:</label>
+          <input type="text" name="fname" id="fname" >
+          <label for="lname" class="lnlabel">Last Name:</label> 
+          <input type="text" name="lname" id="lname" >
+          <label for="email" class="emaillabel2">Email:</label> 
+          <input type="text" name="email" id="email" >
+          <label for="tlevel" class="tllabel">Tech Level:</label>
+          <input type="text" name="tlevel" id="tlevel" >
+          <div>          
+            <button class="btn btn-primary btn-admin" id="sendrequest">Add Admin</button>
+          </div>
       </div> 
-      <div class="form-group">          
-      <button class="btn btn-primary" id="sendrequest">Add Admin</button>
-      </div>
     </form>
   </div>
   </body>
