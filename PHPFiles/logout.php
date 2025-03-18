@@ -3,7 +3,7 @@
 
     if(!isset($_SESSION['loggedin']))
     {
-        header("location:/SEProj2025/");
+        header("location:/SEProj2025-Milestone/");
 
     }
     else

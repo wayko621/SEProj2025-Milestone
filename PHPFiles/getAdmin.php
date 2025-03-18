@@ -27,7 +27,7 @@ if($results->num_rows > 0)
     }
     else
     {
-        header("refresh:2; url=/SEProj2025/");
+        header("refresh:2; url=/SEProj2025-Milestone/");
         echo "User not found or password incorrect";
     }
     $results->free();

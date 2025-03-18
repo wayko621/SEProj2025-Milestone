@@ -2,7 +2,7 @@
     session_start();
     if(!isset($_SESSION['loggedin']) || !isset($_SESSION['facUN']))
     {
-        header("location:/SEProj2025/");    
+        header("location:/SEProj2025-Milestone/");    
     }
 ?>
 <!DOCTYPE html>
