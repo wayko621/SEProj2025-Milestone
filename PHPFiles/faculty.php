@@ -62,6 +62,8 @@
 
                 while($row2 = $results2->fetch_assoc())
                 {
+                    if($row2['AssignedTech'] != 0)
+                {
                     $hashPassword = hash('sha256', $row2['AssignedTech']);
                     $sql = "Select * from adminmember where AdminID = '" .$hashPassword."'";
                     $results = $con->query($sql);
@@ -101,8 +103,46 @@
                     echo " <div id='homecon' style='display:none;'><img src='../files/images/gear2.gif' /></div>";
                     echo "</td>";
                     echo "</tr>";
-                } 
-                             
+                }
+                else
+                {
+                  echo "<tr class='tickets'>";
+                    echo "<td class='ticketID'>";
+                    echo $row2['incidentID'];
+                    echo "</td>";
+                    echo "<td>";
+                    echo $row2['facultyMember'];
+                    echo "</td>";
+                    echo "<td>";
+                    echo $row2['facEmail'];
+                    echo "</td>";
+                    echo "<td>";
+                    echo $row2['TimeDate'];
+                    echo "</td>";
+                    echo "<td>";
+                    echo $row2['classRoomID'];
+                    echo "</td>";
+                    echo "<td>";
+                    echo $row2['deviceName'];
+                    echo "</td>";
+                    echo "<td class='TDProblem'>";
+                    echo $row2['Problem'];
+                    echo "</td>";
+                    echo "<td>";
+                    echo  "Tech Not Assigned";
+                    echo "</td>";
+                    echo "<td class='ticketStatus'>";
+                    echo  $row2['Status'];
+                    echo "</td>";
+                    echo "<td>";
+                    echo "<button class='btn btn-primary btn-sm pull-left updateTicket' id='" .$row2['incidentID']."'>Update Ticket</button>";
+                    echo "</td>";
+                    echo "<td style='display:none;'>";
+                    echo " <div id='homecon' style='display:none;'><img src='../files/images/gear2.gif' /></div>";
+                    echo "</td>";
+                    echo "</tr>";  
+                }
+                }                             
                 echo "</tbody>";
                 echo "</table>";
                 
@@ -223,7 +263,6 @@
                     error: function(response) 
                     { 
                         
-                            alert(response);
                        
                     }
                 });

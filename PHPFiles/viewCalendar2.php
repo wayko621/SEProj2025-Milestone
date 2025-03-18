@@ -25,7 +25,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <script src="../files/js/calendar.global.js"></script>
-
+    <style>
+            .container
+            {
+                margin-top: 35px;
+            }
+        </style>
   </head>
   <body>
      <div class="container">
@@ -40,8 +45,8 @@
                     </div>
                 </div>
             </nav>
+            <div id='homecon' style='display:none;'></div>
             <div id="calendar">
-
             </div>
             <?php
                 require 'dbconfig.php';
@@ -57,6 +62,21 @@ document.addEventListener('DOMContentLoaded', function() {
   var calendarEl = document.getElementById('calendar');
 
   var calendar = new FullCalendar.Calendar(calendarEl, {
+    eventMouseEnter: function (info) {
+         $("#homecon").show();
+         $('#homecon').addClass('fa fa-cog fa-spin fz-5x');
+                        $('#homecon').html("<div id='messages'></div>");  
+                        $('#messages').html("")
+                        .hide()  
+                        .fadeIn(5000, function() {
+                        $('#homecon').removeClass('fa fa-cog fa-spin fz-5x');
+                    });  
+                        
+                       $('#messages').html('Classroom: ' + info.event.extendedProps.description + '<br/> Faculty Member:' + info.event.title)
+                        .fadeOut(2000, function() {
+                        $('#messages').html("");
+                    }); 
+},
     headerToolbar: {
       left: 'prev,next today',
       center: 'title',
