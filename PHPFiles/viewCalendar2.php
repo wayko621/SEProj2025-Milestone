@@ -23,8 +23,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.css"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
-     <script src="../files/js/calendar.global.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="../files/js/calendar.global.js"></script>
 
   </head>
   <body>
@@ -52,25 +52,17 @@
 
     </div>
     <script>
-            document.addEventListener('DOMContentLoaded', function() {
+       
+document.addEventListener('DOMContentLoaded', function() {
   var calendarEl = document.getElementById('calendar');
 
   var calendar = new FullCalendar.Calendar(calendarEl, {
-                eventRender: function(eventObj, $el) {
-                 $el.popover({
-                title: eventObj.title,
-                content: eventObj.description,
-                trigger: 'hover',
-                placement: 'top',
-                container: 'body'
-             });
-                },
-   header: {
-      left: 'prev,next,today',
+    headerToolbar: {
+      left: 'prev,next today',
       center: 'title',
-      right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek, listMonth'
+      right: 'dayGridMonth,timeGridWeek,timeGridDay'
     },
-                events:[
+     events:[
                     <?php
                     while($row2 = $results->fetch_assoc())
                         {?>
@@ -84,10 +76,12 @@
                     },
                 <?php } ?>
                 ]
+  });
 
-            });
-            calendar.render();
-        });
+  calendar.render();
+});
+
+    
     </script>
   </body>
 </html>
