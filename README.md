@@ -77,13 +77,13 @@ Overall, our team wishes to directly allow for the feedback of our stakeholders 
 
 <div>
 <h2>Programming Languages/Tools Used</h2>
-<img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/badge-html-5-512.png" style="width: 40px; height: 40px; display:inline-block;"/>
-<img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/badge-css-3-512.png" style="width: 40px; height: 40px; display:inline-block;"/>
-<img src="https://cdn2.iconfinder.com/data/icons/designer-skills/128/code-programming-javascript-software-develop-command-language-512.png" style="width: 40px; height: 40px; display:inline-block;"/>
-<img src="https://cdn0.iconfinder.com/data/icons/long-shadow-web-icons/512/jquery-512.png" style="width: 40px; height: 40px; display:inline-block;"/>
+<a href="https://web.dev/learn/html"><img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/badge-html-5-512.png" style="width: 40px; height: 40px; display:inline-block;"/></a>
+<a href="https://css-tricks.com/"><img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/badge-css-3-512.png" style="width: 40px; height: 40px; display:inline-block;"/></a>
+<a href="https://www.javascript.com/"><img src="https://cdn2.iconfinder.com/data/icons/designer-skills/128/code-programming-javascript-software-develop-command-language-512.png" style="width: 40px; height: 40px; display:inline-block;"/></a>
+<a href="https://jquery.com"><img src="https://cdn0.iconfinder.com/data/icons/long-shadow-web-icons/512/jquery-512.png" style="width: 40px; height: 40px; display:inline-block;"/></a>
 <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg" style="width: 40px; height: 40px; display:inline-block;"/>
-<img src="https://cdn3.iconfinder.com/data/icons/file-extension-11/512/sql-file-extension-format-digital-512.png" style="width: 40px; height: 40px; display:inline-block;"/>
-<img src="https://popper.js.org/static/popper-text-45fb69958c6fc80df98607583c280b4b.svg" style="width: 40px; height: 40px; display:inline-block;"/>
+<a href="https://www.w3schools.com/Sql/"><img src="https://cdn3.iconfinder.com/data/icons/file-extension-11/512/sql-file-extension-format-digital-512.png" style="width: 40px; height: 40px; display:inline-block;"/></a>
+<a href="https://popper.js.org"><img src="https://popper.js.org/static/popper-text-45fb69958c6fc80df98607583c280b4b.svg" style="width: 40px; height: 40px; display:inline-block;"/></a>
 <a href="https://fullcalendar.io"><img src="https://fullcalendar.io/docs/dist/7d1b800c8515be9b4183.png" style="width: 40px; height: 40px; display:inline-block;"/></a>
 
 
