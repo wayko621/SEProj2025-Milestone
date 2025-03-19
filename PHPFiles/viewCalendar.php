@@ -23,8 +23,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.css"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="../files/js/calendar.global.js"></script>
     <style>
             .container
             {
@@ -45,8 +45,8 @@
                     </div>
                 </div>
             </nav>
+            <div id='homecon' style='display:none;'></div>
             <div id="calendar">
-
             </div>
             <?php
                 require 'dbconfig.php';
@@ -57,23 +57,32 @@
 
     </div>
     <script>
-        $(document).ready(function(){
-            $('#calendar').fullCalendar({
-                eventRender: function(eventObj, $el) {
-                 $el.popover({
-                title: eventObj.title,
-                content: eventObj.description,
-                trigger: 'hover',
-                placement: 'top',
-                container: 'body'
-             });
-                },
-   header: {
-      left: 'prev,next,today',
+       
+document.addEventListener('DOMContentLoaded', function() {
+  var calendarEl = document.getElementById('calendar');
+
+  var calendar = new FullCalendar.Calendar(calendarEl, {
+    eventMouseEnter: function (info) {
+         $("#homecon").show();
+         $('#homecon').addClass('fa fa-cog fa-spin fz-5x');
+                        $('#homecon').html("<div id='messages'></div>");  
+                        $('#messages').html("")
+                        .hide()  
+                        .fadeIn(3000, function() {
+                        $('#homecon').removeClass('fa fa-cog fa-spin fz-5x');
+                    });  
+                        
+                       $('#messages').html('Classroom: ' + info.event.extendedProps.description + '<br/> Faculty Member:' + info.event.title)
+                        .fadeOut(2000, function() {
+                        $('#messages').html("");
+                    }); 
+},
+    headerToolbar: {
+      left: 'prev,next today',
       center: 'title',
-      right: 'ddayGridMonth,timeGridWeek,timeGridDay,listWeek, listMonth'
+      right: 'dayGridMonth,timeGridWeek,timeGridDay'
     },
-                events:[
+     events:[
                     <?php
                     while($row2 = $results->fetch_assoc())
                         {?>
@@ -87,10 +96,12 @@
                     },
                 <?php } ?>
                 ]
+  });
 
-            });
+  calendar.render();
+});
 
-        });
+    
     </script>
   </body>
 </html>
