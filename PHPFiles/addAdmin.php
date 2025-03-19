@@ -43,15 +43,15 @@
     <form action="addAdminUser.php" method="POST" class="row g-3 form-top center-margin" >
       <div class="form-group">
           <label for="adminID" class="IDlabel">AdminID:</label> 
-          <input type="text" name="adminID" id="adminID">
+          <input type="text" name="adminID" id="adminID" autocomplete="off" required =""/>
           <label for="fname" class="fnlabel">First Name:</label>
-          <input type="text" name="fname" id="fname" >
+          <input type="text" name="fname" id="fname" autocomplete="off" required =""/>
           <label for="lname" class="lnlabel">Last Name:</label> 
-          <input type="text" name="lname" id="lname" >
+          <input type="text" name="lname" id="lname" autocomplete="off" required =""/>
           <label for="email" class="emaillabel2">Email:</label> 
-          <input type="text" name="email" id="email" >
+          <input type="email" name="email" id="email" autocomplete="off" required =""/>
           <label for="tlevel" class="tllabel">Tech Level:</label>
-          <input type="text" name="tlevel" id="tlevel" >
+          <input type="text" name="tlevel" id="tlevel" autocomplete="off" required =""/>
           <div>          
             <button class="btn btn-primary btn-admin" id="sendrequest">Add Admin</button>
           </div>
