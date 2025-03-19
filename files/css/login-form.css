@@ -15,6 +15,22 @@ body
 
 }
 
+.image-top
+{
+    width:120px;
+    height:120px;
+    border: 10px solid aliceblue;
+    border-radius: 80px;
+    position: relative;
+    left: 180px;
+}
+
+.image-top img
+{
+    width: 120px;
+    height: 120px;
+
+}
 .box-1
 {
     top: -452px;
