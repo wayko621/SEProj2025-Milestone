@@ -3,34 +3,31 @@
     <head>
         <link rel="icon" type="image/x-icon" href="files/images/favicon.ico">
         <link rel="stylesheet" type="text/css" href="files/css/forms-style.css"> 
+        <link rel="stylesheet" type="text/css" href="files/css/login-form.css"> 
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
     </head>
     <body>
         <div class="wrapper">
-            <figure aria-hidden="true">
-    <div class="person-body"></div>
-    <div class="neck skin"></div>
-    <div class="head skin">
-      <div class="eyes"></div>
-      <div class="mouth"></div>
-    </div>
-    <div class="hair"></div>
-    <div class="ears"></div>
-    <div class="shirt-1"></div>
-    <div class="shirt-2"></div>
-  </figure>
-            <form action="PHPFiles/getAdmin.php" method="POST" class="row g-3 form-top" autocomplete="off">
+            <form class="form-top" action="PHPFiles/getAdmin.php" method="POST" class="row g-3 form-top" autocomplete="off">
                 <div class="form-group">
                     <h2>Admin Member Login</h2>
                     <label for="adminEmail" id="email" class="emaillabel">Email:</label> 
-                    <input type="text" name="adminEmail" id="adminEmail" autocomplete="off"/>
+                    <input type="email" name="adminEmail" id="adminEmail" autocomplete="off" required =""/>
                     <label for="adminPW" id="password" class="pwlabel">Password:</label> 
-                    <input type="password" name="adminPW" id="adminPW" autocomplete="off"/>
+                    <input type="password" name="adminPW" id="adminPW" autocomplete="off" required =""/>
                     <div>
                         <button class="btn btn-primary" id="sendrequest">Login</button>
                     </div>
                 </div> 
             </form>
+            <div class="box">
+                <div class="boxes box-1"></div>
+                <div class="boxes box-2"></div>
+                <div class="boxes box-3"></div>
+                <div class="boxes box-4"></div>
+                <div class="boxes box-5"></div>
+                <div class="boxes box-6"></div>
+            </div>
         </div>
     </body>
 </html>

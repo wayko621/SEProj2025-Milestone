@@ -43,13 +43,13 @@
     <form action="addFacultyMember.php" method="POST" class="row g-3 form-top center-margin" >
       <div class="form-group">
         <label for="facultyID" class="IDlabel">FacultyID:</label> 
-        <input type="text" name="facultyID" id="facultyID">
+        <input type="text" name="facultyID" id="facultyID" autocomplete="off" required =""/>
         <label for="fname" class="fnlabel">First Name:</label> 
-        <input type="text" name="fname" id="fname" >
+        <input type="text" name="fname" id="fname" autocomplete="off" required =""/>
         <label for="lname" class="lnlabel">Last Name:</label> 
-        <input type="text" name="lname" id="lname" >
+        <input type="text" name="lname" id="lname" autocomplete="off" required =""/>
         <label for="email" class="emaillabel2">Email:</label> 
-        <input type="text" name="email" id="email" >
+        <input type="email" name="email" id="email" autocomplete="off" required =""/>
         <div>
           <button class="btn btn-primary btn-faculty" id="sendrequest">Add Faculty Member</button>
         </div>

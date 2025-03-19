@@ -3,6 +3,7 @@
     <head>
         <link rel="icon" type="image/x-icon" href="files/images/favicon.ico">
         <link rel="stylesheet" type="text/css" href="files/css/forms-style.css"> 
+        <link rel="stylesheet" type="text/css" href="files/css/login-form.css"> 
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
     </head>
     <body>   
@@ -12,9 +13,9 @@
                  <h2>Faculty Member Login</h2>
                  <div class="form-group">
                     <label for="facEmail" id="email" class="emaillabel">Email:</label> 
-                    <input type="text" name="facEmail" id="facEmail" autocomplete="off" />
+                    <input type="email" name="facEmail" id="facEmail" autocomplete="off" required =""/>
                     <label for="facPW" id="password" class="pwlabel">Password:</label> 
-                    <input type="password" name="facPW" id="facPW" autocomplete="off"/>
+                    <input type="password" name="facPW" id="facPW" autocomplete="off" required =""/>
                     <div>
                         <button class="btn btn-primary" id="sendrequest">Login</button>
                     </div>
