@@ -1,0 +1,71 @@
+h2
+{
+    text-align: center;
+    display: block;
+    font-family: "Trirong", serif; 
+    font-weight: 400;
+}
+
+label
+{
+    display: block;
+    font-family: "Trirong", serif;
+    font-weight: 300;
+    color: #333;   
+    margin-top: 8px;
+}
+
+input[type="text"], input[type="email"],input[type="password"]
+{
+   box-shadow: 10px 10px 20px -8px rgba(0, 0, 0, .8);
+}
+
+input[type="text"]:focus
+{
+  background: rgba(255,0,0,.3);
+  box-shadow: 10px 10px 15px -8px rgba(255, 0, 0, 1);
+}
+
+input[type="email"]:focus
+{
+    
+   background: rgba(255,0,0,.3); 
+   box-shadow: 10px 10px 15px -8px rgba(255, 0, 0, 1);
+}
+
+input[type="password"]:focus
+{  
+    background: rgba(255,0,0,.3);
+     box-shadow: 10px 10px 15px -8px rgba(255, 0, 0, 1);
+}
+
+input
+{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    font-size: 16px;
+    margin-left: -10px;  
+}
+
+
+.btn
+{
+    position:relative;
+    margin:12px auto;
+    font-family: "Trirong", serif;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    height: 60px;
+    background: #AA0000;
+    border: 1px;
+    border-radius: 25px;
+    padding: 15px;  
+    font-size: 20px;
+}
+
+.btn:hover
+{
+
+   opacity: 0.7; 
+}
