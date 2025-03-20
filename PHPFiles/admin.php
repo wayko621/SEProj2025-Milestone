@@ -33,8 +33,7 @@
                 <div class="container-fluid">
                     <div class="navbar-header"> 
                         <a class="navbar-brand" href="TroubleTicket.php">Get Trouble Tickets</a>
-                        <a class="navbar-brand" href="addAdmin.php">Add Admin Member</a>
-                        <a class="navbar-brand" href="addFaculty.php">Add Faculty Member</a>
+                        <a class="navbar-brand" href="addAdminFaculty.php">Add New Admin/Faculty Member</a>
                         <a class="navbar-brand" href="getClassroomResource.php">Classroom Resource</a>
                         <a class="navbar-brand" href="viewCalendar.php">View Calendar</a>
                     </div>
