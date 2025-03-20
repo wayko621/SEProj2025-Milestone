@@ -28,8 +28,8 @@ final class getAdminTest extends TestCase
 
         // Verify if user exist
         $this->assertNotNull($adminuser, 'User should not be null');  // Ensure the user is found
-        $this->assertEquals('Jose', $adminuser['FirstName'], 'Firstname does not match');  
-        $this->assertEquals("ortizj41@montclair.edu", $adminuser['Email'], 'Email does not match');
+        $this->assertEquals('Jose', $adminuser['FirstName'], 'Firstname does not match');  // Ensures user info (first name) match with the one in DB
+        $this->assertEquals("ortizj41@montclair.edu", $adminuser['Email'], 'Email does not match'); // Ensures email matches with registered email adress in DB
     }
 
     protected function tearDown(): void
