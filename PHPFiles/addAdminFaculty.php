@@ -15,7 +15,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" type="text/css" href="../files/css/bootstrap.min.css">
     <link rel="icon" type="image/x-icon" href="../files/images/favicon.ico">
     <link rel="stylesheet" type="text/css" href="../files/css/main-form-style.css">
     <link rel="stylesheet" type="text/css" href="../files/css/forms-style2.css"> 
@@ -23,14 +22,14 @@
   </head>
   <body>
     <nav class="main-nav">
-      <div class="">
+      
           <div class="navbar-header"> 
               <a class="navbar-brand" href="admin.php">Admin Page</a>
               <a class="navbar-brand" href="TroubleTicket.php">Get Trouble Tickets</a>
               <a class="navbar-brand" href="getClassroomResource.php">Classroom Resource</a>
               <a class="navbar-brand" href="viewCalendar.php">View Calendar</a>
           </div>
-      </div>
+      
     </nav>
     <div class="card">
       <input type="checkbox" id="switch" aria-hidden="true" name=""/>
