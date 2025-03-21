@@ -49,10 +49,10 @@
                 <label for="tlevel" class="tllabel">Tech Level:</label>
                 <input type="text" name="tlevel" id="tlevel" autocomplete="off" required =""/>
                 <div class="addButton">          
-                  <button class="btn btn-primary btn-admin" id="sendrequest">Add Admin</button>
+                  <button class="btn" id="sendrequest">Add Admin</button>
                 </div>
                 <div class="switchback">
-                  <label for="switch" aria-hidden="true">Switch to Faculty Member</label>
+                  <label for="switch" aria-hidden="true" class="switchspan"><span>Switch to Faculty Member</span></label>
                 </div>
               </form>
             </div>
@@ -69,11 +69,11 @@
                 <label for="email" class="emaillabel2">Email:</label> 
                 <input type="email" name="email" id="email" autocomplete="off" required =""/>
                 <div class="addButton">
-                  <button class="btn btn-primary btn-faculty" id="sendrequest">Add Faculty Member</button>
+                  <button class="btn" id="sendrequest">Add Faculty Member</button>
                 </div>
                 <br/>
                 <div class="switchback">
-                  <label for="switch" aria-hidden="true">Switch to Admin Member</label>
+                  <label for="switch" aria-hidden="true" class="switchspan"><span>Switch to Admin Member</span></label>
                 </div>
               </form>
             </div>
