@@ -80,6 +80,18 @@ if($results->num_rows > 0)
     $con->close();
 ?>
 
-  </script>  
+  </script>
+   <script>
+            setInterval(function(){ auto_logout() }, 1200000);
+            function auto_logout()
+            {
+            //this function will redirect the user to the session expired page and redirect back to main page
+            if(confirm("Your session has expired"))
+            {
+                window.location="sessionExpired.php";
+            }
+ 
+            }
+    </script>   
     </body>
 </html>
