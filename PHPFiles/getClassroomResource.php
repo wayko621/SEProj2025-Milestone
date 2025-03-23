@@ -115,7 +115,7 @@
                 echo "</table>";
                 
                 $results3->free();
-                $results2->free();
+                //$results2->free();
                 $con->close(); 
             ?>
             </div>
