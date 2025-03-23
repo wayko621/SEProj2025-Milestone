@@ -34,15 +34,15 @@ display: none;
 
 .card
 {
-	width: 350px;
+	width: 380px;
 	height: 600px;
 	perspective: 1500px;
-	margin: 0 auto;
+	margin: 20px auto 0 auto;
 }
 
 .content
 {
-	width: 380px;
+	
 	height: 650px;
 	transform-style: preserve-3d;
 	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
@@ -104,15 +104,14 @@ transform: rotateY(180deg);
 	position: relative;
 	min-height: 50px;
 	margin-bottom:20px;
-	margin-top:50px;
+	margin:0 auto;
 	display:flex;
-	
+	width: 661px;
 	
 }
 .navbar-header
 {
-	width:900px;
-	margin: 0 auto;
+	
 	background: #f8f8f8;
 	border: 1px solid #e8e8e8;
 	box-sizing: border-box;
