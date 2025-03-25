@@ -58,11 +58,24 @@ h2
     margin-left: -60px;
 }
 
-
-
 .center-margin
 {
     width: 600px; 
     margin:0 auto;
 }
 
+.addButton
+{
+    position: relative;
+    top: -210px;
+    left: 680px;
+}
+
+.newInputBox
+{
+    
+display: inherit;
+position: relative;
+left: 148px;
+margin-top: 5px;
+}

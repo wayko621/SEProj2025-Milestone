@@ -38,27 +38,59 @@
                         <a class="navbar-brand" href="addFaculty.php">Add Faculty Member</a>
                         <a class="navbar-brand" href="getClassroomResource.php">Classroom Resource</a>
                         <a class="navbar-brand" href="viewCalendar.php">View Calendar</a>
-                        <a class="navbar-brand" href="addResources.php">Add Resources</a>
                     </div>
                 </div>
             </nav>
-    <form action="addAdminUser.php" method="POST" class="row g-3 form-top center-margin" >
-      <div class="form-group">
-          <label for="adminID" class="IDlabel">AdminID:</label> 
-          <input type="text" name="adminID" id="adminID" autocomplete="off" required =""/>
-          <label for="fname" class="fnlabel">First Name:</label>
-          <input type="text" name="fname" id="fname" autocomplete="off" required =""/>
-          <label for="lname" class="lnlabel">Last Name:</label> 
-          <input type="text" name="lname" id="lname" autocomplete="off" required =""/>
-          <label for="email" class="emaillabel2">Email:</label> 
-          <input type="email" name="email" id="email" autocomplete="off" required =""/>
-          <label for="tlevel" class="tllabel">Tech Level:</label>
-          <input type="text" name="tlevel" id="tlevel" autocomplete="off" required =""/>
+    <form class="row g-3 form-top center-margin" id="form">
+      <div class="form-group" > 
+          <label for="resourceName" class="resourceName">Resource Name:</label>
+          <input type="text" name="resourceName" id="resourceName" autocomplete="off" required =""/>
+
+          <div id="newInput"></div>
           <div>          
-            <button class="btn btn-primary btn-admin" id="sendrequest">Add Admin</button>
+            <button class="btn btn-primary btn-admin" id="sendrequest">Add Resource</button>
           </div>
       </div> 
     </form>
+    <div class="addButton">
+            <button class="btn addInputBox">+</button>
+    </div>
   </div>
+   
+    <script>
+       
+        $(".addInputBox").click(function(){
+        
+        var type = "input";
+        
+        var input = document.createElement(type);
+        input.type = "text";
+        input.className = "addResource newInputBox"; // set the CSS class
+        input.name = "addResource";
+        document.getElementById('newInput').appendChild(input); // put it into the DOM
+    });
+
+        $("#sendrequest").click(function(){
+          resourceList = $('.addResource').map(function() 
+          {
+            return $(this).val();
+          }).get();
+
+           allResource = resourceList;
+           resourceArray = new Array();
+
+         for (i in allResource)
+          {
+            if (allResource[i])
+                resourceArray.push(allResource[i]);
+          }
+        $.ajax({
+             type:"POST",
+             url: "addResourceItem.php", 
+             data: {resourceName: resourceName, resourceGroup: resourceArray}
+                });
+         
+            });
+</script>
   </body>
 </html>
