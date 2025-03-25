@@ -84,11 +84,10 @@
             if (allResource[i])
                 resourceArray.push(allResource[i]);
           }
-        $.ajax({
-             type:"POST",
-             url: "addResourceItem.php", 
-             data: {resourceName: resourceName, resourceGroup: resourceArray}
-                });
+       for(j=0; j< resourceArray.length; j++)
+       {
+            alert(j);
+       }
          
             });
 </script>
