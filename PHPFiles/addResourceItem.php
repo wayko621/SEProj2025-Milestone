@@ -1,51 +1,87 @@
 <?php
-session_start();
+    require 'dbconfig.php';
+    $resourceItemName = $_POST['resourceItemName'];
+    $resourceGroup = $_POST['addResource'];
 
-    if(!isset($_SESSION['loggedin'])  || !isset($_SESSION['adminUN']))
+    if(!isset($resourceGroup) || $resourceGroup == "[]")
     {
-        header("location:/SEProj2025-Milestone/");
+        $sql = "Select * from resourcelist where resourceName ='" . $resourceItemName . "'";
+        $results = $con->query($sql);
+
+        if($results->num_rows > 0)
+        {
+            //If email already exist user is not created"//
+            header("refresh:2; url=addResources.php");
+            echo "Resource By That Name " . $resourceItemName . " Already Exist";
+        }
+        else
+        {  
+            $sql1 = "Insert into resourcelist(resourceName) VALUES('".$resourceItemName."')";
+            if($con->query($sql1) === TRUE)
+            {
+                header("refresh:2; url=addResources.php");
+                echo "Added new resource";
+            }
+            else
+            {
+                header("refresh:2; url=addResources.php");
+                echo "Error happened";
+            }
+        }
     }
     else
     {
 
-    $resourceName = $_POST['resourceName'];
+        $sql2 = "Select * from resourcelist where resourceName ='" . $resourceItemName . "'";
+        $results2 = $con->query($sql2);
 
-     require 'dbconfig.php';
-        if ($resourceName == null )
+        if($results2->num_rows > 0)
         {
-            header("refresh:2; url=addResource.php");
-            echo "Admin ID, First Name, Last Name or email was not supplied";
+            //If email already exist user is not created"//
+            header("refresh:2; url=addResources.php");
+            echo "Resource By That Name ". $resourceItemName." Already Exist \n";
         }
         else
-        {
-            $sql1 = "Select * from resourcelist where resourceName ='" . $resourceName . "'";
-            $results = $con->query($sql1);
-
-            if($results->num_rows > 0)
+        {  
+            $sql3 = "Insert into resourcelist(resourceName) VALUES('".$resourceItemName."')";
+            if($con->query($sql3) === TRUE)
             {
-                //If email already exist user is not created"//
-                header("refresh:2; url=addResource.php");
-                echo "User Already Exist";
+                header("refresh:2; url=addResources.php");
+                echo "Added new resource";
             }
             else
-            {   
-                $sql = "Insert into resourcelist(resourceName) VALUES('".$resourceName."')";
-                if($con->query($sql) === TRUE)
+            {
+                header("refresh:2; url=addResources.php");
+                echo "Error happened";
+            }
+        }
+        foreach($resourceGroup as $key => $value)
+        {
+            $sql4 = "Select * from resourcelist where resourceName ='" . $resourceGroup[$key] . "'";
+            $results4 = $con->query($sql4);
+
+            if($results4->num_rows > 0)
+            {
+                //If email already exist user is not created"//
+                header("refresh:2; url=addResources.php");
+                echo "Resource By The Name " . $resourceGroup[$key] ." Already Exist";
+            }
+            else 
+            {
+                 $sql5 = "Insert into resourcelist(resourceName) VALUES('".$resourceGroup[$key]."')";
+                if($con->query($sql5) === TRUE)
                 {
-                    header("refresh:2; url=addResource.php");
-                    echo "Added admin user";
+                    header("refresh:2; url=addResources.php");
+                    echo "Added new resource";
                 }
                 else
                 {
-                    header("refresh:2; url=addResource.php");
-                    echo "Error: " . $sql . "<br>" . $con->error;
+                    header("refresh:2; url=addResources.php");
+                    echo "Error happened";
                 }
-            }
+            } 
         }
-
-        $con->close();
     }
 
-    
-
+    $con->close();
 ?>

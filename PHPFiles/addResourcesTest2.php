@@ -59,17 +59,18 @@
    
     <script>
        $(document).ready(function(){
-        $(".addInputBox").on('click',function(){
+        $(".addInputBox").click(function(){
         
         var type = "input";
+        
         var input = document.createElement(type);
         input.type = "text";
         input.className = "addResource newInputBox"; // set the CSS class
         input.name = "addResource";
         document.getElementById('newInput').appendChild(input); // put it into the DOM
-        });
-        $("#sendrequest").on("click",function(e){
-          e.preventDefault();
+    });
+        $("#sendrequest").on("click",function(){
+
           resourceList = $('.addResource').map(function() 
           {
             return $(this).val();
@@ -85,46 +86,50 @@
           }
 
           var jsonData = JSON.stringify(resourceArray);
+         
          if(jsonData == "[]")
-         {  
-            resourceItemName = $("input#resourceItemName").val();
-            dataString = 'resourceItemName=' + resourceItemName;
-            if (resourceItemName == "")
-            {
-                alert("Resource Item is blank");
-                return false;
-            }
-            else
-            {
+         {
              $.ajax({
                 type:"POST",
                     url: "addResourceItem.php", 
                     data: {resourceItemName: resourceItemName},
+                     beforeSend: function(){    //show spinning gear icon 
+                         $("#homecon").show();
+                         
+                         $("#homecon").dialog({
+                                closeText: ""
+                            });
+                    },
                     success: function(response)
                     {
                         alert(response);
                     },
-                    error: function(response) 
+                    error: function(xhr, ajaxOptions, thrownError) 
                     { 
-                        alert(response); 
+                        alert(xhr.responseText); 
                     }
             });
-            }
          }
          else
          {
-            resourceItemName = $("input#resourceItemName").val();
             $.ajax({
                 type:"POST",
                     url: "addResourceItem.php", 
-                    data: {resourceItemName: resourceItemName, addResource: resourceArray},
+                    data: {resourceItemName: resourceItemName, addResource: jsonData},
+                     beforeSend: function(){    //show spinning gear icon 
+                         $("#homecon").show();
+                         
+                         $("#homecon").dialog({
+                                closeText: ""
+                            });
+                    },
                     success: function(response)
                     {
                         alert(response);
                     },
-                    error: function(response) 
+                    error: function(xhr, ajaxOptions, thrownError) 
                     { 
-                        alert(response ); 
+                        alert(xhr.responseText); 
                     }
             });
          }
