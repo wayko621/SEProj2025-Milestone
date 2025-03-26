@@ -58,7 +58,7 @@
   </div>
    
     <script>
-       
+       $(document).ready(function(){
         $(".addInputBox").click(function(){
         
         var type = "input";
@@ -69,8 +69,9 @@
         input.name = "addResource";
         document.getElementById('newInput').appendChild(input); // put it into the DOM
     });
+        <script>
+        $("#sendrequest").on("click",function(){
 
-        $("#sendrequest").click(function(){
           resourceList = $('.addResource').map(function() 
           {
             return $(this).val();
@@ -84,12 +85,38 @@
             if (allResource[i])
                 resourceArray.push(allResource[i]);
           }
-       for(j=0; j< resourceArray.length; j++)
-       {
-            alert(j);
-       }
+
+          var jsonData = JSON.stringify(resourceArray);
          
+         if(jsonData == "[]")
+         {
+            alert("no json data");
+         }
+         else
+         {
+            $.ajax({
+                type:"POST",
+                    url: "addResourceItem.php", 
+                    data: {resourceName: resourceName, addResource: jsonData},
+                     beforeSend: function(){    //show spinning gear icon 
+                         $("#homecon").show();
+                         
+                         $("#homecon").dialog({
+                                closeText: ""
+                            });
+                    },
+                    success: function(response)
+                    {
+                        alert(response);
+                    },
+                    error: function(xhr, ajaxOptions, thrownError) 
+                    { 
+                        alert(xhr.responseText); 
+                    }
             });
+         }
+         });
+    });
 </script>
   </body>
 </html>
