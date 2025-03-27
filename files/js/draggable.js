@@ -36,7 +36,7 @@ $("#update").show();
 var img_src = ui.draggable.attr("src");
 img_id = ui.draggable.attr("id");
 var htmlnew = '<div class="probdiv"><img src="' + img_src + '" id="' + img_id + '" class="smallimg group4"/>'
-htmlnew = htmlnew + '  Please describe problem:<textarea rows="4" cols="80" class="textarea1" name="textarea1"></textarea>'+ '    ' + img_id + ' Date and Time Of Problem: ' + Current_Date + '<input type="hidden" id="currentdate" name="Current_Date" value="' + Current_Date +'"></div>'
+htmlnew = htmlnew + '<p class="p-prob">Please describe problem:</p><textarea rows="4" cols="80" class="textarea1" name="textarea1"></textarea>'+ '    ' + img_id + ' Date and Time Of Problem: ' + Current_Date + '<input type="hidden" id="currentdate" name="Current_Date" value="' + Current_Date +'"></div>'
 $(".problem").append(htmlnew);
 var numItems = $('.probdiv').length
 var probHeight = 420;

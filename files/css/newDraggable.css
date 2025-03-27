@@ -11,7 +11,7 @@ margin:0 auto;
 ul.items
 {
     padding:0;
-    cursor: crosshair;
+    cursor: grab;
 }
 
 li
@@ -101,24 +101,34 @@ margin-top: 100px;
 .problemarea
 {
     margin-top:650px;
-    width:1000px;
+    width:500px;
+    position: relative;
+    left: 830px;
+    z-index: -1;
+    top: -500px;
 }
 .problem
 {
-    width:980px;
-    height:400px;
+    width:600px;
     background-color:#CBCBCB;
     padding:10px;
-    -moz-border-radius:5px;
-    -webkit-border-radius:5px;
     border-radius:5px;
 	color:black;
+    height: 400px;
 }
 .textarea1
 {
     font-size:20px;
+    width: 580px;
 }
 textarea
 {
     resize: none;
+}
+
+
+.p-prob
+{
+    position: relative;
+    top: 80px;
 }

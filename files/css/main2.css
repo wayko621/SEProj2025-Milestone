@@ -22,24 +22,24 @@ body
 .project-name
 {
   position: absolute;
-  top: 0;
-  left: 15px;
+  top: 10px;
+  
   color: whitesmoke;
   font-size: 25px;
   font-family: "Trirong", serif;
   background: rgba(255,255,255,0.3);
-  writing-mode: sideways-lr;
+  #writing-mode: sideways-lr;
   backdrop-filter: blur(15px);
   border-radius: 10px;
-   height: 85%;
+   width: 90%;
    z-index: 1;
 }
 
 .project-name p
 {
-
+margin: 0 520px;
  padding:10px;
- margin-bottom: 95px;
+ 
 }
 
 .form-container
