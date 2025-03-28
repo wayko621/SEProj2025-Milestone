@@ -3,7 +3,7 @@
 
     if(!isset($_SESSION['loggedin'])  || !isset($_SESSION['adminUN']))
     {
-        header("location:/SEProj2025-Milestone");
+        header("location:/SEProj2025-Milestone/");
 
     }
     else
@@ -41,6 +41,15 @@
                 </div>
             </nav>
             <?php
+            
+
+    if(!isset($_SESSION['loggedin'])  || !isset($_SESSION['adminUN']))
+    {
+        header("location:/SEProj2025-Milestone/");
+
+    }
+    else
+    {
                 //Database Connection//
                 require 'dbconfig.php';
                 //Query to get ticket assigned to Admin member and status is not completed sorted by incident ID#//
@@ -110,7 +119,8 @@
                 echo "</tbody>";
                 echo "</table>";
                 $results2->free();
-                $con->close(); 
+                $con->close();
+                } 
             ?>
             </div>
         </div> 
