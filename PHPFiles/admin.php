@@ -1,9 +1,10 @@
 <?php
     session_start();
 
-    if(!isset($_SESSION['loggedin'])  || !isset($_SESSION['adminUN']))
+
+    if(!isset($_SESSION['loggedin'])  || !isset($_SESSION['adminUN']) || !isset($_SESSION['Admin']))
     {
-        header("location:/SEProj2025-Milestone");
+        header("location:/SEProj2025-Milestone/");
 
     }
     else
@@ -13,13 +14,13 @@
     }
 ?>
 
+
 <!DOCTYPE html>
 <html>
     <head>
     <meta charset="utf-8">
     <title>Admin Portal</title>
     <link rel="stylesheet" type="text/css" href="../files/css/bootstrap.min.css">
-    <link rel="icon" type="image/x-icon" href="../files/images/favicon.ico">
      <style>
             .container
             {
@@ -34,13 +35,20 @@
                     <div class="navbar-header"> 
                         <a class="navbar-brand" href="TroubleTicket.php">Get Trouble Tickets</a>
                         <a class="navbar-brand" href="addAdminFaculty.php">Add New Admin/Faculty Member</a>
-                        <a class="navbar-brand" href="getClassroomResource.php">Classroom Resource</a>
                         <a class="navbar-brand" href="viewCalendar.php">View Calendar</a>
                         <a class="navbar-brand" href="addResources.php">Add Resources</a>
+                        <a class="navbar-brand" href="getClassroomResource.php">Return Resources</a>
                     </div>
                 </div>
             </nav>
             <?php
+            if(!isset($_SESSION['loggedin'])  || !isset($_SESSION['adminUN']) || !isset($_SESSION['Admin']))
+    {
+        header("location:/SEProj2025-Milestone/");
+
+    }
+    else
+    {
                 //Database Connection//
                 require 'dbconfig.php';
                 //Query to get ticket assigned to Admin member and status is not completed sorted by incident ID#//
@@ -110,7 +118,8 @@
                 echo "</tbody>";
                 echo "</table>";
                 $results2->free();
-                $con->close(); 
+                $con->close();
+            }
             ?>
             </div>
         </div> 
@@ -170,7 +179,11 @@
                 {
                     type:"POST",
                     url: "updateTicket.php", 
-                    data: {idNum: idNum, techIDNum: <?php echo($_SESSION['Admin']);?>, problem: problemUpdate, status: newStatus},
+                    data: {idNum: idNum, techIDNum: <?php if(!isset($_SESSION['loggedin'])  || !isset($_SESSION['adminUN']) || !isset($_SESSION['Admin']))
+    {
+        header("location:/SEProj2025-Milestone/");
+
+    }else{echo($_SESSION['Admin']);}?>, problem: problemUpdate, status: newStatus},
                      beforeSend: function(){    //show spinning gear icon 
                          $("#homecon").show();
                          

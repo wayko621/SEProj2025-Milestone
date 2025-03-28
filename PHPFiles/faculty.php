@@ -13,7 +13,6 @@
     }
 
 ?>
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -42,6 +41,13 @@
                 </div>
             </nav>
              <?php
+             if(!isset($_SESSION['loggedin']) || !isset($_SESSION['facUN'])|| !isset($_SESSION['facEmail']))
+    {
+        header("location:/SEProj2025-Milestone/");
+        
+    }
+    else
+    {
                 require 'dbconfig.php';
                 $sql2 = "Select * from incidentreport WHERE facEmail = '".$_SESSION['facEmail']. "' AND Status != 'Completed'  ORDER BY incidentID";
                 $results2 = $con->query($sql2);
@@ -145,11 +151,18 @@
                 }                             
                 echo "</tbody>";
                 echo "</table>";
-                
+               } 
             ?> 
             <div>
             <h2> My Booked Classrooms</h2>
              <?php
+             if(!isset($_SESSION['loggedin']) || !isset($_SESSION['facUN'])|| !isset($_SESSION['facEmail']))
+    {
+        header("location:/SEProj2025-Milestone/");
+        
+    }
+    else
+    {
                 $sql3 = "Select * from classroomschedule WHERE facultyMember = '".$_SESSION['facUN']. "' AND Active=1";
                 $results3 = $con->query($sql3);
                 echo "<table class='table table-bordered table-striped'>";
@@ -202,6 +215,7 @@
                 $results2->free();
                 $results->free();
                 $con->close(); 
+            }
             ?>
             </div>
         </div>

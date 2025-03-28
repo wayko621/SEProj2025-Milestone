@@ -26,8 +26,9 @@
           <div class="navbar-header"> 
               <a class="navbar-brand" href="admin.php">Admin Page</a>
               <a class="navbar-brand" href="TroubleTicket.php">Get Trouble Tickets</a>
-              <a class="navbar-brand" href="getClassroomResource.php">Classroom Resource</a>
               <a class="navbar-brand" href="viewCalendar.php">View Calendar</a>
+              <a class="navbar-brand" href="addResources.php">Add Resources</a>
+              <a class="navbar-brand" href="getClassroomResource.php">Return Resources</a>
           </div>
       
     </nav>

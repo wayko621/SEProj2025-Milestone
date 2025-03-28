@@ -35,9 +35,9 @@
                     <div class="navbar-header"> 
                         <a class="navbar-brand" href="admin.php">Admin Page</a>
                         <a class="navbar-brand" href="TroubleTicket.php">Get Trouble Tickets</a>
-                        <a class="navbar-brand" href="addFaculty.php">Add Faculty Member</a>
-                        <a class="navbar-brand" href="getClassroomResource.php">Classroom Resource</a>
+                        <a class="navbar-brand" href="addAdminFaculty.php">Add New Admin/Faculty Member</a>
                         <a class="navbar-brand" href="viewCalendar.php">View Calendar</a>
+                        <a class="navbar-brand" href="getClassroomResource.php">Return Resources</a>
                     </div>
                 </div>
             </nav>
@@ -55,6 +55,8 @@
     <div class="addButton">
             <button class="btn addInputBox">+</button>
     </div>
+    <div id="homecon">
+        </div>
   </div>
    
     <script>
@@ -100,9 +102,35 @@
                 type:"POST",
                     url: "addResourceItem.php", 
                     data: {resourceItemName: resourceItemName},
+                    beforeSend: function(){
+                        $('#homecon').addClass('fa fa-cog fa-spin fz-5x');
+                        $('#homecon').html("<div id='messages'></div>");  
+                        $('#messages').html("")
+                        .hide()  
+                        .fadeIn(5000, function() {
+                        $('#homecon').removeClass('fa fa-cog fa-spin fz-5x');
+                    });  
+                        
+                       $('#messages').html("<img src='../files/images/Radar.gif' />")
+                        .fadeOut(2000, function() {
+                        $('#messages').html("");
+                    });    
+                    },
                     success: function(response)
                     {
-                        alert(response);
+                       setTimeout(function(){
+                        $('#homecon').addClass('fa fa-cog fa-spin fz-5x');
+                        $('#homecon').html("<div id='messages'></div>");  
+                        $('#messages').html(response)
+                        $('#messages').html($('#messages').html() + "<br\>")
+                        .hide()  
+                        .fadeIn(5000, function() {
+                        $('#homecon').removeClass('fa fa-cog fa-spin fz-5x');
+                        $(location).prop('href', 'addResources.php');
+                    });
+                         
+                    }, 3000);
+
                     },
                     error: function(response) 
                     { 
@@ -118,9 +146,37 @@
                 type:"POST",
                     url: "addResourceItem.php", 
                     data: {resourceItemName: resourceItemName, addResource: resourceArray},
+                    beforeSend: function(){
+                        $('#homecon').addClass('fa fa-cog fa-spin fz-5x');
+                        $('#homecon').html("<div id='messages'></div>");  
+                        $('#messages').html("")
+                        .hide()  
+                        .fadeIn(5000, function() {
+                        $('#homecon').removeClass('fa fa-cog fa-spin fz-5x');
+                    });  
+                        
+                       $('#messages').html("<img src='../files/images/Radar.gif' />")
+                        .fadeOut(2000, function() {
+                        $('#messages').html("");
+
+                    });    
+                    },
                     success: function(response)
                     {
-                        alert(response);
+        
+                       setTimeout(function(){
+                        $('#homecon').addClass('fa fa-cog fa-spin fz-5x');
+                        $('#homecon').html("<div id='messages'></div>");  
+                        $('#messages').html(response)
+                        $('#messages').html($('#messages').html() + "<br\>")
+                        .hide()  
+                        .fadeIn(5000, function() {
+                        $('#homecon').removeClass('fa fa-cog fa-spin fz-5x');
+                        $(location).prop('href', 'addResources.php');
+                    });
+                         
+                    }, 3000);
+                       
                     },
                     error: function(response) 
                     { 

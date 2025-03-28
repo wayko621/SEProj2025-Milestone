@@ -20,7 +20,7 @@
             if($con->query($sql1) === TRUE)
             {
                 header("refresh:2; url=addResources.php");
-                echo "Added new resource\n";
+                echo "Added new resource <br \>";
             }
             else
             {
@@ -47,7 +47,7 @@
             if($con->query($sql3) === TRUE)
             {
                 header("refresh:2; url=addResources.php");
-                echo "Added new resource\n";
+                echo "Added new resource <br\>";
             }
             else
             {
@@ -72,7 +72,7 @@
                 if($con->query($sql5) === TRUE)
                 {
                     header("refresh:2; url=addResources.php");
-                    echo "Added new resource\n";
+                    echo "Added new resource<br \>";
                 }
                 else
                 {

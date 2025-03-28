@@ -20,6 +20,7 @@
     <link rel="icon" type="image/x-icon" href="../files/images/favicon.ico">
     <link rel="stylesheet" type="text/css" href="../files/css/forms-style.css"> 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong"> 
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.css"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
@@ -40,7 +41,8 @@
                         <a class="navbar-brand" href="admin.php">Admin Page</a>
                         <a class="navbar-brand" href="TroubleTicket.php">Get Trouble Tickets</a>
                         <a class="navbar-brand" href="addAdminFaculty.php">Add New Admin/Faculty Member</a>
-                        <a class="navbar-brand" href="getClassroomResource.php">Classroom Resource</a>
+                        <a class="navbar-brand" href="addResources.php">Add Resources</a>
+                        <a class="navbar-brand" href="getClassroomResource.php">Return Resources</a>
                     </div>
                 </div>
             </nav>
