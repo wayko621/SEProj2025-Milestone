@@ -106,7 +106,7 @@ transform: rotateY(180deg);
 	margin-bottom:20px;
 	margin:0 auto;
 	display:flex;
-	width: 791px;
+	width: 890px;
 	
 }
 .navbar-header
@@ -115,19 +115,21 @@ transform: rotateY(180deg);
 	background: #f8f8f8;
 	border: 1px solid #e8e8e8;
 	box-sizing: border-box;
+	border-radius: 50px;
 
 }
 .navbar-header a
 {
 	color: #777;
 	background-color: transparent;
-	padding: 15px ;
+	padding-top: 10px;
+	margin: 0 10px;
 	text-decoration: none;
 }
 
 .navbar-header a:hover
 {
-	color: #5e5e5e;
+	color: #ff0000;
 	font-size: 18px;
 	line-height: 20px;
 	background-color: transparent;
@@ -137,7 +139,6 @@ transform: rotateY(180deg);
 {
 	float: left;
 	height: 50px;
-	padding: 15px 15px;
 	font-size: 18px;
 	line-height: 20px;
 	font-family: "Helvetica Neue","Helvetica","Arial",sans-serif;

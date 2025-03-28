@@ -17,6 +17,7 @@
   <head>
     <link rel="icon" type="image/x-icon" href="../files/images/favicon.ico">
     <link rel="stylesheet" type="text/css" href="../files/css/main-form-style.css">
+    <link rel="stylesheet" type="text/css" href="../files/css/login-form.css"> 
     <link rel="stylesheet" type="text/css" href="../files/css/forms-style2.css"> 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong"> 
   </head>
@@ -24,10 +25,10 @@
     <nav class="main-nav">
       
           <div class="navbar-header"> 
-              <a class="navbar-brand" href="admin.php">Admin Page</a>
-              <a class="navbar-brand" href="TroubleTicket.php">Get Trouble Tickets</a>
-              <a class="navbar-brand" href="viewCalendar.php">View Calendar</a>
-              <a class="navbar-brand" href="addResources.php">Add Resources</a>
+              <a class="navbar-brand" href="admin.php">Admin Page  |</a>
+              <a class="navbar-brand" href="TroubleTicket.php">Get Trouble Tickets  |</a>
+              <a class="navbar-brand" href="viewCalendar.php">View Calendar  |</a>
+              <a class="navbar-brand" href="addResources.php">Add Resources  |</a>
               <a class="navbar-brand" href="getClassroomResource.php">Return Resources</a>
           </div>
       
