@@ -1,7 +1,8 @@
 <?php
     session_start();
 
-    if(!isset($_SESSION['loggedin'])  || !isset($_SESSION['adminUN']))
+
+    if(!isset($_SESSION['loggedin'])  || !isset($_SESSION['adminUN']) || !isset($_SESSION['Admin']))
     {
         header("location:/SEProj2025-Milestone/");
 
@@ -13,13 +14,13 @@
     }
 ?>
 
+
 <!DOCTYPE html>
 <html>
     <head>
     <meta charset="utf-8">
     <title>Admin Portal</title>
     <link rel="stylesheet" type="text/css" href="../files/css/bootstrap.min.css">
-    <link rel="icon" type="image/x-icon" href="../files/images/favicon.ico">
      <style>
             .container
             {
@@ -41,9 +42,7 @@
                 </div>
             </nav>
             <?php
-            
-
-    if(!isset($_SESSION['loggedin'])  || !isset($_SESSION['adminUN']))
+            if(!isset($_SESSION['loggedin'])  || !isset($_SESSION['adminUN']) || !isset($_SESSION['Admin']))
     {
         header("location:/SEProj2025-Milestone/");
 
@@ -120,7 +119,7 @@
                 echo "</table>";
                 $results2->free();
                 $con->close();
-                } 
+            }
             ?>
             </div>
         </div> 
@@ -180,7 +179,11 @@
                 {
                     type:"POST",
                     url: "updateTicket.php", 
-                    data: {idNum: idNum, techIDNum: <?php echo($_SESSION['Admin']);?>, problem: problemUpdate, status: newStatus},
+                    data: {idNum: idNum, techIDNum: <?php if(!isset($_SESSION['loggedin'])  || !isset($_SESSION['adminUN']) || !isset($_SESSION['Admin']))
+    {
+        header("location:/SEProj2025-Milestone/");
+
+    }else{echo($_SESSION['Admin']);}?>, problem: problemUpdate, status: newStatus},
                      beforeSend: function(){    //show spinning gear icon 
                          $("#homecon").show();
                          
