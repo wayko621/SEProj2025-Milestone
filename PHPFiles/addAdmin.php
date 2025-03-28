@@ -30,7 +30,7 @@
   </head>
   <body>
      <div class="container">
-       <nav class="navbar navbar-default">
+       <nav class="navbar justify-content-center navbar-default">
                 <div class="container-fluid">
                     <div class="navbar-header"> 
                         <a class="navbar-brand" href="admin.php">Admin Page</a>
