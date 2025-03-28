@@ -49,7 +49,7 @@
                 require 'dbconfig.php';
                 if($_SESSION['TechLevel'] == 2 || $_SESSION['TechLevel'] == 3)
                 {
-                    $sql = "Select * from incidentreport ORDER BY incidentID";
+                    $sql = "Select * from incidentreport WHERE Status != 'Completed' ORDER BY incidentID ";
                     $results = $con->query($sql);
                     echo "<table class='table table-bordered table-striped'>";
                     echo "<tbody>";
@@ -198,11 +198,11 @@
                     type:"POST",
                     url: "updateTicket.php",
                     data: {idNum: idNum, techIDNum: <?php if(!isset($_SESSION['Admin']))
-    {
+                    {
            
-    }
-    else
-    {echo($_SESSION['Admin']); }?>, problem: problemUpdate},
+                    }
+                    else
+                    {echo($_SESSION['Admin']); }?>, problem: problemUpdate},
                     success: function(response)
                     {
                         alert(response);
