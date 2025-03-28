@@ -197,12 +197,12 @@
                 {
                     type:"POST",
                     url: "updateTicket.php",
-                    data: {idNum: idNum, techIDNum: <?php if(!isset($_SESSION['loggedin']) || !isset($_SESSION['adminUN']) || !isset($_SESSION['TechLevel']) || !isset($_SESSION['Admin']))
+                    data: {idNum: idNum, techIDNum: <?php if(!isset($_SESSION['Admin']))
     {
-        header("location:/SEProj2025-Milestone/");    
+           
     }
     else
-    {echo($_SESSION['Admin']);}?>, problem: problemUpdate},
+    {echo($_SESSION['Admin']); }?>, problem: problemUpdate},
                     success: function(response)
                     {
                         alert(response);
