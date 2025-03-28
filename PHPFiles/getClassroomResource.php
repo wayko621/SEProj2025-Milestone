@@ -26,8 +26,6 @@
             {
                 margin-top: 35px;
             }
-            
-
         </style>
     </head>
     <body>

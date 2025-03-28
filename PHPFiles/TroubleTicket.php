@@ -40,6 +40,12 @@
                 </div>
             </nav>
             <?php
+            if(!isset($_SESSION['loggedin']) || !isset($_SESSION['adminUN']) || !isset($_SESSION['TechLevel']))
+    {
+        header("location:/SEProj2025-Milestone/");    
+    }
+    else
+    {
                 require 'dbconfig.php';
                 if($_SESSION['TechLevel'] == 2 || $_SESSION['TechLevel'] == 3)
                 {
@@ -111,7 +117,7 @@
                 }
                 echo "</tbody>";
                 echo "</table>";
-                
+                }
             ?>
         </div>
         <script>
@@ -191,7 +197,12 @@
                 {
                     type:"POST",
                     url: "updateTicket.php",
-                    data: {idNum: idNum, techIDNum: <?php echo($_SESSION['Admin']);?>, problem: problemUpdate},
+                    data: {idNum: idNum, techIDNum: <?php if(!isset($_SESSION['Admin']))
+    {
+           
+    }
+    else
+    {echo($_SESSION['Admin']); }?>, problem: problemUpdate},
                     success: function(response)
                     {
                         alert(response);
