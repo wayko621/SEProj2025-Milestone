@@ -71,7 +71,7 @@ arrroom =  document.getElementById("room").value;
    
 $.post("../phpfiles/createticket.php", {name: imgarray, problem: probarray, timedate: cdarray, requestor: arrreq, email: arremail, room: arrroom })
 .done(function(data){
-    alert(data);
+    alert(data + "\n");
 });
 });
 });
