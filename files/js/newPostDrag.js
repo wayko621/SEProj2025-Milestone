@@ -68,10 +68,46 @@ arremail = $('#email').val();
 arrreq = $('#facname').val();
 arrroom =  document.getElementById("room").value;
 // end of requestor array
-   
-$.post("../phpfiles/createticket.php", {name: imgarray, problem: probarray, timedate: cdarray, requestor: arrreq, email: arremail, room: arrroom })
-.done(function(data){
-    alert(data + "\n");
-});
-});
+
+
+$.ajax({
+    type: 'POST',
+    url:  "../PHPFiles/createticket.php",
+    data: {name: imgarray, problem: probarray, timedate: cdarray, requestor: arrreq, email: arremail, room: arrroom },
+    beforeSend: function(){
+                        $('#homecon').addClass('fa fa-cog fa-spin fz-5x');
+                        $('#homecon').html("<div id='messages'></div>");  
+                        $('#messages').html("")
+                        .hide()  
+                        .fadeIn(5000, function() {
+                        $('#homecon').removeClass('fa fa-cog fa-spin fz-5x');
+                    });  
+                        
+                       $('#messages').html("<img src='../files/images/Radar.gif' />")
+                        .fadeOut(2000, function() {
+                        $('#messages').html("");
+                    });    
+                    },
+                    success: function(response)
+                    {
+                       setTimeout(function(){
+                        $('#homecon').addClass('fa fa-cog fa-spin fz-5x');
+                        $('#homecon').html("<div id='messages'></div>");  
+                        $('#messages').html(response)
+                        $('#messages').html($('#messages').html() + "<br\>")
+                        .hide()  
+                        .fadeIn(5000, function() {
+                        $('#homecon').removeClass('fa fa-cog fa-spin fz-5x');
+                        $(location).prop('href', 'classroom.php');
+                    });
+                         
+                    }, 3000);
+
+                    },
+                    error: function(response) 
+                    { 
+                        alert(response); 
+                    }
+            });
+    });
 });

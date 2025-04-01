@@ -48,6 +48,7 @@ Classroom Repair Sheet
         <option value="213">213</option>
       </select>
 </div>
+
 <ul class="items" id="group1ul">
 <li><img src="../files/images/projectorNew.png" id="projector" class="smallimg group1" alt="projector"  name="room210machines"/></li>
 <li><img src="../files/images/scanner.png" id="210Scanner" class="smallimg group1" alt="210Scanner"  name="room210machines"/></li>
@@ -135,7 +136,10 @@ Drag problem machine in here:
 <div class="numbers"></div>
 <button value="Send To Helpdesk" class="button btn btn-primary">Send To Helpdesk</button> 
 </div>
+<div id="homecon">
 </div>
+</div>
+
 </div>
 <foot>
     <script type="text/javascript" src="../files/js/newDraggable.js"></script>
