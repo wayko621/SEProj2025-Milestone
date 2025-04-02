@@ -222,3 +222,50 @@ ul li:hover:nth-child(2) a:after
 {
   background: #191970;
 }
+
+.welcomesection-ul
+{
+  top: 89px;
+  left: -218px;
+  color: white;
+  border-radius: 16px;
+  border:1px solid aliceblue;
+  box-shadow: 10px 10px 10px rgba(0,0,0,.8);
+  background: rgba(255,255,255,0.3);
+  backdrop-filter: blur(15px);
+  display: inline-block;
+  width: auto;
+
+}
+.welcomesection-ul2
+{
+  top: 335px;
+  backdrop-filter: blur(90px);
+  
+}
+
+.welcomesection-li
+{
+  margin: 0 25px 0 10px;
+  font-size: 30px;
+  font-family: "Trirong", serif;
+}
+
+.welcomesection-li2
+{
+  margin: 0 15px 0 45px;
+  font-size: 17px;
+  text-decoration: underline;
+}
+
+.welcomesection-li3
+{
+  margin: 0 10px 0 10px;
+  font-size: 20px; 
+}
+
+
+.welcomesection-li2:last-child
+{
+  margin-bottom: 10px;
+}
