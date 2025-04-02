@@ -45,7 +45,8 @@
               <nav class="navbar navbar-default">
                 <div class="container-fluid">
                     <div class="navbar-header"> 
-                        <a class="navbar-brand" href="faculty.php">Faculty Page</a>
+                        <a class="navbar-brand" href="facSplash.php">My Page</a>
+                        <a class="navbar-brand" href="faculty.php">My Tickets and Bookings</a>
                         <a class="navbar-brand" href="classroom.php">Create Trouble Tickets</a>
                         <a class="navbar-brand" href="../connectCamera.html">Access Camera</a>
                         <a class="navbar-brand glyphicon glyphicon-book" href="viewBooking.php"><?php echo count($_SESSION['bookedRoom']); ?></a>

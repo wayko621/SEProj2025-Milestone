@@ -21,7 +21,7 @@ if($results->num_rows > 0)
         $_SESSION['TechLevel'] =  $row['TechLevel'];
         $_SESSION['Admin'] = $password;
         $_SESSION['Email'] = $row['Email'];
-        header("refresh:2; url=admin.php");
+        header("refresh:2; url=adminSplash.php");
         echo "Connected successfully<br />User login successful redirecting to admin page <br />";
     }
     }

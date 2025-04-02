@@ -33,14 +33,21 @@
         <div class="container">
             <nav class="navbar navbar-default">
                 <div class="container-fluid">
-                    <div class="navbar-header">
-                        <a class="navbar-brand" href="facSplash.php">My Page</a> 
+                    <div class="navbar-header"> 
+                        <a class="navbar-brand" href="faculty.php">My Tickets and Bookings</a>
                         <a class="navbar-brand" href="classroom.php">Create Trouble Tickets</a>
                         <a class="navbar-brand" href="scheduleClassroom.php">Book a ClassRoom</a>
                         <a class="navbar-brand" href="../connectCamera.html">Access Camera</a>
                     </div>
                 </div>
             </nav>
+            <div class="welcome">
+                <p class="facname"><h2>Welcome Back <?php echo htmlspecialchars($_SESSION['facUN']) ?></h2></p>
+            </div>
+            <div class='tickets'>
+                <p class='lastthree'><h3>Here are your last three active tickets</h3></p>
+                </div>
+
              <?php
              if(!isset($_SESSION['loggedin']) || !isset($_SESSION['facUN'])|| !isset($_SESSION['facEmail']))
     {
@@ -50,21 +57,18 @@
     else
     {
                 require 'dbconfig.php';
-                $sql2 = "Select * from incidentreport WHERE facEmail = '".$_SESSION['facEmail']. "' AND Status != 'Completed'  ORDER BY incidentID";
+                $sql2 = "SELECT * FROM (Select * from incidentreport WHERE facEmail = '".$_SESSION['facEmail']. "' AND Status != 'Completed'  ORDER BY incidentID DESC LIMIT 3) as r ORDER BY incidentID";
                 $results2 = $con->query($sql2);
                 echo "<table class='table table-bordered table-striped'>";
                 echo "<tbody>";
                 echo "<tr>";
                 echo "<th>Ticket ID</th>";
-                echo "<th>Reported By</th>";
-                echo "<th>Email</th>";
                 echo "<th>Date/Time</th>";
                 echo "<th>Room Number</th>";
                 echo "<th>Device Name</th>";
                 echo "<th>Issue Reported</th>";
                 echo "<th>Assigned Tech</th>";
                 echo "<th>Current Status</th>";
-                echo "<th>Update Ticket</th>";
                 echo "</tr>";
 
                 while($row2 = $results2->fetch_assoc())
@@ -79,13 +83,6 @@
                     echo "<td class='ticketID'>";
                     echo $row2['incidentID'];
                     echo "</td>";
-                    echo "<td>";
-                    echo $row2['facultyMember'];
-                    echo "</td>";
-                    echo "<td>";
-                    echo $row2['facEmail'];
-                    echo "</td>";
-                    echo "<td>";
                     echo $row2['TimeDate'];
                     echo "</td>";
                     echo "<td>";
@@ -103,12 +100,6 @@
                     echo "<td class='ticketStatus'>";
                     echo  $row2['Status'];
                     echo "</td>";
-                    echo "<td>";
-                    echo "<button class='btn btn-primary btn-sm pull-left updateTicket' id='" .$row2['incidentID']."'>Update Ticket</button>";
-                    echo "</td>";
-                    echo "<td style='display:none;'>";
-                    echo " <div id='homecon' style='display:none;'><img src='../files/images/gear2.gif' /></div>";
-                    echo "</td>";
                     echo "</tr>";
                 }
                 else
@@ -116,12 +107,6 @@
                   echo "<tr class='tickets'>";
                     echo "<td class='ticketID'>";
                     echo $row2['incidentID'];
-                    echo "</td>";
-                    echo "<td>";
-                    echo $row2['facultyMember'];
-                    echo "</td>";
-                    echo "<td>";
-                    echo $row2['facEmail'];
                     echo "</td>";
                     echo "<td>";
                     echo $row2['TimeDate'];
@@ -140,13 +125,6 @@
                     echo "</td>";
                     echo "<td class='ticketStatus'>";
                     echo  $row2['Status'];
-                    echo "</td>";
-                    echo "<td>";
-                    echo "<button class='btn btn-primary btn-sm pull-left updateTicket' id='" .$row2['incidentID']."'>Update Ticket</button>";
-                    echo "</td>";
-                    echo "<td style='display:none;'>";
-                    echo " <div id='homecon' style='display:none;'><img src='../files/images/gear2.gif' /></div>";
-                    echo "</td>";
                     echo "</tr>";  
                 }
                 }                             
@@ -155,7 +133,7 @@
                } 
             ?> 
             <div>
-            <h2> My Booked Classrooms</h2>
+            <h2> Last Three Active Booked Classrooms</h2>
              <?php
              if(!isset($_SESSION['loggedin']) || !isset($_SESSION['facUN'])|| !isset($_SESSION['facEmail']))
     {
@@ -164,7 +142,7 @@
     }
     else
     {
-                $sql3 = "Select * from classroomschedule WHERE facultyMember = '".$_SESSION['facUN']. "' AND Active=1";
+                $sql3 = "SELECT * FROM (Select * from classroomschedule WHERE facultyMember = '".$_SESSION['facUN']. "' AND Active=1 ORDER by scheduleID desc LIMIT 3) as r ORDER BY scheduleID";
                 $results3 = $con->query($sql3);
                 echo "<table class='table table-bordered table-striped'>";
                 echo "<tbody>";
@@ -220,73 +198,6 @@
             ?>
             </div>
         </div>
-        <script>
-            function resizeInput() 
-            {
-                $(this).attr('size', $(this).val().length);
-            }
-            $('input[type="text"]')
-            // event handler
-            .keyup(resizeInput)
-            // resize on page load
-            .each(resizeInput);         
-            $('td')
-            // event handler
-            .keyup(resizeInput)
-            // resize on page load
-            .each(resizeInput);
-
-            $("td.TDProblem").dblclick(function () 
-            {
-                var originalContent = $(this).text(); 
-                $(this).addClass("cellEditing");
-                $(this).html("<input type='text' value='" + originalContent + "' />");
-                $(this).children().first().focus();
-                $(this).children().first().keypress(function (e) 
-                {
-                if (e.which == 13) 
-                {
-                var newContent = $(this).val();
-                $(this).parent().text(newContent);
-                $(this).parent().removeClass("cellEditing");
-                }
-                });
-            });
-            $('.updateTicket').on('click', function()
-            {
-                index = $(this).closest('tr').index() - 1;
-                idNum =  $(".ticketID:eq(" + index + ")" ).text();
-                problemUpdate = $(this).parents('tr').find('td').eq(6).text();
-                currentStatus = $(".ticketStatus:eq(" + index + ")" ).text(); 
-                $.ajax(
-                {
-                    type:"POST",
-                    url: "updateTicket.php",
-                    data: {idNum: idNum, problem: problemUpdate, status: currentStatus},
-                    beforeSend: function(){
-                         $("#homecon").show();
-                         
-                         $("#homecon").dialog({
-                                closeText: ""
-                            });
-                    },
-                    success: function(response)
-                    {       
-                       
-                   
-                    },
-                    error: function(response) 
-                    { 
-                        
-                       
-                    }
-                });
-                $(document).ajaxStop(function()
-                    {
-                        window.location.reload();
-                    });
-            });
-        </script>  
          <script>
             setInterval(function(){ auto_logout() }, 1200000);
             function auto_logout()

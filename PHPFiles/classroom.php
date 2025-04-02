@@ -33,7 +33,8 @@ Classroom Repair Sheet
      <nav class="navbar navbar-default">
                 <div class="container-fluid">
                     <div class="navbar-header"> 
-                        <a class="navbar-brand" href="faculty.php">Faculty Page</a>
+                        <a class="navbar-brand" href="facSplash.php">My Page</a>
+                        <a class="navbar-brand" href="faculty.php">My Tickets and Bookings</a>
                         <a class="navbar-brand" href="scheduleClassroom.php">Book a ClassRoom</a>
                         <a class="navbar-brand" href="../connectCamera.html">Access Camera</a>
                     </div>
@@ -48,7 +49,6 @@ Classroom Repair Sheet
         <option value="213">213</option>
       </select>
 </div>
-
 <ul class="items" id="group1ul">
 <li><img src="../files/images/projectorNew.png" id="projector" class="smallimg group1" alt="projector"  name="room210machines"/></li>
 <li><img src="../files/images/scanner.png" id="210Scanner" class="smallimg group1" alt="210Scanner"  name="room210machines"/></li>

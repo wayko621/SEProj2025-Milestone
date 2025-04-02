@@ -32,8 +32,8 @@
         <div class="container">
             <nav class="navbar navbar-default">
                 <div class="container-fluid">
-                    <div class="navbar-header">
-                        <a class="navbar-brand" href="adminSplash.php"><?php echo $_SESSION['adminUN']?>'s Page</a> 
+                    <div class="navbar-header"> 
+                        <a class="navbar-brand" href="admin.php"><?php echo $_SESSION['adminUN']?>'s  Assigned Tickets</a>
                         <a class="navbar-brand" href="TroubleTicket.php">Get All Tickets</a>
                         <a class="navbar-brand" href="addAdminFaculty.php">Add New Admin/Faculty Member</a>
                         <a class="navbar-brand" href="viewCalendar.php">View Calendar</a>
@@ -42,6 +42,12 @@
                     </div>
                 </div>
             </nav>
+            <div class="welcome">
+                <p class="adminname"><h2>Welcome Back <?php echo htmlspecialchars($_SESSION['adminUN']) ?></h2></p>
+            </div>
+            <div class='tickets'>
+                <p class='lasttfive'><h3>Here are your last five active tickets</h3></p>
+                </div>
             <?php
             if(!isset($_SESSION['loggedin'])  || !isset($_SESSION['adminUN']) || !isset($_SESSION['Admin']))
     {
@@ -53,7 +59,7 @@
                 //Database Connection//
                 require 'dbconfig.php';
                 //Query to get ticket assigned to Admin member and status is not completed sorted by incident ID#//
-                $sql2 = "Select * from incidentreport WHERE AssignedTech = ".$_SESSION['Admin']. " and Status != 'Completed' ORDER BY incidentID";
+                $sql2 = "SELECT * FROM (Select * from incidentreport WHERE AssignedTech = ".$_SESSION['Admin']. " and Status != 'Completed' ORDER BY incidentID DESC LIMIT 5) as r ORDER BY incidentID";
                 $results2 = $con->query($sql2);
                 echo "<table class='table table-bordered table-striped'>";
                 echo "<tbody>";
