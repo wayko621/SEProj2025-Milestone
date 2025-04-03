@@ -82,12 +82,12 @@ $.ajax({
                         $('#homecon').html("<div id='messages'></div>");  
                         $('#messages').html("")
                         .hide()  
-                        .fadeIn(5000, function() {
+                        .fadeIn(1000, function() {
                         $('#homecon').removeClass('fa fa-cog fa-spin fz-5x');     
                     });  
                         
                       $('#messages').html("<img src='../files/images/Radar.gif' />")
-                        .fadeOut(2000, function() {
+                        .fadeOut(3000, function() {
                         $('#messages').html("");
                     });   
                     },
@@ -100,9 +100,8 @@ $.ajax({
                         $('#homecon').addClass('fa fa-cog fa-spin fz-5x update-ticket');
                         $('#homecon').html("<div id='messages' style='font-size: 20px; background: rgba(255,255,255,0.6); border-radius: 8px; padding-left: 10px; backdrop-filter: blur(16px);'></div>");  
                         $('#messages').html(response)
-                        $('#messages').html($('#messages').html() + "<br\>")
                         .hide()  
-                        .fadeIn(5000, function() {
+                        .fadeIn(3000, function() {
                         $('#homecon').removeClass('fa fa-cog fa-spin fz-5x');
                         $(location).prop('href', 'classroom.php');
                     });
