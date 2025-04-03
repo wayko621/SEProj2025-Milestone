@@ -83,6 +83,7 @@
                     echo "<td class='ticketID'>";
                     echo $row2['incidentID'];
                     echo "</td>";
+                    echo "<td>";
                     echo $row2['TimeDate'];
                     echo "</td>";
                     echo "<td>";

@@ -20,7 +20,7 @@
             if($con->query($sql1) === TRUE)
             {
                 header("refresh:2; url=addResources.php");
-                echo "Added new resource <br \>";
+                echo "Added new resource <br>";
             }
             else
             {
@@ -37,9 +37,9 @@
 
         if($results2->num_rows > 0)
         {
-            //If email already exist user is not created"//
+            //If resource already exist resource is not added"//
             header("refresh:2; url=addResources.php");
-            echo "Resource By That Name ". $resourceItemName." Already Exist \n";
+            echo "Resource By That Name ". $resourceItemName." Already Exist <br>";
         }
         else
         {  
@@ -47,7 +47,7 @@
             if($con->query($sql3) === TRUE)
             {
                 header("refresh:2; url=addResources.php");
-                echo "Added new resource <br\>";
+                echo "Added new resource <br>";
             }
             else
             {
@@ -62,9 +62,9 @@
 
             if($results4->num_rows > 0)
             {
-                //If email already exist user is not created"//
+                //If resource already exist resource is not added//
                 header("refresh:2; url=addResources.php");
-                echo "Resource By The Name " . $resourceGroup[$key] ." Already Exist\n";
+                echo "Resource By The Name " . $resourceGroup[$key] ." Already Exist <br>";
             }
             else 
             {
@@ -72,7 +72,7 @@
                 if($con->query($sql5) === TRUE)
                 {
                     header("refresh:2; url=addResources.php");
-                    echo "Added new resource<br \>";
+                    echo "Added new resource<br>";
                 }
                 else
                 {
