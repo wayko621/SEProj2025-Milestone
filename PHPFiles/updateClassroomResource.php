@@ -34,13 +34,13 @@
 	else
 	{
 	
-		$sql3 = "UPDATE resourcelist SET Available = '1' WHERE resourceName ='" . $resourceName . "'"; 
-		$sql4 = "UPDATE classrooms SET Available = '1' WHERE RoomNum ='" . $classRoomNum . "'"; 
-		$sql5 = "UPDATE classroomschedule SET Active = '0' WHERE scheduleID =" . $scheduleID ; 
+		$sql3 = "UPDATE resourcelist SET Available = '1' WHERE resourceName ='{$resourceName}'"; 
+		$sql4 = "UPDATE classrooms SET Available = '1' WHERE RoomNum ='{$classRoomNum}'"; 
+		$sql5 = "UPDATE classroomschedule SET Active = '0' WHERE scheduleID ={$scheduleID}"; 
 		if($con->query($sql3) === TRUE)
 		{
 			
-			echo($resourceName . " was returned from " . $classRoomNum . "\n");
+			echo("{$resourceName} was returned from {$classRoomNum} \n");
 
 		}
 		else
@@ -62,7 +62,7 @@
 		if($con->query($sql5) === TRUE)
 		{
 			
-			echo("Booking ID : " . $scheduleID ." booking was closed");
+			echo("Booking ID : {$scheduleID} booking was closed");
 
 		}
 		else

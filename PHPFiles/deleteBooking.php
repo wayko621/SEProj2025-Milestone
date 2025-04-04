@@ -5,7 +5,7 @@
     unset($_SESSION['bookedRoom'][$key]);
     
     $_SESSION['qty_array'] = array_values($_SESSION['qty_array']);
-    $_SESSION['message'] = "Classroom " . $key . " was removed from the cart";
+    $_SESSION['message'] = "Classroom {$key} was removed from the cart";
     header("location:viewBooking.php");
     
 ?>

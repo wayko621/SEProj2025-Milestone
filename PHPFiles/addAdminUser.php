@@ -23,7 +23,7 @@
         }
         else
         {
-            $sql1 = "Select * from adminmember where Email ='" . $email . "'";
+            $sql1 = "Select * from adminmember where Email ='{$email}'";
             $results = $con->query($sql1);
 
             if($results->num_rows > 0)
@@ -34,7 +34,7 @@
             }
             else
             {   
-                $sql = "Insert into adminmember(adminID, FirstName, LastName, Email, TechLevel) VALUES('".$hashPassword."','".$fname."','".$lname."','".$email."','".$tlevel."')";
+                $sql = "Insert into adminmember(adminID, FirstName, LastName, Email, TechLevel) VALUES('{$hashPassword}','{$fname}','{$lname}','{$email}','{$tlevel}')";
                 if($con->query($sql) === TRUE)
                 {
                     header("refresh:2; url=addAdminFaculty.php");

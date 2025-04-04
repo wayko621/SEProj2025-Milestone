@@ -3,7 +3,7 @@
     
     $building = $_POST['building'];
     
-    $sql2 ="Select * from classrooms where available = 1 and Building = '" .$building. "'";
+    $sql2 ="Select * from classrooms where available = 1 and Building = '{$building}'";
 
     $results2 = $con->query($sql2);
     echo "<table class='table table-bordered table-striped'>";
@@ -29,7 +29,7 @@
         echo $row2['RoomNum'];
         echo "</td>";
         echo "<td class='btn btn-primary btn-sm pull-left bookClassRoom'>";
-        echo '<a href="bookRoom.php?id='.$row2['ID']. ' ">Book Classroom</a>';
+        echo "<a href='bookRoom.php?id={$row2['ID']}'>Book Classroom</a>";
         echo "</td>";
         echo"</tr>" ; 
       }
