@@ -62,7 +62,7 @@
                 {
                     if($row3['resourceID'] != 0)
                     { 
-                        $sql2 = "Select * from resourcelist where resourceID =" .$row3['resourceID'];
+                        $sql2 = "Select * from resourcelist where resourceID ={$row3['resourceID']}";
                         $results2 = $con->query($sql2);
                         $row2 = $results2->fetch_assoc();
                         echo "<tr class='classroomSchedule'>";
@@ -76,7 +76,7 @@
                         echo $row2['resourceName'];
                         echo "</td>";
                         echo "<td>";
-                        echo "<button class='btn btn-primary btn-sm pull-left updateClassroomResource' id='" .$row3['scheduleID']."'>Close Expired Booking</button>";
+                        echo "<button class='btn btn-primary btn-sm pull-left updateClassroomResource' id='{$row3['scheduleID']}'>Close Expired Booking</button>";
                         echo "</td>";
                         echo "<td class='scheduleID' style='display:none;'>";
                         echo $row3['scheduleID'];
@@ -99,7 +99,7 @@
                         echo "None Requested/Available";
                         echo "</td>";
                         echo "<td>";
-                        echo "<button class='btn btn-primary btn-sm pull-left updateClassroomResource' id='" .$row3['scheduleID']."'>Close Expired Booking</button>";
+                        echo "<button class='btn btn-primary btn-sm pull-left updateClassroomResource' id='{$row3['scheduleID']}'>Close Expired Booking</button>";
                         echo "</td>";
                         echo "<td class='scheduleID' style='display:none;'>";
                         echo $row3['scheduleID'];

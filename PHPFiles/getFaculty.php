@@ -8,7 +8,7 @@
     $password = trim($_POST['facPW']);
     $hashPassword = hash('sha256', $password);
     
-$sql ="Select * from facultymember where Email ='" .$email. "' and FacultyID = '" . $hashPassword . "'";
+$sql ="Select * from facultymember where Email ='{$email}' and FacultyID = '{$hashPassword}'";
 
 $results = $con->query($sql);
 

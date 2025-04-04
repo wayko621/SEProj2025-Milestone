@@ -21,7 +21,7 @@ else
    foreach ($name as $key => $valname) 
    {
    	
-     $sql = "Insert into incidentreport(classRoomID, facultyMember, facEmail, deviceName, Problem, TimeDate, AssignedTech, Status) VALUES('".$roomNum."','".$facName."','".$email."','". $valname."','".$problem[$key]."','".$timedate[$key]."', 0, 'New')";
+     $sql = "Insert into incidentreport(classRoomID, facultyMember, facEmail, deviceName, Problem, TimeDate, AssignedTech, Status) VALUES('{$roomNum}','{$facName}','{$email}','{$valname}','{$problem[$key]}','{$timedate[$key]}', 0, 'New')";
         if($con->query($sql) === TRUE)
      {
         

@@ -8,7 +8,7 @@
     $password = trim($_POST['adminPW']);
     $hashPassword = hash('sha256', $password);
    
-$sql ="Select * from adminmember where Email ='" .$email. "' and AdminID = '" . $hashPassword . "'";
+$sql ="Select * from adminmember where Email ='{$email}' and AdminID = '{$hashPassword}'";
 
 $results = $con->query($sql);
 

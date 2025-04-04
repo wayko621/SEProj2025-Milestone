@@ -57,7 +57,7 @@
     else
     {
                 require 'dbconfig.php';
-                $sql2 = "SELECT * FROM (Select * from incidentreport WHERE facEmail = '".$_SESSION['facEmail']. "' AND Status != 'Completed'  ORDER BY incidentID DESC LIMIT 3) as r ORDER BY incidentID";
+                $sql2 = "SELECT * FROM (Select * from incidentreport WHERE facEmail = '{$_SESSION['facEmail']}' AND Status != 'Completed'  ORDER BY incidentID DESC LIMIT 3) as r ORDER BY incidentID";
                 $results2 = $con->query($sql2);
                 echo "<table class='table table-bordered table-striped'>";
                 echo "<tbody>";
@@ -143,7 +143,7 @@
     }
     else
     {
-                $sql3 = "SELECT * FROM (Select * from classroomschedule WHERE facultyMember = '".$_SESSION['facUN']. "' AND Active=1 ORDER by scheduleID desc LIMIT 3) as r ORDER BY scheduleID";
+                $sql3 = "SELECT * FROM (Select * from classroomschedule WHERE facultyMember = '{$_SESSION['facUN']}' AND Active=1 ORDER by scheduleID desc LIMIT 3) as r ORDER BY scheduleID";
                 $results3 = $con->query($sql3);
                 echo "<table class='table table-bordered table-striped'>";
                 echo "<tbody>";
@@ -157,7 +157,7 @@
                 {
                     if($row3['resourceID'] != 0)
                     { 
-                        $sql2 = "Select * from resourcelist where resourceID =" .$row3['resourceID'];
+                        $sql2 = "Select * from resourcelist where resourceID ={$row3['resourceID']}";
                         $results2 = $con->query($sql2);
                         $row2 = $results2->fetch_assoc();
                         echo "<tr class='classroomSchedule'>";

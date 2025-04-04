@@ -53,7 +53,7 @@
                 //Database Connection//
                 require 'dbconfig.php';
                 //Query to get ticket assigned to Admin member and status is not completed sorted by incident ID#//
-                $sql2 = "Select * from incidentreport WHERE AssignedTech = ".$_SESSION['Admin']. " and Status != 'Completed' ORDER BY incidentID";
+                $sql2 = "Select * from incidentreport WHERE AssignedTech ='{$_SESSION['Admin']}' and Status != 'Completed' ORDER BY incidentID";
                 $results2 = $con->query($sql2);
                 echo "<table class='table table-bordered table-striped'>";
                 echo "<tbody>";
@@ -108,7 +108,7 @@
                     echo "<option value='Waiting_Client'>Waiting Client</option>";
                     echo "<option value='Completed'>Completed</option>";
                     echo "<td>";
-                    echo "<button class='btn btn-primary btn-sm pull-left updateTicket' id='" .$row2['incidentID']."'>Update Ticket</button>";
+                    echo "<button class='btn btn-primary btn-sm pull-left updateTicket' id='{$row2['incidentID']}'>Update Ticket</button>";
                     echo "</td>";
                       echo "<td style='display:none;'>";
                     echo " <div id='homecon' style='display:none;'><img src='../files/images/gear2.gif' /></div>";

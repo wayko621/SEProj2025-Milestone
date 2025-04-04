@@ -101,7 +101,7 @@
                     echo $row['AssignedTech'];
                     echo "</td>";
                     echo "<td>";
-                    echo "<button class='btn btn-primary btn-sm pull-left getTech' id='" .$row['incidentID']."'>Assign Tech</button>";
+                    echo "<button class='btn btn-primary btn-sm pull-left getTech' id='{$row['incidentID']}'>Assign Tech</button>";
                     echo "</td>";
                     echo "<td>";
                     echo $row['Status'];
