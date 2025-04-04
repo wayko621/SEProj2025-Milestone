@@ -32,12 +32,13 @@
             <nav class="navbar navbar-default">
                 <div class="container-fluid">
                     <div class="navbar-header"> 
-                        <a class="navbar-brand" href="admin.php">My Tickets</a>
+                        <a class="navbar-brand" href="adminSplash.php"><?php echo $_SESSION['adminUN']?>'s Page</a> 
+                         <a class="navbar-brand" href="admin.php"><?php echo $_SESSION['adminUN']?>'s  Assigned Tickets</a>
                         <a class="navbar-brand" href="TroubleTicket.php">Get Trouble Tickets</a>
-                        <a class="navbar-brand" href="adminResourceList.php">Get Resource List</a>
-                        <a class="navbar-brand" href="addAdmin.php">Add Admin Member</a>
-                        <a class="navbar-brand" href="addFaculty.php">Add Faculty Member</a>
+                         <a class="navbar-brand" href="addAdminFaculty.php">Add New Admin/Faculty Member</a>
                         <a class="navbar-brand" href="viewCalendar.php">View Calendar</a>
+                        <a class="navbar-brand" href="addResources.php">Add Resources</a>
+                        <a class="navbar-brand" href="returnResource.php">Return Resources</a>
                     </div>
                 </div>
             </nav>

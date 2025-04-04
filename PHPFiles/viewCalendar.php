@@ -51,7 +51,7 @@
                         <a class="navbar-brand" href="TroubleTicket.php">Get All Tickets</a>
                         <a class="navbar-brand" href="addAdminFaculty.php">Add New Admin/Faculty Member</a>
                         <a class="navbar-brand" href="addResources.php">Add Resources</a>
-                        <a class="navbar-brand" href="getClassroomResource.php">Return Resources</a>
+                        <a class="navbar-brand" href="returnResource.php">Return Resources</a>
                     </div>
                 </div>
             </nav>
