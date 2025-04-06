@@ -15,11 +15,11 @@
                  <h2>Faculty Member Login</h2>
                  <div class="form-group">
                     <label for="facEmail" id="email" class="emaillabel">Email:</label> 
-                    <input type="email" name="facEmail" id="facEmail" autocomplete="off" required =""/>
+                    <input type="email" name="facEmail" id="facEmail" autocomplete="off" required ="" placeholder="staff@montclair.edu" />
                     <label for="facPW" id="password" class="pwlabel">Password:</label> 
                     <input type="password" name="facPW" id="facPW" autocomplete="off" required =""/>
                     <div>
-                        <input type="checkbox">Show Password</input>
+                        <input type="checkbox" onclick="passFunc()">Show Password</input>
                     </div>
                     <div>
                         <button class="btn btn-primary" id="sendrequest">Login</button>
@@ -28,7 +28,6 @@
             </form>
         </div>
         <script>
-             <script>
             function passFunc() {
                 var x = document.getElementById("facPW");
                 if (x.type === "password") {
