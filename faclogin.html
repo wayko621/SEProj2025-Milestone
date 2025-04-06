@@ -19,13 +19,25 @@
                     <label for="facPW" id="password" class="pwlabel">Password:</label> 
                     <input type="password" name="facPW" id="facPW" autocomplete="off" required =""/>
                     <div>
+                        <input type="checkbox">Show Password</input>
+                    </div>
+                    <div>
                         <button class="btn btn-primary" id="sendrequest">Login</button>
                     </div>
                 </div>
             </form>
         </div>
         <script>
-
+             <script>
+            function passFunc() {
+                var x = document.getElementById("facPW");
+                if (x.type === "password") {
+                x.type = "text";
+                    } else {
+                    x.type = "password";
+                    }
+                } 
+        </script>  
         </script>    
     </body>
 </html>
