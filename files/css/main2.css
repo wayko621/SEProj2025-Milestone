@@ -225,8 +225,8 @@ ul li:hover:nth-child(2) a:after
 
 .welcomesection-ul
 {
-  top: 89px;
-  left: -218px;
+  top: 350px;
+  left: 165px;
   color: white;
   border-radius: 16px;
   border:1px solid aliceblue;
@@ -239,7 +239,8 @@ ul li:hover:nth-child(2) a:after
 }
 .welcomesection-ul2
 {
-  top: 335px;
+  top: 395px;
+  left: 600px;
   backdrop-filter: blur(90px);
   
 }
