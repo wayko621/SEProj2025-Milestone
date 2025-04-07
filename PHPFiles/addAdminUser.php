@@ -34,8 +34,9 @@
             }
             else
             {   
+                $sql3 = "Insert into adminID (adminID) Values ('{$adminID}')";
                 $sql = "Insert into adminmember(adminID, FirstName, LastName, Email, TechLevel) VALUES('{$hashPassword}','{$fname}','{$lname}','{$email}','{$tlevel}')";
-                if($con->query($sql) === TRUE)
+                if($con->query($sql) === TRUE && $con->query($sql3) == TRUE)
                 {
                     header("refresh:2; url=addAdminFaculty.php");
                     echo "Added admin user";
@@ -45,6 +46,8 @@
                     header("refresh:2; url=addAdminFaculty.php");
                     echo "Error: " . $sql . "<br>" . $con->error;
                 }
+
+                
             }
         }
 
