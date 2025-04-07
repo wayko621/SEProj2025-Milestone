@@ -13,7 +13,7 @@
     }
     else
     {
-        $sql1 = "Select * from facultymember where Email ='" . $email . "'";
+        $sql1 = "Select * from facultymember where Email ='{$email}'";
         $results = $con->query($sql1);
 
     if($results->num_rows > 0)
@@ -24,7 +24,7 @@
     }
     else
     {   
-        $sql = "Insert into facultymember(FacultyID, FirstName, LastName, Email) VALUES('".$hashPassword."','".$fname."','".$lname."','".$email."')";
+        $sql = "Insert into facultymember(FacultyID, FirstName, LastName, Email) VALUES('{$hashPassword}','{$fname}','{$lname}','{$email}')";
         if($con->query($sql) === TRUE)
         {
             header("refresh:2; url=addAdminFaculty.php");

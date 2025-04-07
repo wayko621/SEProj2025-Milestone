@@ -8,7 +8,7 @@
     $password = trim($_POST['facPW']);
     $hashPassword = hash('sha256', $password);
     
-$sql ="Select * from facultymember where Email ='" .$email. "' and FacultyID = '" . $hashPassword . "'";
+$sql ="Select * from facultymember where Email ='{$email}' and FacultyID = '{$hashPassword}'";
 
 $results = $con->query($sql);
 
@@ -16,7 +16,7 @@ if($results->num_rows > 0)
 {
     while($row = $results->fetch_assoc())
     {
-        header("refresh:2; url=faculty.php");
+        header("refresh:2; url=facSplash.php");
         echo "Connected successfully<br />User login successful redirecting to faculty page";
         $_SESSION['loggedin'] = time();
         $_SESSION['facUN'] = $row['FirstName'];

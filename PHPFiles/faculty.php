@@ -33,7 +33,8 @@
         <div class="container">
             <nav class="navbar navbar-default">
                 <div class="container-fluid">
-                    <div class="navbar-header"> 
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="facSplash.php">My Page</a> 
                         <a class="navbar-brand" href="classroom.php">Create Trouble Tickets</a>
                         <a class="navbar-brand" href="scheduleClassroom.php">Book a ClassRoom</a>
                         <a class="navbar-brand" href="../connectCamera.html">Access Camera</a>
@@ -49,7 +50,7 @@
     else
     {
                 require 'dbconfig.php';
-                $sql2 = "Select * from incidentreport WHERE facEmail = '".$_SESSION['facEmail']. "' AND Status != 'Completed'  ORDER BY incidentID";
+                $sql2 = "Select * from incidentreport WHERE facEmail = '{$_SESSION['facEmail']}' AND Status != 'Completed'  ORDER BY incidentID";
                 $results2 = $con->query($sql2);
                 echo "<table class='table table-bordered table-striped'>";
                 echo "<tbody>";
@@ -71,7 +72,7 @@
                     if($row2['AssignedTech'] != 0)
                 {
                     $hashPassword = hash('sha256', $row2['AssignedTech']);
-                    $sql = "Select * from adminmember where AdminID = '" .$hashPassword."'";
+                    $sql = "Select * from adminmember where AdminID = '{$hashPassword}'";
                     $results = $con->query($sql);
                     $row3 = $results->fetch_assoc();
                     echo "<tr class='tickets'>";
@@ -103,7 +104,7 @@
                     echo  $row2['Status'];
                     echo "</td>";
                     echo "<td>";
-                    echo "<button class='btn btn-primary btn-sm pull-left updateTicket' id='" .$row2['incidentID']."'>Update Ticket</button>";
+                    echo "<button class='btn btn-primary btn-sm pull-left updateTicket' id='{$row2['incidentID']}'>Update Ticket</button>";
                     echo "</td>";
                     echo "<td style='display:none;'>";
                     echo " <div id='homecon' style='display:none;'><img src='../files/images/gear2.gif' /></div>";
@@ -141,7 +142,7 @@
                     echo  $row2['Status'];
                     echo "</td>";
                     echo "<td>";
-                    echo "<button class='btn btn-primary btn-sm pull-left updateTicket' id='" .$row2['incidentID']."'>Update Ticket</button>";
+                    echo "<button class='btn btn-primary btn-sm pull-left updateTicket' id='{$row2['incidentID']}'>Update Ticket</button>";
                     echo "</td>";
                     echo "<td style='display:none;'>";
                     echo " <div id='homecon' style='display:none;'><img src='../files/images/gear2.gif' /></div>";
@@ -163,7 +164,7 @@
     }
     else
     {
-                $sql3 = "Select * from classroomschedule WHERE facultyMember = '".$_SESSION['facUN']. "' AND Active=1";
+                $sql3 = "Select * from classroomschedule WHERE facultyMember = '{$_SESSION['facUN']}' AND Active=1";
                 $results3 = $con->query($sql3);
                 echo "<table class='table table-bordered table-striped'>";
                 echo "<tbody>";
@@ -177,7 +178,7 @@
                 {
                     if($row3['resourceID'] != 0)
                     { 
-                        $sql2 = "Select * from resourcelist where resourceID =" .$row3['resourceID'];
+                        $sql2 = "Select * from resourcelist where resourceID ={$row3['resourceID']}";
                         $results2 = $con->query($sql2);
                         $row2 = $results2->fetch_assoc();
                         echo "<tr class='classroomSchedule'>";

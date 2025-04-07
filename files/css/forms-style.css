@@ -13,7 +13,7 @@
     border: 1px solid #A9A9A9;
     border-radius: 10px;
     padding:30px 50px 50px 50px;
-    background: rgba(255, 255, 255, .8);
+    background: rgba(238, 211, 208, .8);
     box-shadow: 20px 20px 40px -6px rgba(0,0,0,.9);
    
 }
@@ -67,15 +67,20 @@ h2
 .addButton
 {
     position: relative;
-    top: -210px;
-    left: 680px;
+    top: 0;
+    left: 285px;
 }
 
 .newInputBox
 {
-    
 display: inherit;
 position: relative;
 left: 148px;
 margin-top: 5px;
+}
+
+.addInputBox
+{
+    width:50%;
+
 }

@@ -33,8 +33,9 @@
             <nav class="navbar navbar-default">
                 <div class="container-fluid">
                     <div class="navbar-header"> 
-                       <a class="navbar-brand" href="admin.php">Admin Page</a>
-                        <a class="navbar-brand" href="TroubleTicket.php">Get Trouble Tickets</a>
+                        <a class="navbar-brand" href="adminSplash.php"><?php echo $_SESSION['adminUN']?>'s Page</a> 
+                        <a class="navbar-brand" href="admin.php"><?php echo $_SESSION['adminUN']?>'s  Assigned Tickets</a>
+                        <a class="navbar-brand" href="TroubleTicket.php">Get All Tickets</a>
                         <a class="navbar-brand" href="addAdminFaculty.php">Add New Admin/Faculty Member</a>
                         <a class="navbar-brand" href="viewCalendar.php">View Calendar</a>
                         <a class="navbar-brand" href="addResources.php">Add Resources</a>
@@ -61,7 +62,7 @@
                 {
                     if($row3['resourceID'] != 0)
                     { 
-                        $sql2 = "Select * from resourcelist where resourceID =" .$row3['resourceID'];
+                        $sql2 = "Select * from resourcelist where resourceID ={$row3['resourceID']}";
                         $results2 = $con->query($sql2);
                         $row2 = $results2->fetch_assoc();
                         echo "<tr class='classroomSchedule'>";
@@ -75,7 +76,7 @@
                         echo $row2['resourceName'];
                         echo "</td>";
                         echo "<td>";
-                        echo "<button class='btn btn-primary btn-sm pull-left updateClassroomResource' id='" .$row3['scheduleID']."'>Close Expired Booking</button>";
+                        echo "<button class='btn btn-primary btn-sm pull-left updateClassroomResource' id='{$row3['scheduleID']}'>Close Expired Booking</button>";
                         echo "</td>";
                         echo "<td class='scheduleID' style='display:none;'>";
                         echo $row3['scheduleID'];
@@ -98,7 +99,7 @@
                         echo "None Requested/Available";
                         echo "</td>";
                         echo "<td>";
-                        echo "<button class='btn btn-primary btn-sm pull-left updateClassroomResource' id='" .$row3['scheduleID']."'>Close Expired Booking</button>";
+                        echo "<button class='btn btn-primary btn-sm pull-left updateClassroomResource' id='{$row3['scheduleID']}'>Close Expired Booking</button>";
                         echo "</td>";
                         echo "<td class='scheduleID' style='display:none;'>";
                         echo $row3['scheduleID'];

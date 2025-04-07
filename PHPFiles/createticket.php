@@ -21,11 +21,11 @@ else
    foreach ($name as $key => $valname) 
    {
    	
-     $sql = "Insert into incidentreport(classRoomID, facultyMember, facEmail, deviceName, Problem, TimeDate, AssignedTech, Status) VALUES('".$roomNum."','".$facName."','".$email."','". $valname."','".$problem[$key]."','".$timedate[$key]."', 0, 'New')";
+     $sql = "Insert into incidentreport(classRoomID, facultyMember, facEmail, deviceName, Problem, TimeDate, AssignedTech, Status) VALUES('{$roomNum}','{$facName}','{$email}','{$valname}','{$problem[$key]}','{$timedate[$key]}', 0, 'New')";
         if($con->query($sql) === TRUE)
      {
         
-         echo "Ticket Created \n";
+         echo "Ticket Created <br>";
      }
      else
      {
@@ -66,7 +66,7 @@ else
         //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
         $mail->send();
-        echo "Message has been sent \n";
+        echo "Message has been sent <br>";
         }
         } catch (Exception $e) {
             echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";

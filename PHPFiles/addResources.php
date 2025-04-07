@@ -33,11 +33,12 @@
        <nav class="navbar navbar-default">
                 <div class="container-fluid">
                     <div class="navbar-header"> 
-                        <a class="navbar-brand" href="admin.php">Admin Page</a>
-                        <a class="navbar-brand" href="TroubleTicket.php">Get Trouble Tickets</a>
+                        <a class="navbar-brand" href="adminSplash.php"><?php echo $_SESSION['adminUN']?>'s Page</a> 
+                         <a class="navbar-brand" href="admin.php"><?php echo $_SESSION['adminUN']?>'s  Assigned Tickets</a>
+                        <a class="navbar-brand" href="TroubleTicket.php">Get All Tickets</a>
                         <a class="navbar-brand" href="addAdminFaculty.php">Add New Admin/Faculty Member</a>
                         <a class="navbar-brand" href="viewCalendar.php">View Calendar</a>
-                        <a class="navbar-brand" href="getClassroomResource.php">Return Resources</a>
+                        <a class="navbar-brand" href="returnResource.php">Return Resources</a>
                     </div>
                 </div>
             </nav>
@@ -55,14 +56,13 @@
     <div class="addButton">
             <button class="btn addInputBox">+</button>
     </div>
-    <div id="homecon">
-        </div>
+    
   </div>
-   
+   <div id="homecon">
+    </div>
     <script>
        $(document).ready(function(){
         $(".addInputBox").on('click',function(){
-        
         var type = "input";
         var input = document.createElement(type);
         input.type = "text";
@@ -103,8 +103,11 @@
                     url: "addResourceItem.php", 
                     data: {resourceItemName: resourceItemName},
                     beforeSend: function(){
+                        $("#homecon").dialog({
+                            closeText: ""
+                        });
                         $('#homecon').addClass('fa fa-cog fa-spin fz-5x');
-                        $('#homecon').html("<div id='messages'></div>");  
+                        $('#homecon').html("<div id='messages' style='position:relative; top:60px; width:auto;'></div>");
                         $('#messages').html("")
                         .hide()  
                         .fadeIn(5000, function() {
@@ -118,9 +121,12 @@
                     },
                     success: function(response)
                     {
+                         $("#homecon").dialog({
+                            closeText: ""
+                        });
                        setTimeout(function(){
                         $('#homecon').addClass('fa fa-cog fa-spin fz-5x');
-                        $('#homecon').html("<div id='messages'></div>");  
+                        $('#homecon').html("<div id='messages' style='font-size: 20px; background: rgba(255,255,255,0.6); border-radius: 8px; padding-left: 10px; backdrop-filter: blur(16px); position:relative; top:60px; width:500px;'></div>");  
                         $('#messages').html(response)
                         $('#messages').html($('#messages').html() + "<br\>")
                         .hide()  
@@ -143,12 +149,16 @@
          {
             resourceItemName = $("input#resourceItemName").val();
             $.ajax({
+
                 type:"POST",
                     url: "addResourceItem.php", 
                     data: {resourceItemName: resourceItemName, addResource: resourceArray},
                     beforeSend: function(){
+                        $("#homecon").dialog({
+                            closeText: ""
+                        });
                         $('#homecon').addClass('fa fa-cog fa-spin fz-5x');
-                        $('#homecon').html("<div id='messages'></div>");  
+                        $('#homecon').html("<div id='messages' style='position:relative; top:160px;''></div>");  
                         $('#messages').html("")
                         .hide()  
                         .fadeIn(5000, function() {
@@ -163,16 +173,18 @@
                     },
                     success: function(response)
                     {
-        
+                       $("#homecon").dialog({
+                            closeText: ""
+                        });
                        setTimeout(function(){
                         $('#homecon').addClass('fa fa-cog fa-spin fz-5x');
-                        $('#homecon').html("<div id='messages'></div>");  
+                        $('#homecon').html("<div id='messages' style='font-size: 20px; background: rgba(255,255,255,0.6); border-radius: 8px; padding-left: 10px; backdrop-filter: blur(16px); position:relative; top:160px; width:500px;'></div>");  
                         $('#messages').html(response)
-                        $('#messages').html($('#messages').html() + "<br\>")
                         .hide()  
                         .fadeIn(5000, function() {
                         $('#homecon').removeClass('fa fa-cog fa-spin fz-5x');
                         $(location).prop('href', 'addResources.php');
+
                     });
                          
                     }, 3000);

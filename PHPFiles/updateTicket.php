@@ -11,7 +11,7 @@
 	}
 	else
 	{
-		$sql ="Update incidentreport SET Problem = '". $Problem  ."', Status = '".$Status."' Where incidentID = $IDNum";
+		$sql ="Update incidentreport SET Problem = '{$Problem}', Status = '{$Status}' Where incidentID = {$IDNum}";
 		if($con->query($sql) === TRUE)
 		{
 			echo "Successful Update";

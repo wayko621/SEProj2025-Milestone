@@ -2,6 +2,11 @@
 <html>
     <head>
         <link rel="icon" type="image/x-icon" href="files/images/favicon.ico">
+        <link rel="stylesheet" type="text/css" href="files/css/fontawesome.min.css"> 
+        <link rel="stylesheet" type="text/css" href="files/css/brands.min.css"> 
+        <link rel="stylesheet" type="text/css" href="files/css/solid.min.css"> 
+        <link rel="stylesheet" type="text/css" href="files/css/svg-with-js.min.css"> 
+        <link rel="stylesheet" type="text/css" href="files/css/v5-font-face.min.css">  
         <link rel="stylesheet" type="text/css" href="files/css/main-form-style.css"> 
         <link rel="stylesheet" type="text/css" href="files/css/forms-style.css"> 
         <link rel="stylesheet" type="text/css" href="files/css/login-form.css"> 
@@ -13,10 +18,16 @@
                 <div class="image-top"><img src="files/images/admin.png"/></div>
                 <div class="form-group">
                     <h2>Admin Member Login</h2>
-                    <label for="adminEmail" id="email" class="emaillabel">Email:</label> 
-                    <input type="email" name="adminEmail" id="adminEmail" autocomplete="off" required =""/>
-                    <label for="adminPW" id="password" class="pwlabel">Password:</label> 
+                    <!--<label for="adminEmail" id="email" class="emaillabel">Email:</label> -->
+                    <i class="fa fa-envelope icon"></i>
+                    <input type="email" name="adminEmail" id="adminEmail" autocomplete="off" required ="" placeholder="admin@montclair.edu" />
+                    <!--<label for="adminPW" id="password" class="pwlabel">Password:</label>--> 
+                    <br>
+                     <i class="fa fa-key icon"></i>
                     <input type="password" name="adminPW" id="adminPW" autocomplete="off" required =""/>
+                    <div>
+                        <input type="checkbox" onclick="passFunc()">Show Password</input>
+                    </div>
                     <div>
                         <button class="btn btn-primary" id="sendrequest">Login</button>
                     </div>
@@ -31,5 +42,15 @@
                 <div class="boxes box-6"></div>
             </div>
         </div>
+        <script>
+            function passFunc() {
+                var x = document.getElementById("adminPW");
+                if (x.type === "password") {
+                x.type = "text";
+                    } else {
+                    x.type = "password";
+                    }
+                } 
+        </script>  
     </body>
 </html>

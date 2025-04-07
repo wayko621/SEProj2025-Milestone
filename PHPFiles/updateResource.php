@@ -9,7 +9,7 @@
 		if($con->query($sql) === TRUE)
 		{
 			
-			echo($IDNum . ": " . $resourceName . " was assigned to room " . $classRoomNum);
+			echo("{$IDNum}: {$resourceName} was assigned to room {$classRoomNum}");
 
 		}
 		else
