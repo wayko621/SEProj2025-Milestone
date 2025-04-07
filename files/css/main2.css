@@ -223,10 +223,24 @@ ul li:hover:nth-child(2) a:after
   background: #191970;
 }
 
-.welcomesection-ul
+.welcomesection
 {
+  position: relative;
   top: 350px;
   left: 165px;
+}
+
+.welcomesection2
+{
+  position: relative;
+  top: 363px;
+  left: 600px;
+}
+
+.welcomesection-ul
+{
+  top: 0;
+  left: 0;
   color: white;
   border-radius: 16px;
   border:1px solid aliceblue;
@@ -239,8 +253,8 @@ ul li:hover:nth-child(2) a:after
 }
 .welcomesection-ul2
 {
-  top: 395px;
-  left: 600px;
+  top: 0px;
+  left: 0px;
   backdrop-filter: blur(90px);
   width: auto;
   
