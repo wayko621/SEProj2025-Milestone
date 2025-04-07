@@ -136,7 +136,7 @@
             <div>
             <h2> Last Three Active Booked Classrooms</h2>
              <?php
-             if(!isset($_SESSION['loggedin']) || !isset($_SESSION['facUN'])|| !isset($_SESSION['facEmail']))
+             if(!isset($_SESSION['loggedin']) || !isset($_SESSION['facUN']) || !isset($_SESSION['facEmail']))
     {
         header("location:/SEProj2025-Milestone/");
         
@@ -190,12 +190,11 @@
                              
                 echo "</tbody>";
                 echo "</table>";
-                
+                }
                 $results3->free();
                 $results2->free();
-                $results->free();
                 $con->close(); 
-            }
+            
             ?>
             </div>
         </div>
