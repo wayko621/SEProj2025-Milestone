@@ -242,6 +242,7 @@ ul li:hover:nth-child(2) a:after
   top: 395px;
   left: 600px;
   backdrop-filter: blur(90px);
+  width: auto;
   
 }
 
