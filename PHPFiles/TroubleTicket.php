@@ -48,8 +48,11 @@
     else
     {
                 require 'dbconfig.php';
+
+               
                 if($_SESSION['TechLevel'] == 2 || $_SESSION['TechLevel'] == 3)
                 {
+                    
                     $sql = "Select * from incidentreport WHERE Status != 'Completed' ORDER BY incidentID ";
                     $results = $con->query($sql);
                     echo "<table class='table table-bordered table-striped'>";
@@ -92,10 +95,15 @@
                     echo $row['Problem'];
                     echo "</td>";
                     echo "<td>";
+                    $sqlID = "Select AdminID from adminid ORDER BY AdminID";
+                    $resultID = $con->query($sqlID);
                     echo "<select name='techid' class='techid'>";
-                    echo "<option value='100'>100</option>";
-                    echo "<option value='200'>200</option>";
-                    echo "<option value='300'>300</option>";
+                    while($rowID = $resultID->fetch_assoc())
+                    {
+                    echo "<option value='{$rowID['AdminID']}'>{$rowID['AdminID']}</option>";
+                    }
+                    echo "</select>";
+
                     echo "</td>";
                     echo "<td>";
                     echo $row['AssignedTech'];
@@ -108,6 +116,7 @@
                     echo "</td>";
                     echo "</tr>";
                     }
+                    $resultID->free();
                     $results->free();
                     $con->close();
                 }
