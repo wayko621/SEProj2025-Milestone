@@ -4,7 +4,7 @@
     if(!in_array($_GET['id'], $_SESSION['bookedRoom']))
     {
         array_push($_SESSION['bookedRoom'], $_GET['id']);
-        $_SESSION['message'] = "Added Room to checkout";
+        $_SESSION['message'] = "Added Room to reservation";
     }
     else
     {
