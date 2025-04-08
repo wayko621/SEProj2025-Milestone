@@ -60,8 +60,6 @@
     <li><img src="../files/images/dell5820.png" id="PC04" class="smallimg group2" alt="PC04"  name="room210machines"/></li>
     <li><img src="../files/images/dell5820.png" id="PC05" class="smallimg group2" alt="PC05"  name="room210machines"/></li>
     <li><img src="../files/images/dell5820.png" id="PC06" class="smallimg group2" alt="PC06"  name="room210machines"/></li>
-    <li><img src="../files/images/dell5820.png" id="PC07" class="smallimg group2" alt="PC07"  name="room210machines"/></li>
-    <li><img src="../files/images/dell5820.png" id="PC08" class="smallimg group2" alt="PC08"  name="room210machines"/></li>
     </ul>
     <ul class="items" id="computerNames">
     <li id="pcname">PC01</li>
@@ -70,32 +68,40 @@
     <li id="pcname">PC04</li>
     <li id="pcname">PC05</li>
     <li id="pcname">PC06</li>
-    <li id="pcname">PC07</li>
-    <li id="pcname">PC08</li>
     </ul>
     <ul class="items" id="group3ul">
+    <li><img src="../files/images/dell5820.png" id="PC07" class="smallimg group2" alt="PC07"  name="room210machines"/></li>
+    <li><img src="../files/images/dell5820.png" id="PC08" class="smallimg group2" alt="PC08"  name="room210machines"/></li>
     <li><img src="../files/images/dell5820.png" id="PC09" class="smallimg group2" alt="PC09"  name="room210machines"/></li>
     <li><img src="../files/images/dell5820.png" id="PC10" class="smallimg group2" alt="PC10"  name="room210machines"/></li>
     <li><img src="../files/images/dell5820.png" id="PC11" class="smallimg group3" alt="PC11"  name="room210machines"/></li>
     <li><img src="../files/images/dell5820.png" id="PC12" class="smallimg group3" alt="PC12"  name="room210machines"/></li>
-    <li><img src="../files/images/dell5820.png" id="PC13" class="smallimg group3" alt="PC13"  name="room210machines"/></li>
-    <li><img src="../files/images/dell5820.png" id="PC14" class="smallimg group3" alt="PC14"  name="room210machines"/></li>
-    <li><img src="../files/images/dell5820.png" id="PC15" class="smallimg group3" alt="PC15"  name="room210machines"/></li>
-    <li><img src="../files/images/dell5820.png" id="PC16" class="smallimg group3" alt="PC16"  name="room210machines"/></li>
     </ul>
     <ul class="items" id="computerNames">
+    <li id="pcname">PC07</li>
+    <li id="pcname">PC08</li>
     <li id="pcname">PC09</li>
     <li id="pcname">PC10</li>
     <li id="pcname">PC11</li>
     <li id="pcname">PC12</li>
+    </ul>
+    <ul class="items" id="group4ul">
+    <li><img src="../files/images/dell5820.png" id="PC13" class="smallimg group3" alt="PC13"  name="room210machines"/></li>
+    <li><img src="../files/images/dell5820.png" id="PC14" class="smallimg group3" alt="PC14"  name="room210machines"/></li>
+    <li><img src="../files/images/dell5820.png" id="PC15" class="smallimg group3" alt="PC15"  name="room210machines"/></li>
+    <li><img src="../files/images/dell5820.png" id="PC16" class="smallimg group3" alt="PC16"  name="room210machines"/></li>
+    <li><img src="../files/images/dell5820.png" id="PC17" class="smallimg group3" alt="PC17"  name="room210machines"/></li>
+    <li><img src="../files/images/dell5820.png" id="PC18" class="smallimg group3" alt="PC18"  name="room210machines"/></li>
+    </ul>
+    <ul class="items" id="computerNames">
     <li id="pcname">PC13</li>
     <li id="pcname">PC14</li>
     <li id="pcname">PC15</li>
     <li id="pcname">PC16</li>
+    <li id="pcname">PC17</li>
+    <li id="pcname">PC18</li>
     </ul>
-    <ul class="items" id="group4ul">
-    <li><img src="../files/images/dell5820.png" id="PC17" class="smallimg group3" alt="PC17"  name="room210machines"/></li>
-    <li><img src="../files/images/dell5820.png" id="PC18" class="smallimg group3" alt="PC18"  name="room210machines"/></li>
+    <ul class="items" id="group5ul">
     <li><img src="../files/images/dell5820.png" id="PC19" class="smallimg group3" alt="PC19"  name="room210machines"/></li>
     <li><img src="../files/images/dell5820.png" id="PC20" class="smallimg group3" alt="PC20"  name="room210machines"/></li>
     <li><img src="../files/images/dell5820.png" id="PC21" class="smallimg group4" alt="PC21"  name="room210machines"/></li>
@@ -104,8 +110,6 @@
     <li><img src="../files/images/dell5820.png" id="PC24" class="smallimg group4" alt="PC24"  name="room210machines"/></li>
     </ul>
     <ul class="items" id="computerNames">
-    <li id="pcname">PC17</li>
-    <li id="pcname">PC18</li>
     <li id="pcname">PC19</li>
     <li id="pcname">PC20</li>
     <li id="pcname">PC21</li>
@@ -113,13 +117,12 @@
     <li id="pcname">PC23</li>
     <li id="pcname">PC24</li>
     </ul>
-    <ul class="items" id="group5ul">
+    <ul class="items" id="group6ul">
     <li><img src="../files/images/dell5820.png" id="PC25" class="smallimg group4" alt="PC25"  name="room210machines"/></li>
     <li><img src="../files/images/dell5820.png" id="PC26" class="smallimg group4" alt="PC26"  name="room210machines"/></li>
     <li><img src="../files/images/dell5820.png" id="PC27" class="smallimg group4" alt="PC27"  name="room210machines"/></li>
     <li><img src="../files/images/dell5820.png" id="PC28" class="smallimg group4" alt="PC28"  name="room210machines"/></li>
     <li><img src="../files/images/dell5820.png" id="PC29" class="smallimg group4" alt="PC29"  name="room210machines"/></li>
-
     <li><img src="../files/images/dell5820.png" id="PC30" class="smallimg group4" alt="PC30"  name="room210machines"/></li>
     </ul>
     <ul class="items" id="computerNames">
@@ -132,9 +135,11 @@
     </ul>
     <div class="problemarea">
     <div class="problem">
-    Drag problem machine in here:
-    <div class="numbers"></div>
+    <p class="sendsec">Drag problem machine in here:</p>
+    <div class="numbers sendsec"></div>
+    <div class="sendsec">
     <button value="Send To Helpdesk" class="button btn btn-primary">Send To Helpdesk</button> 
+    </div>
     </div>
     <div id="homecon">
     </div>

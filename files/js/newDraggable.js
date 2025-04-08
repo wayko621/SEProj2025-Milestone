@@ -40,13 +40,13 @@ var htmlnew = '<div class="probdiv"><img src="' + img_src + '" id="' + img_id + 
 htmlnew = htmlnew + '  <p class="p-prob">Please describe problem:</p><textarea rows="4" cols="80" class="textarea1" name="textarea1"></textarea>'+ '    ' + img_id + ' Date and Time Of Problem: ' + Current_Date + '<input type="hidden" id="currentdate" name="Current_Date" value="' + Current_Date +'"></div>'
 $(".problem").append(htmlnew);
 var numItems = $('.probdiv').length
-var probHeight = 400;
+var probHeight = 550;
 if(numItems == 1){
 newHeight = probHeight * numItems;
 }
 else
 {
-newHeight = 320 * numItems;
+newHeight = (300 * numItems) + 90;
 }
 $("#update").hide();
 $(".problem").css("height", newHeight + "px");
