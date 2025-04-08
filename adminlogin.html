@@ -11,6 +11,8 @@
         <link rel="stylesheet" type="text/css" href="files/css/forms-style.css"> 
         <link rel="stylesheet" type="text/css" href="files/css/login-form.css"> 
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.min.js"></script>
+        <script type="text/javascript" src="files/js/jquery-ui-1.8.22.custom.min.js"></script>
     </head>
     <body>
         <div class="wrapper">
@@ -25,9 +27,7 @@
                     <br>
                      <i class="fa fa-key icon"></i>
                     <input type="password" name="adminPW" id="adminPW" autocomplete="off" required =""/>
-                    <div>
-                        <input type="checkbox" onclick="passFunc()">Show Password</input>
-                    </div>
+                     <i class="fa fa-eye icon"></i>
                     <div>
                         <button class="btn btn-primary" id="sendrequest">Login</button>
                     </div>
@@ -43,14 +43,20 @@
             </div>
         </div>
         <script>
-            function passFunc() {
+            $(".fa-eye").on("click",function() 
+            {
                 var x = document.getElementById("adminPW");
-                if (x.type === "password") {
-                x.type = "text";
-                    } else {
-                    x.type = "password";
-                    }
+                if (x.type === "password") 
+                {
+                    x.type = "text";
+                    $(".fa-eye").removeClass("fa-eye").addClass("fa-eye-slash");
                 } 
+                else 
+                {
+                    x.type = "password";
+                    $(".fa-eye-slash").removeClass("fa-eye-slash").addClass("fa-eye");
+                }
+            }); 
         </script>  
     </body>
 </html>
