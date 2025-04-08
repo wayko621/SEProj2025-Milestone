@@ -15,7 +15,7 @@
     <head>
         <meta charset="utf-8">
         <title>Incident Report</title>
-        <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.min.js"></script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
         <script type="text/javascript" src="../files/js/jquery-ui-1.8.22.custom.min.js"></script>
         <link rel="stylesheet" type="text/css" href="../files/css/bootstrap.min.css">
         <link rel="icon" type="image/x-icon" href="../files/images/favicon.ico">
