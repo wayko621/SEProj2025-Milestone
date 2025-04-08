@@ -45,7 +45,7 @@
                 <p class="facname"><h2>Welcome Back <?php echo htmlspecialchars($_SESSION['facUN']) ?></h2></p>
             </div>
             <div class='tickets'>
-                <p class='lastthree'><h3>Here are your last three active tickets</h3></p>
+                <p class='lastthree'><h3>Here are your last five active tickets</h3></p>
                 </div>
 
              <?php
@@ -57,7 +57,7 @@
     else
     {
                 require 'dbconfig.php';
-                $sql2 = "SELECT * FROM (Select * from incidentreport WHERE facEmail = '{$_SESSION['facEmail']}' AND Status != 'Completed'  ORDER BY incidentID DESC LIMIT 3) as r ORDER BY incidentID";
+                $sql2 = "SELECT * FROM (Select * from incidentreport WHERE facEmail = '{$_SESSION['facEmail']}' AND Status != 'Completed'  ORDER BY incidentID DESC LIMIT 5) as r ORDER BY incidentID";
                 $results2 = $con->query($sql2);
                 echo "<table class='table table-bordered table-striped'>";
                 echo "<tbody>";
