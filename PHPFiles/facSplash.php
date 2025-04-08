@@ -193,7 +193,7 @@
                 
                 $results3->free();
                 $results2->free();
-                $results->free();
+                
                 $con->close(); 
             }
             ?>
