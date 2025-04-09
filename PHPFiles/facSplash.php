@@ -18,8 +18,8 @@
     <head>
         <meta charset="utf-8">
         <title>Faculty Portal</title>
-         <script type='text/javascript' src='https://code.jquery.com/jquery-1.7.min.js'></script>
-    <script type="text/javascript" src="../files/js/jquery-ui-1.8.22.custom.min.js"></script>
+        <script type='text/javascript' src='https://code.jquery.com/jquery-1.7.min.js'></script>
+        <script type="text/javascript" src="../files/js/jquery-ui-1.8.22.custom.min.js"></script>
         <link rel="stylesheet" type="text/css" href="../files/css/bootstrap.min.css">
         <link rel="icon" type="image/x-icon" href="../files/images/favicon.ico">
         <style>
@@ -27,9 +27,8 @@
             {
                 margin-top: 35px;
             }
-            
-
         </style>
+        <link rel="stylesheet" type="text/css" href="../files/css/sidebar.css">
     </head>
     <body>
         <div class="container">
@@ -51,6 +50,24 @@
                     </div>
                 </div>
             </nav>
+            <div class="sidebar-nav">
+                <ul class="sidebar-ul">
+                    <li class="account">Account</li>
+                    <ul class="account-ul">
+                        <span class="view glyphicon glyphicon-off"></span>
+                        <li class="account-li username"><?php echo htmlspecialchars($_SESSION['facUN']); ?></li>
+                        <li class="account-li logout btn btn-danger">Log Out</li>
+                        <hr></hr>
+                    </ul>
+                    <li>Links</li>
+                    <ul>
+                    </ul>
+                    <a class="camera" href="../connectCamera.html"><li class="glyphicon glyphicon-camera camerali">
+                    <br>
+                    <span>View Camera</span></li></a>
+                </ul>
+            </div>
+
             <div class="welcome">
                 <p class="facname"><h2>Welcome Back <?php echo htmlspecialchars($_SESSION['facUN']) ?></h2></p>
             </div>
@@ -196,16 +213,14 @@
                         echo "</td>";
                         echo "</tr>";
                     }
-                } 
-                             
+                }             
                 echo "</tbody>";
                 echo "</table>";
                 }
                 $results3->free();
                 $results2->free();
-                $con->close(); 
-            
-            ?>
+                $con->close();  
+                ?>
             </div>
         </div>
         <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
@@ -231,5 +246,20 @@
             });
             });
         </script>
+
+        <script>
+            $('.account').on("click", function(){
+
+                $(".account-ul").addClass('view');
+            });
+        </script>
+         <script>
+            $('.view').on("click", function(){
+
+                $(".account-ul").removeClass('view');
+            });
+        </script>
+
+
     </body>
     </html>
