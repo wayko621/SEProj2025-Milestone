@@ -7,8 +7,8 @@
     }
     else
     {
-        require 'facLoginfo.php';
-        require 'logout.php';
+       // require 'facLoginfo.php';
+        //require 'logout.php';
         if(!isset($_SESSION['bookedRoom']))
         {
             $_SESSION['bookedRoom'] = array();
@@ -21,7 +21,7 @@
     <head>
         <meta charset="utf-8">
         <title>Classroom Schedule</title>
-        <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script type='text/javascript' src='https://code.jquery.com/jquery-1.7.min.js'></script>
         <script type="text/javascript" src="../files/js/jquery-ui-1.8.22.custom.min.js"></script>
         <link rel="stylesheet" type="text/css" href="../files/css/bootstrap.min.css">
         <link rel="icon" type="image/x-icon" href="../files/images/favicon.ico">
@@ -50,6 +50,14 @@
                         <a class="navbar-brand" href="classroom.php">Create Trouble Tickets</a>
                         <a class="navbar-brand" href="../connectCamera.html">Access Camera</a>
                         <a class="navbar-brand glyphicon glyphicon-book" href="viewBooking.php"><?php echo count($_SESSION['bookedRoom']); ?></a>
+                        <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo htmlspecialchars($_SESSION['facUN']); ?><span class="caret"></span></a>
+                          <ul class="dropdown-menu">
+                           <p class='logout center-block bg-danger'>Log Out</p>
+                          </ul>
+                        </li>
+                    </ul>
                     </div>
                 </div>
             </nav>
@@ -122,6 +130,16 @@
  
             }
         </script> 
+        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+         <script>
+          $(document).ready(function()
+           {
+            $('.logout').on('click',function()
+            {
+           $(location).prop('href', 'sessionDestroy.php');
+            });
+            });
+        </script>
     </body>
 </html>
     
