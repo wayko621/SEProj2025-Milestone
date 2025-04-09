@@ -36,7 +36,7 @@
                     <div class="navbar-header"> 
                         <a class="navbar-brand" href="faculty.php">My Tickets and Bookings</a>
                         <a class="navbar-brand" href="classroom.php">Create Trouble Tickets</a>
-                        <a class="navbar-brand" href="scheduleClassroom.php">Book a ClassRoom</a>
+                        <a class="navbar-brand" href="scheduleClassroom.php">Book a Classroom</a>
                         <a class="navbar-brand" href="../connectCamera.html">Access Camera</a>
                     </div>
                 </div>
