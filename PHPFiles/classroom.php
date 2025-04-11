@@ -58,7 +58,6 @@
                         <span class="viewButton glyphicon glyphicon-off"></span>
                         <a class="allLinks-li" href="facSplash.php">My Page</a>
                         <a class="allLinks-li" href="faculty.php">My Tickets and Bookings</a>
-                        <a class="allLinks-li" href="classroom.php">Create Trouble Tickets</a>
                     </ul>
                     <a class="camera" href="../connectCamera.html"><li class="glyphicon glyphicon-camera camerali">
                     <br>
