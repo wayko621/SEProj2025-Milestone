@@ -35,10 +35,10 @@
 	position: absolute;
 	left: 0;
 	top: 0;
-	border: 1px solid black;
+	border: 1px solid rgba(0,0,0,.3);
 	height: 100vh;
 	border-radius: 2px;
-	background: red;
+	background: #606060;
 	width: 140px;
 }
 
@@ -69,14 +69,15 @@
 
 .sidebar-nav li:first-child:hover
 {
-	background-color: darkred;
+	background-color: #707070;
 	cursor: pointer;
 	color: white;
+
 }
 
 .sidebar-nav li:nth-child(3):hover
 {
-	background-color: darkred;
+	background-color: #707070;
 	cursor: pointer;
 	color: white;
 } 
@@ -134,10 +135,13 @@
 
 }
 
-
+a:hover
+{
+	text-decoration: none;
+}
 .allLinks-li:hover
 {
-	color: red;
+	color: whitesmoke;
 } 
 
 .allLinks-li
@@ -150,10 +154,7 @@
 	padding-left: 10px;
 }
 
-a:hover
-{
-	text-decoration: none;
-}
+
 
 .camera, .reserve
 {

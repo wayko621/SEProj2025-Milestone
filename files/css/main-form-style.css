@@ -1,8 +1,12 @@
+*
+{
+    font-family: "Trirong", sans-serif;
+}
+
 h2
 {
     text-align: center;
     display: block;
-    font-family: "Trirong", serif; 
     font-weight: 400;
 }
 
@@ -57,7 +61,6 @@ input
 {
     position:relative;
     margin:12px auto;
-    font-family: "Trirong", serif;
     color: #FFFFFF;
     text-transform: uppercase;
     height: 60px;

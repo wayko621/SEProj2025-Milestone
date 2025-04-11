@@ -39,10 +39,11 @@
                 color: #f00;
             }
         </style>
+        <link rel="stylesheet" type="text/css" href="../files/css/sidebar.css">
     </head>
     <body>
         <div class="container">
-              <nav class="navbar navbar-default">
+              <!--<nav class="navbar navbar-default">
                 <div class="container-fluid">
                     <div class="navbar-header"> 
                         <a class="navbar-brand" href="facSplash.php">My Page</a>
@@ -60,7 +61,27 @@
                     </ul>
                     </div>
                 </div>
-            </nav>
+            </nav>-->
+              <div class="sidebar-nav">
+                <ul class="sidebar-ul">
+                    <li class="account">Account</li>
+                    <ul class="account-ul">
+                        <span class="viewButton glyphicon glyphicon-off"></span>
+                        <li class="account-li username"><?php echo htmlspecialchars($_SESSION['facUN']); ?></li>
+                        <li class="account-li logout btn btn-danger"><p style="font-size: 18px; margin-top: 10px">Log Out<p></li>
+                    </ul>
+                    <li class="allLinks">Links</li>
+                    <ul class="allLinks-ul">
+                        <span class="viewButton glyphicon glyphicon-off"></span>
+                        <a class="navbar-brand allLinks-li" href="facSplash.php">My Page</a> 
+                        <a class="navbar-brand allLinks-li" href="faculty.php">My Tickets and Bookings</a>
+                        <a class="navbar-brand allLinks-li" href="classroom.php">Create Trouble Tickets</a>
+                    </ul>
+                    <a class="camera" href="../connectCamera.html"><li class="glyphicon glyphicon-camera camerali">
+                    <br>
+                    <span>Access Camera</span></li></a>
+                </ul>
+            </div>
             <?php
 
                 if(isset($_SESSION['message']))
@@ -138,6 +159,25 @@
             {
            $(location).prop('href', 'sessionDestroy.php');
             });
+            });
+        </script>
+           <script>
+            $('.account').on("click", function(){
+              
+                $(".account-ul").addClass('view'); 
+                $(".allLinks-ul").removeClass('allLinks-view');  
+            });
+        </script>
+         <script>
+            $('.viewButton').on("click", function(){
+                $(".account-ul").removeClass('view');
+                $(".allLinks-ul").removeClass('allLinks-view');
+            });
+        </script>
+         <script>
+            $('.allLinks').on("click", function(){
+                  $(".account-ul").removeClass('view');
+                $(".allLinks-ul").addClass('allLinks-view');
             });
         </script>
     </body>

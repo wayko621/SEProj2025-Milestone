@@ -17,6 +17,7 @@
     <link rel="stylesheet" type="text/css" href="../files/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="../files/css/newDraggable.css">
     <link rel="icon" type="image/x-icon" href="../files/images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../files/css/sidebar2.css">
     </head>
     <body>
     <div style="padding-left: 10px;">
@@ -26,7 +27,7 @@
        
     </div>
     <div class="wrapper">
-        <nav class="navbar navbar-default">
+        <!--<nav class="navbar navbar-default">
             <div class="container-fluid">
                 <div class="navbar-header"> 
                     <a class="navbar-brand" href="facSplash.php">My Page</a>
@@ -43,7 +44,28 @@
                     </ul>
                 </div>
             </div>
-        </nav>
+        </nav>-->
+         <div class="sidebar-nav">
+                <ul class="sidebar-ul">
+                    <li class="account">Account</li>
+                    <ul class="account-ul">
+                        <span class="viewButton glyphicon glyphicon-off"></span>
+                        <li class="account-li username"><?php echo htmlspecialchars($_SESSION['facUN']); ?></li>
+                        <li class="account-li logout btn btn-danger"><p style="font-size: 18px; margin-top: 10px">Log Out<p></li>
+                    </ul>
+                    <li class="allLinks">Links</li>
+                    <ul class="allLinks-ul">
+                        <span class="viewButton glyphicon glyphicon-off"></span>
+                        <a class="allLinks-li" href="facSplash.php">My Page</a>
+                        <a class="allLinks-li" href="faculty.php">My Tickets and Bookings</a>
+                        <a class="allLinks-li" href="classroom.php">Create Trouble Tickets</a>
+                    </ul>
+                    <a class="camera" href="../connectCamera.html"><li class="glyphicon glyphicon-camera camerali">
+                    <br>
+                    <span>Access Camera</span></li></a>
+                     <a class="reserve" href="scheduleClassroom.php"><li class="reserveli"><img src="../files/images/reserve-icon.svg" class="reserveicon"/><span>Reserve a Classroom</span></li></a>
+                </ul>
+            </div>
       <div class="room210">
           <h4 style="margin-left: 955px; margin-bottom: 0">Classroom</h4>
           <select class="form-select form-select-lg mb-3 room" id="room" style="margin-left: 958px;">
@@ -173,6 +195,25 @@
                     }
                 }
         </script> 
+           <script>
+            $('.account').on("click", function(){
+              
+                $(".account-ul").addClass('view'); 
+                $(".allLinks-ul").removeClass('allLinks-view');  
+            });
+        </script>
+         <script>
+            $('.viewButton').on("click", function(){
+                $(".account-ul").removeClass('view');
+                $(".allLinks-ul").removeClass('allLinks-view');
+            });
+        </script>
+         <script>
+            $('.allLinks').on("click", function(){
+                  $(".account-ul").removeClass('view');
+                $(".allLinks-ul").addClass('allLinks-view');
+            });
+        </script>
     </foot>
     </body>
 </html>
