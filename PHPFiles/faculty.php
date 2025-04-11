@@ -73,7 +73,7 @@
                    
                     <a class="reserve" href="scheduleClassroom.php"><li class="reserveli"> 
                     <img src="../files/images/reserve-class.svg" class="reserveicon"/>
-                    <span>Reserve a Classroom</span></li></a>
+                    <span>Reserve Classroom</span></li></a>
                     <!-- License: CC Attribution. Made by Ryan Adryawan: https://dribbble.com/ryanawan -->
                     <a class="ticket" href="classroom.php">
                     <li>

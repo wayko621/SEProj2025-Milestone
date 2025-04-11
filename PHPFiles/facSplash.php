@@ -67,7 +67,7 @@
                     <a class="camera" href="../connectCamera.html"><li class="glyphicon glyphicon-camera camerali">
                     <br>
                     <span>Access Camera</span></li></a>
-                     <a class="reserve" href="scheduleClassroom.php"><li class="reserveli"><img src="../files/images/reserve-class.svg" class="reserveicon"/><span>Reserve a Classroom</span></li></a>
+                     <a class="reserve" href="scheduleClassroom.php"><li class="reserveli"><img src="../files/images/reserve-class.svg" class="reserveicon"/><span>Reserve Classroom</span></li></a>
                      <!-- License: CC Attribution. Made by Ryan Adryawan: https://dribbble.com/ryanawan -->
                     <a class="ticket" href="classroom.php"><li><svg fill="#ffffff" width="75px" height="75px" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
                     <g data-name="19 costumer service" id="_19_costumer_service">
