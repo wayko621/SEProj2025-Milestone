@@ -17,8 +17,8 @@
   <head>
     <link rel="icon" type="image/x-icon" href="../files/images/favicon.ico">
     <link rel="stylesheet" type="text/css" href="../files/css/main-form-style.css">
-    <link rel="stylesheet" type="text/css" href="../files/css/login-form.css"> 
-    <link rel="stylesheet" type="text/css" href="../files/css/forms-style2.css"> 
+    <link rel="stylesheet" type="text/css" href="../files/css/forms-style2.css">
+    <link rel="stylesheet" type="text/css" href="../files/css/adminfac.css">  
   </head>
   <body>
     <nav class="main-nav">

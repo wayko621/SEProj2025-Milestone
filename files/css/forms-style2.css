@@ -1,6 +1,5 @@
 *
 {
-	font-family: "Trirong", sans-serif;
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;	
@@ -83,7 +82,7 @@ transform: rotateY(180deg);
 {
 	position: absolute;
 	top: 540px;
-	font-size: 18px;
+	font-size: 23px;
 	margin-left: -9px;
 	width:90%;
 	background: whitesmoke;
@@ -92,11 +91,14 @@ transform: rotateY(180deg);
 	box-shadow: 10px 10px 20px -8px rgba(0, 0, 0, .5);
 }
 
-
+.switchspan:hover
+{
+	cursor: pointer;
+}
 
 .switchback span
 {
-	font-weight: bold;
+	
 
 }
 .addButton
