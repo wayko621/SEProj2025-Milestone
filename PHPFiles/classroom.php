@@ -51,7 +51,7 @@
                     <ul class="account-ul">
                         <span class="viewButton glyphicon glyphicon-off"></span>
                         <li class="account-li username"><?php echo htmlspecialchars($_SESSION['facUN']); ?></li>
-                        <li class="account-li logout btn btn-danger"><p style="font-size: 18px; margin-top: 10px">Log Out<p></li>
+                        <li class="account-li logout btn btn-danger" onMouseOver="this.style.background='darkred'" onMouseOut="this.style.background='#d9534f'"><p style="font-size: 18px; margin-top: 10px">Log Out<p></li>
                     </ul>
                     <li class="allLinks">Links</li>
                     <ul class="allLinks-ul">
