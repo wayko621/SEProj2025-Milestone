@@ -21,6 +21,13 @@
     <meta charset="utf-8">
     <title>Admin Portal</title>
     <link rel="stylesheet" type="text/css" href="../files/css/bootstrap.min.css">
+      <style>
+            *
+            {
+                font-family:  font-family: "Trirong", sans-serif;
+            }
+        </style>
+    
      <style>
             .container
             {

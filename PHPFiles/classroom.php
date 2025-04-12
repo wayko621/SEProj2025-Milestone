@@ -62,7 +62,7 @@
                     <a class="camera" href="../connectCamera.html"><li class="glyphicon glyphicon-camera camerali">
                     <br>
                     <span>Access Camera</span></li></a>
-                     <a class="reserve" href="scheduleClassroom.php"><li class="reserveli"><img src="../files/images/reserve-icon.svg" class="reserveicon"/><span>Reserve a Classroom</span></li></a>
+                      <a class="reserve" href="scheduleClassroom.php"><li class="reserveli"><img src="../files/images/reserve-class.svg" class="reserveicon"/><span>Reserve Classroom</span></li></a>
                 </ul>
             </div>
       <div class="room210">
