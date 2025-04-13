@@ -66,14 +66,12 @@
 	font-size: 18px;
 	padding-bottom: 15px;
 	list-style: none;
-
 }
 
 .sidebar-nav li:first-child
 {
 	padding-top: 20px;
 	padding-left: 15px;
-
 }
 
 .sidebar-nav li:first-child:hover

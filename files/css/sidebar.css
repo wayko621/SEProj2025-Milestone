@@ -16,7 +16,7 @@
     z-index: -1;
   }
   100% {
-     left: 140px;
+     left: 100px;
      z-index: 1;
   }
 }
@@ -39,15 +39,14 @@
 
 .sidebar-nav
 {
-	
 	position: absolute;
 	left: 0;
 	top: 0;
 	border: 1px solid black;
-	height: 100vh;
+	height: 200vh;
 	border-radius: 2px;
 	background: red;
-	width: 140px;
+	width: 100px;
 }
 
 .logout
@@ -64,10 +63,9 @@
 
 .sidebar-nav li
 {
-	font-size: 23px;
+	font-size: 18px;
 	padding-bottom: 15px;
 	list-style: none;
-
 }
 
 .sidebar-nav li:first-child

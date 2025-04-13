@@ -26,6 +26,8 @@
             .container
             {
                 margin-top: 35px;
+                width: 960px;
+                margin-left: 250px;
             }
         </style>
         <link rel="stylesheet" type="text/css" href="../files/css/sidebar.css">
