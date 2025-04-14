@@ -15,9 +15,11 @@
     <script type='text/javascript' src='https://code.jquery.com/jquery-1.7.min.js'></script>
     <script type="text/javascript" src="../files/js/jquery-ui-1.8.22.custom.min.js"></script>
     <link rel="stylesheet" type="text/css" href="../files/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="../files/css/newDraggable.css">
+    
     <link rel="icon" type="image/x-icon" href="../files/images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../files/css/sidebar-main.css">
     <link rel="stylesheet" type="text/css" href="../files/css/sidebar2.css">
+    <link rel="stylesheet" type="text/css" href="../files/css/newDraggable.css">
     </head>
     <body>
     <div style="padding-left: 10px;">
@@ -27,42 +29,20 @@
        
     </div>
     <div class="wrapper">
-        <!--<nav class="navbar navbar-default">
-            <div class="container-fluid">
-                <div class="navbar-header"> 
-                    <a class="navbar-brand" href="facSplash.php">My Page</a>
-                    <a class="navbar-brand" href="faculty.php">My Tickets and Bookings</a>
-                    <a class="navbar-brand" href="scheduleClassroom.php">Book a Classroom</a>
-                    <a class="navbar-brand" href="../connectCamera.html">Access Camera</a>
-                    <ul class="nav navbar-nav">
-                        <li class="dropdown">
-                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo htmlspecialchars($_SESSION['facUN']); ?><span class="caret"></span></a>
-                          <ul class="dropdown-menu">
-                           <p class='logout center-block bg-danger'>Log Out</p>
-                          </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>-->
          <div class="sidebar-nav">
                 <ul class="sidebar-ul">
                     <li class="account">Account</li>
                     <ul class="account-ul">
                         <span class="viewButton glyphicon glyphicon-off"></span>
                         <li class="account-li username"><?php echo htmlspecialchars($_SESSION['facUN']); ?></li>
-                        <li class="account-li logout btn btn-danger" onMouseOver="this.style.background='darkred'" onMouseOut="this.style.background='#d9534f'"><p style="font-size: 18px; margin-top: 10px">Log Out<p></li>
+                        <li class="account-li logout btn btn-danger"><p style="font-size: 18px; margin-top: 10px">Log Out<p></li>
                     </ul>
-                    <li class="allLinks">Links</li>
-                    <ul class="allLinks-ul">
-                        <span class="viewButton glyphicon glyphicon-off"></span>
-                        <a class="allLinks-li" href="facSplash.php">My Page</a>
-                        <a class="allLinks-li" href="faculty.php">My Tickets and Bookings</a>
-                    </ul>
+                    <a class="" href="facSplash.php"><li class="">My Page</li></a>
+                    <a class="" href="faculty.php"><li class="">My Tickets and Bookings</li></a>
                     <a class="camera" href="../connectCamera.html"><li class="glyphicon glyphicon-camera camerali">
                     <br>
                     <span>Access Camera</span></li></a>
-                      <a class="reserve" href="scheduleClassroom.php"><li class="reserveli"><img src="../files/images/reserve-class.svg" class="reserveicon"/><span>Reserve Classroom</span></li></a>
+                    <a class="reserve" href="scheduleClassroom.php"><li class="reserveli"><img src="../files/images/reserve-class.svg" class="reserveicon"/><span>Reserve Classroom</span></li></a>
                 </ul>
             </div>
       <div class="room210">

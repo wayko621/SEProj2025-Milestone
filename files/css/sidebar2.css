@@ -36,7 +36,7 @@
 	left: 0;
 	top: 0;
 	border: 1px solid rgba(0,0,0,.3);
-	height: 100vh;
+	height: 200vh;
 	border-radius: 2px;
 	background: #606060;
 	width: 140px;
@@ -134,10 +134,13 @@
 	padding-right: 25px;
 
 }
-
-a:hover
+.sidebar-ul a
 {
-	text-decoration: none;
+  color: black;
+}
+.sidebar-ul a:hover
+{
+  text-decoration: none;
 }
 .allLinks-li:hover
 {

@@ -1,42 +1,4 @@
-*
-{
-    font-family: "Trirong", sans-serif;
-    line-height:1.1;
-    padding: 0;
-    margin: 0;
-}
-
-@keyframes slideToRight {
-  0% {
-    left:0;
-    z-index: -1;
-  }
-   50% {
-   
-    z-index: -1;
-  }
-  100% {
-     left: 100px;
-     z-index: 1;
-  }
-}
-
-@keyframes slideToRight2 {
-  0% {
-    left:0;
-    z-index: -1;
-  }
-   50% {
-   
-    z-index: -1;
-  }
-  100% {
-     left: 140px;
-     z-index: 1;
-  }
-}
-
-
+/*Sidebar CSS*/
 .sidebar-nav
 {
 	position: absolute;
@@ -46,34 +8,15 @@
 	height: 200vh;
 	border-radius: 2px;
 	background: red;
-	width: 100px;
+	width: 110px;
 }
-
-.logout
+.sidebar-ul a
 {
-
-	margin-top: 10px;
-	
+  color: black;
 }
-.btn-danger
+.sidebar-ul a:hover
 {
-	
-	font-size: 18px;
-}
-
-.sidebar-nav li
-{
-	font-size: 18px;
-	padding-bottom: 15px;
-	list-style: none;
-}
-
-.sidebar-nav li:first-child
-{
-	padding-top: 20px;
-		width: 100%;
-	padding-left: 15px;
-
+  text-decoration: none;
 }
 
 .sidebar-nav li:first-child:hover
@@ -92,132 +35,17 @@
 	
 } 
 
-
-.sidebar-ul
+.glyphicon-off:hover
 {
-	position: relative;
-	padding-left:0;
+	color: darkred;
 }
-
-.account-ul
-{
-	position: absolute;
-	left: -160px;
-	top: 0;
-	width: 160px;
-	border: 1.5px solid rgba(0,0,0, .1);
-	padding: 10px 0 15px 25px;
-	border-top-right-radius: 10px;
-	border-bottom-right-radius: 10px;
-
-}
-
-.view
-{
-	animation-name: slideToRight;
-  animation-duration: .5s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: 1;
-	left: 140px;
-}
-
-.glyphicon-off
-{
-	font-size: 18px;
-}
-
-.sidebar-nav li:nth-child(5)
-{
-	padding-bottom: 0;
-
-}
-
-.username
-{
-
-	border: 1px solid rgba(0,0,0, .1);
-	border-radius: 60px;
-	width: 100px;
-	height: 100px;
-	padding-top: 30px;
-	padding-left: 25px;
-	padding-right: 25px;
-
-}
-
-
-
-a
-{
-	color: black;
-}
+/*End of Logout Section*/
 
 .allLinks-li:hover
 {
 	color: red;
 } 
 
-.allLinks-li
-{
-	color:black;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 16px;
-	line-height: 35px;
-	padding-left: 10px;
-}
 
-a:hover
-{
-	text-decoration: none;
-}
-
-.camera, .reserve
-{
-	color:black;
-	text-decoration: none;
-	margin-top: -15px;
-	font-size: 15px;
-}
-
-
-
-.viewButton
-{
-	float:right;
-}
-
-.allLinks-ul
-{
-	position: absolute;
-	left: -360px;
-	top: 70px;
-	width: 200px;
-	border: 1.5px solid rgba(0,0,0, .1);
-	border-top-right-radius: 10px;
-	border-bottom-right-radius: 10px ;
-	padding-top: 10px;
-	padding-left: 0;
-}
-.allLinks-view
-{
-	
-	animation-name: slideToRight2;
-    animation-duration: .5s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: 1;
-	left: 141px;
-}
-
-.reserveicon
-{
-	width: 100px;
-	height: 100px;
-	margin: -25px 0;
-}
-
-.reserveli span
-{
-	font-size: 20px;
-}
+/*End of Navigation Section*/
 

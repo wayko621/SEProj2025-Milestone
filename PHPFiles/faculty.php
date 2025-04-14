@@ -26,32 +26,17 @@
             .container
             {
                 margin-top: 35px;
+                width: 960px;
+                margin-left: 250px;
             }
             
         </style>
+        <link rel="stylesheet" type="text/css" href="../files/css/sidebar-main.css">
         <link rel="stylesheet" type="text/css" href="../files/css/sidebar.css">
         
     </head>
     <body>
         <div class="container">
-            <!--<nav class="navbar navbar-default">
-                <div class="container-fluid">
-                    <div class="navbar-header">
-                        <a class="navbar-brand" href="facSplash.php">My Page</a> 
-                        <a class="navbar-brand" href="classroom.php">Create Trouble Tickets</a>
-                        <a class="navbar-brand" href="scheduleClassroom.php">Book a Classroom</a>
-                        <a class="navbar-brand" href="../connectCamera.html">Access Camera</a>
-                        <ul class="nav navbar-nav">
-                        <li class="dropdown">
-                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo htmlspecialchars($_SESSION['facUN']); ?><span class="caret"></span></a>
-                          <ul class="dropdown-menu">
-                           <p class='logout center-block bg-danger'>Log Out</p>
-                          </ul>
-                        </li>
-                    </ul>
-                    </div>
-                </div>
-            </nav>-->
             <div class="sidebar-nav">
                 <ul class="sidebar-ul">
                     <li class="account">Account</li>
@@ -61,12 +46,12 @@
                         <li class="account-li logout btn btn-danger"><p style="font-size: 18px; margin-top: 10px">Log Out<p></li>
                     </ul>
                     <a class="" href="facSplash.php"><li class="">My Page</li></a>
-                    <ul class="allLinks-ul">
+                    <!--<ul class="allLinks-ul">
                         <span class="viewButton glyphicon glyphicon-off"></span>
-                        <!--<a class="allLinks-li" href="facSplash.php">My Page</a> 
+                        <a class="allLinks-li" href="facSplash.php">My Page</a> 
                         <a class="allLinks-li" href="classroom.php">Create Trouble Tickets</a>
-                        <a class="allLinks-li" href="scheduleClassroom.php">Book a Classroom</a>-->
-                    </ul>
+                        <a class="allLinks-li" href="scheduleClassroom.php">Book a Classroom</a>
+                    </ul>-->
                     <a class="camera" href="../connectCamera.html"><li class="glyphicon glyphicon-camera camerali">
                     <br>
                     <span>Access Camera</span></li></a>

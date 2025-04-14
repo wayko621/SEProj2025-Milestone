@@ -21,15 +21,7 @@
     <head>
         <meta charset="utf-8">
         <title>Classroom Schedule</title>
-        <script type='text/javascript' src='https://code.jquery.com/jquery-1.7.min.js'></script>
-        <script type="text/javascript" src="../files/js/jquery-ui-1.8.22.custom.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="../files/css/bootstrap.min.css">
-        <link rel="icon" type="image/x-icon" href="../files/images/favicon.ico">
-        <style>
-            .container
-            {
-                margin-top: 35px;
-            }
+         <style>
             .bookClassRoom a
             {
                 color: #fff;
@@ -39,29 +31,16 @@
                 color: #f00;
             }
         </style>
+        <script type='text/javascript' src='https://code.jquery.com/jquery-1.7.min.js'></script>
+        <script type="text/javascript" src="../files/js/jquery-ui-1.8.22.custom.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="../files/css/bootstrap.min.css">
+        <link rel="icon" type="image/x-icon" href="../files/images/favicon.ico">
+        <link rel="stylesheet" type="text/css" href="../files/css/sidebar-main.css">
         <link rel="stylesheet" type="text/css" href="../files/css/sidebar.css">
     </head>
     <body>
-        <div class="container">
-              <!--<nav class="navbar navbar-default">
-                <div class="container-fluid">
-                    <div class="navbar-header"> 
-                        <a class="navbar-brand" href="facSplash.php">My Page</a>
-                        <a class="navbar-brand" href="faculty.php">My Tickets and Bookings</a>
-                        <a class="navbar-brand" href="classroom.php">Create Trouble Tickets</a>
-                        <a class="navbar-brand" href="../connectCamera.html">Access Camera</a>
-                        <a class="navbar-brand glyphicon glyphicon-book" href="viewBooking.php"><?php echo count($_SESSION['bookedRoom']); ?></a>
-                        <ul class="nav navbar-nav">
-                        <li class="dropdown">
-                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo htmlspecialchars($_SESSION['facUN']); ?><span class="caret"></span></a>
-                          <ul class="dropdown-menu">
-                           <p class='logout center-block bg-danger'>Log Out</p>
-                          </ul>
-                        </li>
-                    </ul>
-                    </div>
-                </div>
-            </nav>-->
+        <div class="container" style="margin-top: 35px; width: 960px;
+                margin-left: 250px;">
               <div class="sidebar-nav">
                 <ul class="sidebar-ul">
                     <li class="account">Account</li>
@@ -70,13 +49,8 @@
                         <li class="account-li username"><?php echo htmlspecialchars($_SESSION['facUN']); ?></li>
                         <li class="account-li logout btn btn-danger"><p style="font-size: 18px; margin-top: 10px">Log Out<p></li>
                     </ul>
-                    <li class="allLinks">Links</li>
-                    <ul class="allLinks-ul">
-                        <span class="viewButton glyphicon glyphicon-off"></span>
-                        <a class="navbar-brand allLinks-li" href="facSplash.php">My Page</a> 
-                         <!--<a class="navbar-brand allLinks-li" href="faculty.php">My Tickets and Bookings</a>
-                       <a class="navbar-brand allLinks-li" href="classroom.php">Create Trouble Tickets</a>-->
-                    </ul>
+                    <a class="" href="facSplash.php"><li class="">My Page</li></a>
+                    <a class="" href="faculty.php"><li class="">My Tickets and Bookings</li></a>
                     <a class="camera" href="../connectCamera.html"><li class="glyphicon glyphicon-camera camerali">
                     <br>
                     <span>Access Camera</span></li></a>
@@ -158,7 +132,7 @@
  
             }
         </script> 
-        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+        <!--<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>-->
          <script>
           $(document).ready(function()
            {
