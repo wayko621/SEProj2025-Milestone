@@ -34,7 +34,7 @@
             {
                 position: relative;
                 left:1150px;
-                top: -400px;
+                top: -350px;
             }
         </style>
         <script type='text/javascript' src='https://code.jquery.com/jquery-1.7.min.js'></script>
