@@ -28,10 +28,6 @@
     <script src="../files/js/calendar.global.js"></script>
     <style>
         <style>
-            .container
-            {
-                margin-top: 35px;
-            }
             .custom-ui-widget-header-warning {
                 border-radius: 10px;
             }  
@@ -43,7 +39,8 @@
         <link rel="stylesheet" type="text/css" href="../files/css/sidebaradmin.css">
   </head>
   <body>
-     <div class="container">
+     <div class="container" style="margin-top: 35px;
+                margin-left: 250px;">
            <div class="sidebar-nav">
                 <ul class="sidebar-ul">
                     <li class="account">Account</li>

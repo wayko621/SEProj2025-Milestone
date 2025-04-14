@@ -124,7 +124,7 @@
                 }
                 else
                 {
-                   header("refresh:0; url=/SEProj2025-Milestone/PHPFiles/admin.php");
+                   header("refresh:0; url=/PHPFiles/admin.php");
                    echo "Tech level is lower than 2 or does not exist. Redirecting back to admin page";
                 }
                     echo "</tbody>";

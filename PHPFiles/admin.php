@@ -1,10 +1,9 @@
 <?php
+
     session_start();
-
-
     if(!isset($_SESSION['loggedin'])  || !isset($_SESSION['adminUN']) || !isset($_SESSION['Admin']))
     {
-        header("location:/SEProj2025-Milestone/");
+        header("refresh:0; url=https://seproj2025");
 
     }
     else
@@ -14,29 +13,29 @@
     }
 ?>
 
-
 <!DOCTYPE html>
 <html>
     <head>
     <meta charset="utf-8">
     <title>Admin Portal</title>
     <script type='text/javascript' src='https://code.jquery.com/jquery-1.7.min.js'></script>
-        <script type="text/javascript" src="../files/js/jquery-ui-1.8.22.custom.min.js"></script>
+    <script type="text/javascript" src="../files/js/jquery-ui-1.8.22.custom.min.js"></script>
     <link rel="stylesheet" type="text/css" href="../files/css/bootstrap.min.css">
-      <style>
-            *
-            {
-                font-family:  font-family: "Trirong", sans-serif;
-            }
-        </style>
+    <style>
+        *
+        {
+            font-family:  font-family: "Trirong", sans-serif;
+        }
+    </style>
     
-     <style>
-            .container
-            {
-                margin-top: 35px;
-            }
-        </style>
-        <link rel="stylesheet" type="text/css" href="../files/css/sidebaradmin.css">
+    <style>
+        .container
+        {
+            margin-top: 35px;
+            margin-left: 250px;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="../files/css/sidebaradmin.css">
     </head>
     <body>
         <div class="container">
@@ -59,7 +58,7 @@
             <?php
             if(!isset($_SESSION['loggedin'])  || !isset($_SESSION['adminUN']) || !isset($_SESSION['Admin']))
             {
-                header("location:/SEProj2025-Milestone/");
+                 header("refresh:0; url=https://seproj2025");
             }
             else
             {
