@@ -67,6 +67,7 @@
   padding: 10px 0 15px 25px;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
+  background: whitesmoke;
 }
 .logout
 {
@@ -78,7 +79,7 @@
   animation-duration: .5s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: 1;
-  left: 100px;
+  left: 109px;
 }
 .glyphicon-off:hover
 {
