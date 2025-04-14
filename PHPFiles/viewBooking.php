@@ -102,8 +102,8 @@
             </tbody>
             </table>
             <a href="scheduleClassroom.php" class="btn btn-primary"><span class="glyphicon glyphicon-arrow-left"></span>Back</a>
-            <a href="clearBooking.php" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span>Clear Booking</a>
-            <label class="btn btn-success" id="checkout"><span class="glyphicon glyphicon-check"></span>Checkout</label>
+            <a href="clearBooking.php" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span>Clear Reservation</a>
+            <label class="btn btn-success" id="checkout"><span class="glyphicon glyphicon-check"></span>Reserve Classroom</label>
         </form>
         <div id="homecon">
         </div>
