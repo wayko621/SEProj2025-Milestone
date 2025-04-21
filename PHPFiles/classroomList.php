@@ -12,7 +12,7 @@
     echo "<th>Room ID</th>";
     echo "<th>Building</th>";
     echo "<th>Classroom</th>";
-    echo "<th>Book Room</th>";
+    echo "<th>Reserve Classroom</th>";
     echo "</tr>";
     if($results2->num_rows > 0)
     {
@@ -29,7 +29,7 @@
         echo $row2['RoomNum'];
         echo "</td>";
         echo "<td class='btn btn-primary btn-sm pull-left bookClassRoom'>";
-        echo "<a href='bookRoom.php?id={$row2['ID']}'>Book Classroom</a>";
+        echo "<a href='bookRoom.php?id={$row2['ID']}'>Reserve Classroom</a>";
         echo "</td>";
         echo"</tr>" ; 
       }
