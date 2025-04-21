@@ -68,26 +68,31 @@
                     </g>
                     </svg><br>Create Ticket</li></a>
                 </ul>
+                 <div class="booking" style="top: -585px;"><a class="navbar-brand glyphicon glyphicon-book" href="viewBooking.php"><?php echo count($_SESSION['bookedRoom']); ?></a></div>
             </div>
             <?php
 
                 if(isset($_SESSION['message']))
                 {
                     echo "<div class='row'>";
-                    echo "<div class='col-sm-6 col-sm-offset-6'>";
+                    echo "<div class='message-resize' style='width:50%;'>";
                     echo "<div class='alert alert-info text-center'>";
                     echo $_SESSION['message'];
                     echo "</div></div></div>";
                 }
             ?>
+
             <select name='building' class='building'>
                 <option value="Center for Computing and Information Science">Center for Computing and Information Science</option>
                 <option value="Richardson Hall">Richardson Hall</option>
             </select>
+
+            
         <div id="tableResults">
+
         </div>
         </div>
-        <div class="booking"><a class="navbar-brand glyphicon glyphicon-book" href="viewBooking.php"><?php echo count($_SESSION['bookedRoom']); ?></a></div>
+        
         <script>
             $(document).ready(function(){
                 buildingNum = 'Center for Computing and Information Science';
