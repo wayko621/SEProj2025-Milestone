@@ -3,7 +3,7 @@
 
     if(!isset($_SESSION['loggedin']) || !isset($_SESSION['adminUN']))
     {
-        header("location:/SEProj2025-Milestone/");    
+        header("location:/");    
     }
     else
     {
@@ -42,6 +42,7 @@
                     <a class="ticket" href="admin.php"><li><img src="../files/images/helpdesk.svg" class="calendaricon"><br><span><?php echo $_SESSION['adminUN']?>'s  Assigned Tickets</span></li></a>
                      <a class="reserve" href="viewCalendar.php"><li class="reserveli"><img src="../files/images/calendar-icon.svg" class="calendaricon"/><br><span>View Calendar</span></li></a>
                      <a class="reserve" href="addAdminFaculty.php"><li class="reserveli"><img src="../files/images/addmember.svg" class="calendaricon"/><br><span>Add New Admin/Faculty Member</span></li></a>
+                     <a class="reserve" href="addResources.php"><li class="reserveli"><img src="../files/images/add-resource.svg" class="calendaricon"/><br><span>Add Resources</span></li></a>
                     <a class="reserve" href="returnResource.php"><li class="reserveli"><img src="../files/images/switch-icon.svg" class="calendaricon"/><br><span>Return Resources</span></li></a>
                 </ul>
             </div>

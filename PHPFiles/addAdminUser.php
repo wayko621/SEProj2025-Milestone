@@ -3,7 +3,7 @@
 
     if(!isset($_SESSION['loggedin'])  || !isset($_SESSION['adminUN']))
     {
-        header("location:index.html");
+        header("location:/index.html");
     }
     else
     {

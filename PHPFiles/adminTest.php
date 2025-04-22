@@ -4,12 +4,11 @@
 
     if(!isset($_SESSION['loggedin'])  || !isset($_SESSION['adminUN']) || !isset($_SESSION['Admin']))
     {
-        header("location:/SEProj2025-Milestone/");
+        header("location:/");
 
     }
     else
     {
        require 'adminTest.html';
-        //require 'logout.php';
     }
 ?>
