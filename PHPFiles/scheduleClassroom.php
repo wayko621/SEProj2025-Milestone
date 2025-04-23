@@ -7,8 +7,6 @@
     }
     else
     {
-       // require 'facLoginfo.php';
-        //require 'logout.php';
         if(!isset($_SESSION['bookedRoom']))
         {
             $_SESSION['bookedRoom'] = array();

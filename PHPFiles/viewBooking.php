@@ -13,7 +13,7 @@
     </head>
     <body>
         <div class="container">
-        <h1 class="page-header text-center" id="viewcart">Booked Room Details</h1>
+        <h1 class="page-header text-center" id="viewcart">Reserved Classroom Details</h1>
         <div class="row">
         <div class="col-sm-8 col-sm-offset-2">
         <?php
