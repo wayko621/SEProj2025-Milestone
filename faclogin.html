@@ -10,17 +10,16 @@
         <link rel="stylesheet" type="text/css" href="files/css/main-form-style.css"> 
         <link rel="stylesheet" type="text/css" href="files/css/forms-style.css"> 
         <link rel="stylesheet" type="text/css" href="files/css/login-form.css"> 
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+        <link rel="stylesheet" type="text/css" href="files/css/facLogin.css"> 
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
         <script type="text/javascript" src="files/js/jquery-ui-1.8.22.custom.min.js"></script>
     </head>
     <body>   
         <div class="wrapper">
-            
             <form class="row g-3 form-top" action="PHPFiles/getFaculty.php" method="POST"  autocomplete="off">
                  <div class="image-top"><img src="files/images/faculty.png"/></div>
-                 <h2>Faculty Member Login</h2>
                  <div class="form-group">
+                    <h2>Faculty Member Login</h2>
                     <!--<label for="facEmail" id="email" class="emaillabel">Email:</label> -->
                     <i class="fa fa-envelope icon"></i>
                     <input type="email" name="facEmail" id="facEmail" autocomplete="off" required ="" placeholder="staff@montclair.edu" />
@@ -34,6 +33,14 @@
                     </div>
                 </div>
             </form>
+              <div class="box">
+                <div class="boxes box-1"></div>
+                <div class="boxes box-2"></div>
+                <div class="boxes box-3"></div>
+                <div class="boxes box-4"></div>
+                <div class="boxes box-5"></div>
+                <div class="boxes box-6"></div>
+            </div>
         </div>
         <script>
             $(".fa-eye").on("click",function() {

@@ -1,0 +1,214 @@
+*
+{
+    font-family: "Trirong", sans-serif;
+    line-height:1.1;
+    padding: 0;
+    margin: 0;
+}
+
+@keyframes slideToRight {
+  0% {
+    left:0;
+    z-index: -1;
+  }
+   50% {
+   
+    z-index: -1;
+  }
+  100% {
+     left: 100px;
+     z-index: 1;
+  }
+}
+
+@keyframes slideToRight2 {
+  0% {
+    left:0;
+    z-index: -1;
+  }
+   50% {
+   
+    z-index: -1;
+  }
+  100% {
+     left: 140px;
+     z-index: 1;
+  }
+}
+
+
+.sidebar-nav
+{
+	position: absolute;
+	left: 0;
+	top: 0;
+	border: 1px solid white;
+	height: 900vh;
+	border-radius: 2px;
+	background: rgba(30, 144, 255,1);
+	width: 100px;
+}
+
+.logout
+{
+
+	margin-top: 10px;
+	
+}
+.btn-danger
+{
+	
+	font-size: 18px;
+}
+
+.sidebar-nav li
+{
+	font-size: 18px;
+	padding-bottom: 15px;
+	list-style: none;
+}
+
+.sidebar-nav li:first-child
+{
+	padding-top: 20px;
+	padding-left: 15px;
+}
+
+.sidebar-nav li:first-child:hover
+{
+	background-color: darkblue;
+	cursor: pointer;
+	color: white;
+
+}
+
+.sidebar-nav li:nth-child(3):hover
+{
+	background-color: darkblue;
+	cursor: pointer;
+	color: white;
+	
+} 
+
+
+.sidebar-ul
+{
+	position: relative;
+	padding-left:0;
+}
+
+.account-ul
+{
+	position: absolute;
+	left: -160px;
+	top: 0;
+	width: 160px;
+	border: 1.5px solid rgba(0,0,0, .1);
+	padding: 10px 0 15px 25px;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+
+}
+
+.view
+{
+	animation-name: slideToRight;
+  animation-duration: .5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+	left: 100px;
+}
+
+.glyphicon-off
+{
+	font-size: 16px;
+}
+
+.sidebar-nav li:nth-child(5)
+{
+	padding-bottom: 0;
+
+}
+
+.username
+{
+
+	border: 1px solid rgba(0,0,0, .1);
+	border-radius: 60px;
+	width: 100px;
+	height: 100px;
+	padding-top: 30px;
+	padding-left: 25px;
+	padding-right: 25px;
+
+}
+
+a
+{
+	color: black;
+}
+
+.allLinks-li:hover
+{
+	color: blue;
+} 
+
+.allLinks-li
+{
+	color:black;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	line-height: 35px;
+	padding-left: 10px;
+}
+
+a:hover
+{
+	text-decoration: none;
+}
+
+.calendaricon img
+{
+	width: 75px;
+	height: 75px;
+	margin: -25px 0;
+}
+
+.viewButton
+{
+	float:right;
+}
+
+.allLinks-ul
+{
+	position: absolute;
+	left: -360px;
+	top: 70px;
+	width: 200px;
+	border: 1.5px solid rgba(0,0,0, .1);
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px ;
+	padding-top: 10px;
+	padding-left: 0;
+}
+.allLinks-view
+{
+	
+	animation-name: slideToRight2;
+    animation-duration: .5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+	left: 141px;
+}
+
+.reserveli span, .ticket span
+{
+	font-size: 16px;
+}
+
+.btn
+{
+	background: rgba(30, 144, 255,1);
+	border: 1px solid darkblue;
+}

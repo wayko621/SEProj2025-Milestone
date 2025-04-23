@@ -1,13 +1,13 @@
 <?php
     session_start();
+
     if(!isset($_SESSION['loggedin']) || !isset($_SESSION['adminUN']))
     {
-        header("location:/SEProj2025-Milestone/");    
+        header("location:/");    
     }
     else
     {
-        require 'loginfo.php';
-        require 'logout.php';
+       
     }
 ?>
 <!DOCTYPE html>
@@ -23,33 +23,37 @@
             .container
             {
                 margin-top: 35px;
+                margin-left: 250px;
             }
         </style>
+        <link rel="stylesheet" type="text/css" href="../files/css/sidebaradmin.css">
     </head>
     <body>
         <div class="container">
-            <nav class="navbar navbar-default">
-                <div class="container-fluid">
-                    <div class="navbar-header">
-                        <a class="navbar-brand" href="adminSplash.php"><?php echo $_SESSION['adminUN']?>'s Page</a> 
-                        <a class="navbar-brand" href="admin.php"><?php echo $_SESSION['adminUN']?>'s  Assigned Tickets</a>
-                        <a class="navbar-brand" href="addAdminFaculty.php">Add New Admin/Faculty Member</a>
-                        <a class="navbar-brand" href="viewCalendar.php">View Calendar</a>
-                        <a class="navbar-brand" href="addResources.php">Add Resources</a>
-                        <a class="navbar-brand" href="returnResource.php">Return Resources</a>
-                    </div>
-                </div>
-            </nav>
+            <div class="sidebar-nav">
+                <ul class="sidebar-ul">
+                    <li class="account">Account</li>
+                    <ul class="account-ul">
+                        <span class="viewButton glyphicon glyphicon-off"></span>
+                        <li class="account-li username"><?php echo htmlspecialchars($_SESSION['adminUN']); ?></li>
+                        <li class="account-li logout btn btn-danger"><p style="font-size: 18px; margin-top: 10px">Log Out<p></li>
+                    </ul>
+                    <a class="ticket" href="adminSplash.php"><li><img src="../files/images/helpdesk.svg" class="calendaricon"><br><span><?php echo $_SESSION['adminUN']?>'s Page</span></li></a>
+                    <a class="ticket" href="admin.php"><li><img src="../files/images/helpdesk.svg" class="calendaricon"><br><span><?php echo $_SESSION['adminUN']?>'s  Assigned Tickets</span></li></a>
+                     <a class="reserve" href="viewCalendar.php"><li class="reserveli"><img src="../files/images/calendar-icon.svg" class="calendaricon"/><br><span>View Calendar</span></li></a>
+                     <a class="reserve" href="addAdminFaculty.php"><li class="reserveli"><img src="../files/images/addmember.svg" class="calendaricon"/><br><span>Add New Admin/Faculty Member</span></li></a>
+                     <a class="reserve" href="addResources.php"><li class="reserveli"><img src="../files/images/add-resource.svg" class="calendaricon"/><br><span>Add Resources</span></li></a>
+                    <a class="reserve" href="returnResource.php"><li class="reserveli"><img src="../files/images/switch-icon.svg" class="calendaricon"/><br><span>Return Resources</span></li></a>
+                </ul>
+            </div>
             <?php
             if(!isset($_SESSION['loggedin']) || !isset($_SESSION['adminUN']) || !isset($_SESSION['TechLevel']))
-    {
-        header("location:/SEProj2025-Milestone/");    
-    }
-    else
-    {
+            {
+                header("location:/SEProj2025-Milestone/");    
+            }
+            else
+            {
                 require 'dbconfig.php';
-
-               
                 if($_SESSION['TechLevel'] == 2 || $_SESSION['TechLevel'] == 3)
                 {
                     
@@ -122,14 +126,16 @@
                 }
                 else
                 {
-                   header("refresh:0; url=/SEProj2025-Milestone/PHPFiles/admin.php");
+                   header("refresh:0; url=admin.php");
                    echo "Tech level is lower than 2 or does not exist. Redirecting back to admin page";
                 }
-                echo "</tbody>";
-                echo "</table>";
+                    echo "</tbody>";
+                    echo "</table>";
                 }
             ?>
         </div>
+         <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+       <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
         <script>
                 var techID = 0;
                 $('.techid').change(function()
@@ -236,7 +242,35 @@
  
             }
         </script> 
-
+         
+         <script>
+          $(document).ready(function()
+           {
+            $('.logout').on('click',function()
+            {
+           $(location).prop('href', 'sessionDestroy.php');
+            });
+            });
+        </script>
+             <script>
+            $('.account').on("click", function(){
+              
+                $(".account-ul").addClass('view'); 
+                $(".allLinks-ul").removeClass('allLinks-view');  
+            });
+        </script>
+         <script>
+            $('.viewButton').on("click", function(){
+                $(".account-ul").removeClass('view');
+                $(".allLinks-ul").removeClass('allLinks-view');
+            });
+        </script>
+         <script>
+            $('.allLinks').on("click", function(){
+                  $(".account-ul").removeClass('view');
+                $(".allLinks-ul").addClass('allLinks-view');
+            });
+        </script>
     </body>
 </html>
     

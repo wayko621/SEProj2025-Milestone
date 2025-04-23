@@ -13,7 +13,7 @@
     </head>
     <body>
         <div class="container">
-        <h1 class="page-header text-center" id="viewcart">Booked Room Details</h1>
+        <h1 class="page-header text-center" id="viewcart">Reserved Classroom Details</h1>
         <div class="row">
         <div class="col-sm-8 col-sm-offset-2">
         <?php
@@ -102,8 +102,8 @@
             </tbody>
             </table>
             <a href="scheduleClassroom.php" class="btn btn-primary"><span class="glyphicon glyphicon-arrow-left"></span>Back</a>
-            <a href="clearBooking.php" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span>Clear Booking</a>
-            <label class="btn btn-success" id="checkout"><span class="glyphicon glyphicon-check"></span>Checkout</label>
+            <a href="clearBooking.php" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span>Clear Reservation</a>
+            <label class="btn btn-success" id="checkout"><span class="glyphicon glyphicon-check"></span>Reserve Classroom</label>
         </form>
         <div id="homecon">
         </div>

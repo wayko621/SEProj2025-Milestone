@@ -2,7 +2,7 @@
     session_start();
     if(!isset($_SESSION['loggedin']) || !isset($_SESSION['facUN']))
     {
-        header("location:/SEProj2025-Milestone/");    
+        header("location:/");    
     }
 ?>
 <!DOCTYPE html>
@@ -12,34 +12,39 @@
     <title>
     Classroom Repair Sheet
     </title>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script type='text/javascript' src='https://code.jquery.com/jquery-1.7.min.js'></script>
     <script type="text/javascript" src="../files/js/jquery-ui-1.8.22.custom.min.js"></script>
     <link rel="stylesheet" type="text/css" href="../files/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="../files/css/newDraggable.css">
+    
     <link rel="icon" type="image/x-icon" href="../files/images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../files/css/sidebar-main.css">
+    <link rel="stylesheet" type="text/css" href="../files/css/sidebar2.css">
+    <link rel="stylesheet" type="text/css" href="../files/css/newDraggable.css">
     </head>
     <body>
     <div style="padding-left: 10px;">
-        Name:  <input type="hidden" name="facname" class="facname" id="facname" value=<?php echo htmlspecialchars($_SESSION['facUN']); ?>></input>  
-        <?php echo htmlspecialchars($_SESSION['facUN']); ?>   
-        <br />Email: <input type="hidden" name="email" class="email" id="email" value=<?php echo htmlspecialchars($_SESSION['facEmail']); ?>>
-        <?php echo htmlspecialchars($_SESSION['facEmail']); ?></input>
-        <?php
-           require 'logout.php';
-        ?>
-        <br />
+        <input type="hidden" name="facname" class="facname" id="facname" value=<?php echo htmlspecialchars($_SESSION['facUN']); ?>></input>  
+        <input type="hidden" name="email" class="email" id="email" value=<?php echo htmlspecialchars($_SESSION['facEmail']); ?>>
+        </input>
+       
     </div>
     <div class="wrapper">
-         <nav class="navbar navbar-default">
-                    <div class="container-fluid">
-                        <div class="navbar-header"> 
-                            <a class="navbar-brand" href="facSplash.php">My Page</a>
-                            <a class="navbar-brand" href="faculty.php">My Tickets and Bookings</a>
-                            <a class="navbar-brand" href="scheduleClassroom.php">Book a Classroom</a>
-                            <a class="navbar-brand" href="../connectCamera.html">Access Camera</a>
-                        </div>
-                    </div>
-                </nav>
+         <div class="sidebar-nav">
+                <ul class="sidebar-ul">
+                    <li class="account">Account</li>
+                    <ul class="account-ul">
+                        <span class="viewButton glyphicon glyphicon-off"></span>
+                        <li class="account-li username"><?php echo htmlspecialchars($_SESSION['facUN']); ?></li>
+                        <li class="account-li logout btn btn-danger"><p style="font-size: 18px; margin-top: 10px">Log Out<p></li>
+                    </ul>
+                    <a class="" href="facSplash.php"><li class="">My Page</li></a>
+                    <a class="" href="faculty.php"><li class="">My Tickets and Bookings</li></a>
+                    <a class="camera" href="../connectCamera.html"><li class="glyphicon glyphicon-camera camerali">
+                    <br>
+                    <span>Access Camera</span></li></a>
+                    <a class="reserve" href="scheduleClassroom.php"><li class="reserveli"><img src="../files/images/reserve-class.svg" class="reserveicon"/><span>Reserve Classroom</span></li></a>
+                </ul>
+            </div>
       <div class="room210">
           <h4 style="margin-left: 955px; margin-bottom: 0">Classroom</h4>
           <select class="form-select form-select-lg mb-3 room" id="room" style="margin-left: 958px;">
@@ -146,8 +151,18 @@
     </div>
     </div>
     <foot>
+        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="../files/js/newDraggable.js"></script>
         <script type="text/javascript" src="../files/js/newPostDrag.js"></script>
+      <script>
+      $(document).ready(function()
+       {
+        $('.logout').on('click',function()
+        {
+       $(location).prop('href', 'sessionDestroy.php');
+        });
+        });
+        </script>
          <script>
                 setInterval(function(){ auto_logout() }, 1200000);
                 function auto_logout()
@@ -159,6 +174,25 @@
                     }
                 }
         </script> 
+           <script>
+            $('.account').on("click", function(){
+              
+                $(".account-ul").addClass('view'); 
+                $(".allLinks-ul").removeClass('allLinks-view');  
+            });
+        </script>
+         <script>
+            $('.viewButton').on("click", function(){
+                $(".account-ul").removeClass('view');
+                $(".allLinks-ul").removeClass('allLinks-view');
+            });
+        </script>
+         <script>
+            $('.allLinks').on("click", function(){
+                  $(".account-ul").removeClass('view');
+                $(".allLinks-ul").addClass('allLinks-view');
+            });
+        </script>
     </foot>
     </body>
 </html>

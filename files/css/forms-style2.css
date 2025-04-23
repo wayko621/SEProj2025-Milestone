@@ -82,7 +82,7 @@ transform: rotateY(180deg);
 {
 	position: absolute;
 	top: 540px;
-	font-size: 18px;
+	font-size: 23px;
 	margin-left: -9px;
 	width:90%;
 	background: whitesmoke;
@@ -93,12 +93,12 @@ transform: rotateY(180deg);
 
 .switchspan:hover
 {
-	cursor: ew-resize;
+	cursor: pointer;
 }
 
 .switchback span
 {
-	font-weight: bold;
+	
 
 }
 .addButton
@@ -149,7 +149,7 @@ transform: rotateY(180deg);
 	height: 50px;
 	font-size: 18px;
 	line-height: 20px;
-	font-family: "Helvetica Neue","Helvetica","Arial",sans-serif;
+	
 }
 
 .btn-primary
@@ -160,7 +160,7 @@ transform: rotateY(180deg);
 	line-height: 1.5;
 	border-radius: 3px;
 	border-color: #2e6da4;
-	font-family: inherit;
+	
 	color: #fff;
 }
 button
@@ -171,7 +171,7 @@ button
 
 .loginsection
 {
-	font-family: "Helvetica Neue","Helvetica","Arial",sans-serif;
+	
 	font-size: 14px;
 	line-height: 1.42857143;
 	color: #333;

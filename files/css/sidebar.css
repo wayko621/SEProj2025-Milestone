@@ -1,0 +1,51 @@
+/*Sidebar CSS*/
+.sidebar-nav
+{
+	position: absolute;
+	left: 0;
+	top: 0;
+	border: 1px solid black;
+	height: 2000vh;
+	border-radius: 2px;
+	background: red;
+	width: 110px;
+}
+.sidebar-ul a
+{
+  color: black;
+}
+.sidebar-ul a:hover
+{
+  text-decoration: none;
+}
+
+.sidebar-nav li:first-child:hover
+{
+	background-color: darkred;
+	cursor: pointer;
+	color: white;
+
+}
+
+.sidebar-nav li:nth-child(3):hover
+{
+	background-color: darkred;
+	cursor: pointer;
+	color: white;
+	
+} 
+
+.glyphicon-off:hover
+{
+	color: darkred;
+}
+/*End of Logout Section*/
+
+.allLinks-li:hover
+{
+	color: red;
+} 
+
+
+/*End of Navigation Section*/
+

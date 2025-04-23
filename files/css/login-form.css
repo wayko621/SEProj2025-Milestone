@@ -1,8 +1,3 @@
-body
-{
-    background-image: linear-gradient( 90deg,  rgba(204,0,0,1) 11.2%, rgba(68,0,0,1) 100.6% );
-}
-
 .boxes
 {
     background: rgba(255,255,255,0.3);
@@ -11,8 +6,6 @@ body
     border-top: 1px solid rgba(255,255,255,0.3);
     box-shadow: 10px 10px 60px -8px rgba(0, 0, 0, .2);
     position: relative;
-    
-
 }
 
 .image-top
