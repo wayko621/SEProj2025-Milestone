@@ -1,11 +1,11 @@
 <?php
 namespace Devdogz\Se2015projTest;
-use InvalidArgumentException; 
- 
+use InvalidArgumentException;  
+
 //Database Connection//
 require_once 'dbconfig.php';
 
-class getAdmin
+class getResource
 {
     private $mysqli;
 
@@ -15,25 +15,23 @@ class getAdmin
         $dbConfig = new DBConfig();
         $this->mysqli = $dbConfig->getConnection();
     }
-
-    public function getUserByCredentials($firstname)
+    
+    public function getResourceByName($resourcename)
     {
         // Prepare and execute the query to get the user
-        $stmt = $this->mysqli->prepare('SELECT FirstName, AdminID, Email FROM adminmember WHERE FirstName = ?');
+        $stmt = $this->mysqli->prepare('SELECT resourceName FROM resourcelist WHERE resourceName = ?');
         
-        // Use 's' for string (firstname) and 'i' for integer (AdminID)
-        $stmt->bind_param('s', $firstname);  
+        // Use 's' for string (resourcename) 
+        $stmt->bind_param('s', $resourcename);  
         
         $stmt->execute();
         
         // Get the result
         $result = $stmt->get_result();
-        $user = $result->fetch_assoc();
+        $resourceFound = $result->fetch_assoc();
         
         // Return the user if found, otherwise return null
-        return $user;
+        return $resourceFound;
     }
-
-   
 
 }

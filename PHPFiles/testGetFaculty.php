@@ -1,11 +1,11 @@
 <?php
 namespace Devdogz\Se2015projTest;
-use InvalidArgumentException; 
- 
+use InvalidArgumentException;
+
 //Database Connection//
 require_once 'dbconfig.php';
 
-class getAdmin
+class getFaculty
 {
     private $mysqli;
 
@@ -19,7 +19,7 @@ class getAdmin
     public function getUserByCredentials($firstname)
     {
         // Prepare and execute the query to get the user
-        $stmt = $this->mysqli->prepare('SELECT FirstName, AdminID, Email FROM adminmember WHERE FirstName = ?');
+        $stmt = $this->mysqli->prepare('SELECT FirstName, FacultyID, Email FROM facultymember WHERE FirstName = ?');
         
         // Use 's' for string (firstname) and 'i' for integer (AdminID)
         $stmt->bind_param('s', $firstname);  
@@ -33,7 +33,5 @@ class getAdmin
         // Return the user if found, otherwise return null
         return $user;
     }
-
-   
 
 }
