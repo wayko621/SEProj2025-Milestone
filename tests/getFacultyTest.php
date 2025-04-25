@@ -14,7 +14,7 @@ final class getFacultyTest extends TestCase
         $dbConfig = new DBConfig();
         $this->mysqli = $dbConfig->getConnection();
         
-        // Initialize getAdmin with the database connection
+        // Initialize getFacutly with the database connection
         $this->facultyRepository = new getFaculty();
     }
 
@@ -23,7 +23,7 @@ final class getFacultyTest extends TestCase
         $firstname = 'Jose';
         $email = "ortizj41@montclair.edu";
 
-        // Pass user's login info by FirstName and AdminID
+        // Pass user's login info by FirstName and FacID
         $facultyuser = $this->facultyRepository->getUserByCredentials($firstname);
 
         // Verify if user exist
@@ -33,8 +33,8 @@ final class getFacultyTest extends TestCase
 
          // Verify if user does not exist
         $this->assertNotNull($facultyuser, 'User should not be null');  // Ensure the user is found
-        $this->assertEquals('Greg', $facultyuser['FirstName'], 'Firstname does not match');  
-        $this->assertEquals("seymourg1@montclair.edu", $facultyuser['Email'], 'Email does not match');
+        $this->assertEquals($firstname, $facultyuser['FirstName'], 'Firstname does not match');  
+        $this->assertEquals($email, $facultyuser['Email'], 'Email does not match');
     }
 
     protected function tearDown(): void
