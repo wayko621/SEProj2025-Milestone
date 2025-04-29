@@ -33,8 +33,8 @@ final class getFacultyTest extends TestCase
 
          // Verify if user does not exist
         $this->assertNotNull($facultyuser, 'User should not be null');  // Ensure the user is found
-        $this->assertEquals($firstname, $facultyuser['FirstName'], 'Firstname does not match');  
-        $this->assertEquals($email, $facultyuser['Email'], 'Email does not match');
+        $this->assertEquals('Christian', $facultyuser['FirstName'], 'Firstname does not match');  
+        $this->assertEquals('random@email.com', $facultyuser['Email'], 'Email does not match');
     }
 
     protected function tearDown(): void
