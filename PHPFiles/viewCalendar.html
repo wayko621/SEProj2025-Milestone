@@ -48,10 +48,11 @@
             <div id='homecon'></div>
             <div id="calendar">
             </div>
-            <?php
+           <?php
                 require 'dbconfig.php';
                 $sql1 = "Select * from classroomschedule WHERE Active = 1";
                 $results = $con->query($sql1);
+                
             ?>
     </div>
      <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
